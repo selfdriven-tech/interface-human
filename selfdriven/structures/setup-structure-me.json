@@ -1,0 +1,32 @@
+﻿{
+	"template":
+	{
+		"structures":
+		[
+			{
+				"title": "Me",
+				"categories":
+				[
+					{"title": "General",  "description": "", "displayorder": "0", "type": "1", "typetext": "[Standard]"},
+					{"title": "Images",  "description": "", "displayorder": "0", "type": "1", "typetext": "[Standard]"}
+				],
+				"groupings":
+				[
+
+				],
+				"elements":
+				[
+					{"title": "Critical Reflection",  "alias": "_criticalreflection",  "caption": "Analysis and action", "reference": "14053", "description": "", "categorytext": "General", "backgroundcolour": "", "textcolour": "", "displayorder": "1", "hint": "", "notes": "", "notestype": "1", "notestypetext": "Numeric", "datatype": "5", "datatypetext": "Numeric"},
+					{"title": "Communication",  "alias": "_communication",  "caption": "Generation and innovation", "reference": "14054", "description": "", "categorytext": "General", "backgroundcolour": "", "textcolour": "", "displayorder": "2", "hint": "", "notes": "", "notestype": "1", "notestypetext": "Numeric", "datatype": "5", "datatypetext": "Numeric"},
+					{"title": "Creativity",  "alias": "_creativity",  "caption": "Generation and innovation", "reference": "14055", "description": "", "categorytext": "General", "backgroundcolour": "", "textcolour": "", "displayorder": "3", "hint": "", "notes": "", "notestype": "1", "notestypetext": "Numeric", "datatype": "5", "datatypetext": "Numeric"},
+					{"title": "Collaboration",  "alias": "_collaboration",  "caption": "Co-construction and coherence", "reference": "14056", "description": "", "categorytext": "General", "backgroundcolour": "", "textcolour": "", "displayorder": "4", "hint": "", "notes": "", "notestype": "1", "notestypetext": "Numeric", "datatype": "5", "datatypetext": "Numeric"},
+					{"title": "Influence",  "alias": "_influence",  "caption": "Initiative and leadership", "reference": "14057", "description": "", "categorytext": "General", "backgroundcolour": "", "textcolour": "", "displayorder": "5", "hint": "5", "notes": "", "notestype": "1", "notestypetext": "Numeric", "datatype": "5", "datatypetext": "Numeric"},
+					{"title": "Altruism",  "alias": "_altruism",  "caption": "Empathy and enablement", "reference": "14058", "description": "", "categorytext": "General", "backgroundcolour": "", "textcolour": "", "displayorder": "6", "hint": "", "notes": "", "notestype": "1", "notestypetext": "Numeric", "datatype": "5", "datatypetext": "Numeric"},
+					{"title": "Engagement",  "alias": "_engagement",  "caption": "Perception and direction", "reference": "14059", "description": "", "categorytext": "General", "backgroundcolour": "", "textcolour": "", "displayorder": "7", "hint": "", "notes": "", "notestype": "1", "notestypetext": "Numeric", "datatype": "5", "datatypetext": "Numeric"},
+					{"title": "Perseverance",  "alias": "_perseverance",  "caption": "Productivity and integrity", "reference": "14060", "description": "", "categorytext": "General", "backgroundcolour": "", "textcolour": "", "displayorder": "8", "hint": "", "notes": "", "notestype": "1", "notestypetext": "Text - Single Line", "datatype": "4", "datatypetext": "Text - Single Line"},
+					{"title": "Profile Image",  "alias": "_profileimage",  "caption": "", "reference": "14061", "description": "", "categorytext": "Images", "backgroundcolour": "", "textcolour": "", "displayorder": "", "hint": "", "notes": "", "notestype": "1", "notestypetext": "Text - Single Line", "datatype": "4", "datatypetext": "Text - Single Line"}
+				]
+			}
+		]
+	}
+}

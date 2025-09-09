@@ -1,0 +1,2604 @@
+<!--
+  {
+      title: "Form; App; Studio",
+      design: ""
+    }
+-->
+
+<div id="studio-dashboard" class="hidden d-none myds-view">
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-lg-12 pl-md-0 pr-md-0">
+				<ul class="d-none nav nav-tabs myds-tab mb-2 ml-2">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#studio-dashboard-me">
+							<button class="btn btn-default btn-outline btn-rounded"><i
+									class="fas fa-user mr-1"></i>My</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-2" data-toggle="tab" href="#studio-dashboard-community">
+							<button class="btn btn-default btn-outline btn-rounded"><i class="fa fa-users"></i>
+								Community</button></a>
+					</li>
+					<li class="nav-item d-none">
+						<a class="nav-link px-2" data-toggle="tab" href="#studio-dashboard-connections"
+							style="background-color:transparent; border-color:transparent;">
+							<button class="btn btn-default btn-outline btn-rounded"> <i
+									class="fa fa-project-diagram mr-1"></i> Connections</button></a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active pt-3" id="projects-dashboard-me">
+						<div class="ml-md-2">
+							<div class="row mb-1">
+								<div class="col-lg-12 mt-1">
+									<div class="card shadow-lg">
+										<div class="card-body">
+											<div class="row">
+												<div class="col">
+													<h4 class="mb-0" style="font-size: 1.4rem;">Hello, <span
+															class="myds-logon-first-name"></span></h4>
+												</div>
+												<div class="col-auto">
+													<span class="myds-logon-space text-secondary"></span>
+												</div>
+											</div>
+										</div>
+										<div class="card-body d-none">
+											<div class="row">
+												<div class="col-12 col-md-6">
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row text-center">
+
+								<div class="col-12 col-md-6">
+									<div class="card shadow-lg">
+										<div class="card-header pb-2">
+											<h4 class="mb-0" style="font-size: 1.4rem;">Templates</h4>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-12 col-sm-12">
+													<h1 class="p-0 mb-2" style="font-size: 3rem;"><a
+															href="#studio-setup-templates"
+															id="studio-dashboard-setup-templates">...</a></h1>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6">
+									<div class="card shadow-lg">
+										<div class="card-header pb-2">
+											<h4 class="mb-0" style="font-size: 1.4rem;">Guides</h4>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-12 col-sm-12">
+													<a href="https://selfdriven.education/templates" target="_blank">
+														About Templates
+													</a>
+												</div>
+												<div class="col-12 col-sm-12 mt-3">
+													<a href="https://selfdriven.education/building-a-template"
+														target="_blank">
+														Building a Template Guide
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-0 d-none">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+
+							<div class="card mt-3">
+								<div class="card-header pt-2 pr-2">
+									<h4 class="float-left mt-2 ml-1 mb-0">How Going?</h4>
+									<div class="float-right">
+										<i class="fas fa-question mr-2 mt-2 text-muted"></i>
+									</div>
+								</div>
+								<div class="card-body inspinia-timeline">
+									<label class="form-check-label mb-1 w-100"
+										for="studio-dashboard-wellbeing-howgoing">
+										<div class="row">
+											<div class="col-6 text-muted small float-left">Could be better</div>
+											<div class="col-6 text-muted small float-right text-right">Going OK<i
+													class="far fa-thumbs-up ml-1 text-muted"></i></div>
+										</div>
+									</label>
+									<input type="range" min="0" max="100" value="0" step="10"
+										class="form-control-range myds-range" data-scope="studio-dashboard-wellbeing"
+										data-controller="studio-dashboard-wellbeing-save" data-context="_howgoing"
+										id="studio-dashboard-wellbeing-howgoing">
+									<a id="studio-community-dashboard-howgoing-reach-out-for-me"
+										href="#studio-wellbeing-how-going"
+										class="d-none btn btn-default btn-outline btn-sm mt-3 w-100">
+										Reach Out For Help
+									</a>
+									<a id="studio-community-dashboard-howgoing-reach-out-for-community"
+										href="#studio-wellbeing-how-going"
+										class="d-none btn btn-default btn-outline btn-sm mt-3 w-100">
+										Help Others
+									</a>
+									<a id="studio-community-dashboard-howgoing-stay-fit"
+										href="#studio-wellbeing-how-going"
+										class="d-none btn btn-primary btn-sm mt-3 w-100">
+										Tips For Staying Physically & Mentally Fit
+									</a>
+								</div>
+							</div>
+
+							<div class="card lift">
+								<div class="card-header pb-2 text-center">
+									<h4>Community Tokens</h4>
+								</div>
+								<div class="card-body">
+									<div class="row">
+										<div class="col-6 text-center">
+											<h1 class="p-0" style="font-size:2.4em;"><a href="#studio-tokens"
+													id="projects-dashboard-tokens-earned" style="color:#9ecbed;">...</a>
+											</h1>
+											<small class="text-muted">Total Earned</small>
+										</div>
+										<div class="col-6 text-center">
+											<h1 class="p-0" style="font-size:2.4em;"><a href="#studio-tokens"
+													id="projects-dashboard-tokens-used" style="color:#9ecbed;">...</a>
+											</h1>
+											<small class="text-muted">Total Used</small>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="d-none card mt-4">
+								<div class="card-header pt-2 pr-2">
+									<h4 class="float-left mt-2 ml-1">Updates</h4>
+									<div class="float-right">
+										<i class="fas fa-rss mr-2 mt-2 text-muted"></i>
+									</div>
+								</div>
+								<div class="card-body inspinia-timeline" id="studio-community-dashboard-updates">
+								</div>
+							</div>
+
+							<div class="card d-none">
+								<div class="card-header pr-3 text-center">
+									<h4 class="mb-1 mt-2">Need help with something?</h4>
+								</div>
+								<div class="card-body">
+									<div class="text-secondary text-center">
+										There are other members of the community that can help you.
+									</div>
+									<a href="#studio-community-facilitators"
+										class="btn btn-default btn-outline btn-sm mt-3 w-100">
+										Find a Facilitator
+									</a>
+								</div>
+								<div class="card-body border-top text-center pb-3">
+									<a href="https://www.selfdriven.education/octo" target="_blank"
+										class="text-decoration-none">
+										<img src="/site/2134/selfdriven-art-series-3-octo.0.doing.stuff-thanks.png"
+											class="img-responsive mx-auto rounded-circle mb-3 w-50 w-md-25">
+									</a>
+									<div class="text-secondary text-center">
+										Need help with using the App?
+									</div>
+									<div>
+										<a href="https://www.selfdriven.education/getting-started-app-learner"
+											target="_blank" class="btn btn-default btn-outline btn-sm mt-3 w-100">Check
+											Out the Getting Started Guide</a>
+									</div>
+									<div class="mt-3 text-center">
+										<a href="https://www.selfdriven.education" target="_blank"
+											class="text-secondary w-100">More Guides ...</a>
+									</div>
+								</div>
+								<div class="card-body border-top">
+									<div class="text-secondary text-center">
+										Need help with learning decisions ie your next steps
+									</div>
+									<a href="#studio-next" class="btn btn-default btn-outline btn-sm mt-3 w-100">Next
+										Steps</a>
+								</div>
+								<div class="card-body border-top">
+									<div class="text-secondary text-center">
+										Get support for your community improvement project using improve.community!
+									</div>
+									<a href="#studio-community-improve"
+										class="btn btn-default btn-outline btn-sm mt-3 w-100">Improve.Community</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div id="studio-me" class="hidden d-none myds-view">
+</div>
+
+<div id="_studio-me-summary" class="hidden d-none myds-view-template">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							My Profile
+						</h6>
+						<h1 class="header-title">
+							{{firstname}} {{surname}}
+						</h1>
+					</div>
+					<div class="col-auto text-right">
+						<button class="btn btn-default btn-outline btn-sm myds-navigate"
+							data-controller="studio-me-on-chain-edit" data-context="{{guid}}" data-id="{{guid}}">My
+							On-Chain Profile</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="card shadow-lg">
+					<div class="card-body p-3">
+						<img class="img-fluid w-100 rounded" src="{{_profileimage}}">
+					</div>
+					<div class="card-body pt-2 pb-4 text-center">
+						<div class="ml-2">
+							<button class="btn btn-default btn-outline btn-sm myds-navigate"
+								data-controller="studio-me-edit" id="studio-me-edit-{{id}}" data-context="{{guid}}"
+								data-id="{{guid}}">Edit Profile</button>
+							<!--<button class="btn btn-default btn-outline btn-sm myds-navigate" data-controller="studio-me-on-chain-edit" id="studio-me-on-chain-edit-{{id}}" data-context="{{guid}}" data-id="{{guid}}"><i class="far fa-link"></i></button>-->
+							<!--<button class="d-none btn btn-default btn-outline btn-sm myds-navigate" data-controller="studio-me-share" id="studio-me-edit-{{id}}" data-context="{{guid}}" data-id="{{guid}}"><i class="far fa-share-square"></i></button>-->
+						</div>
+					</div>
+
+					<div class="card-body text-center border-top" id="studio-me-summary-id-view">
+						<h4>selfdriven ID</h4>
+						<div class="text-muted">
+							{{guid}}
+						</div>
+					</div>
+					<div class="card-body text-center border-top" id="studio-me-summary-id-view">
+						<h4>Logon Name</h4>
+						<div class="text-muted">
+							{{logonname}}
+						</div>
+					</div>
+				</div>
+
+				<div id="studio-me-summary-identifiers-view"></div>
+
+				<div class="card mt-4 shadow-lg">
+					<div class="card-header text-center pt-2 pb-2 border-bottom">
+						<h4 class="pt-1">Security</h4>
+						<div class="pull-right"></div>
+					</div>
+
+					<div class="card-body py-2 text-center" id="studio-me-summary-security-view">
+
+						<div class="row mt-3">
+							<div class="col-sm-12">
+								<h3 class="mb-0" id="">
+									{{lastlogon}}
+								</h3>
+								<div class="text-muted"><small>Last Logon</small></div>
+							</div>
+						</div>
+
+						<div class="row mt-1">
+							<div class="col-sm-12">
+								<a class="btn btn-default btn-outline w-75 mx-auto btn-block btn-sm mt-3 mb-3"
+									href="#auth-password" data-toggle="modal">Change Password</a>
+								<div id="studio-me-summary-security-password-view"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-body py-3 text-center border-top" id="studio-me-summary-security-2nd-factor-view">
+						<h4>2nd Factor</h4>
+						<div>
+							To protect your account you need to enable 2nd factor authentication.
+						</div>
+						<div class="mt-2 d-none">
+							<a href="https://learn.selfdriven.cloud/auth2ndfactor" target="_blank">Find out more ...</a>
+						</div>
+						<button class="btn btn-default btn-outline w-75 mx-auto btn-block btn-sm myds-click mt-3 mb-3"
+							data-controller="studio-me-security-setup-2ndfactor"
+							id="studio-me-summary-security-setup-2ndfactor-{{id}}" data-context="{{id}}"
+							data-id="{{id}}">
+							Set up or reset 2FA</button>
+						<div class="px-4" id="studio-me-summary-security-2ndfactor-view"></div>
+					</div>
+
+					<div class="card-body py-3 text-center border-top"
+						id="studio-me-summary-security-2nd-factor-trust-this-browser-view">
+						<a href="#auth-trust" data-toggle="modal"
+							class="btn btn-default btn-outline w-75 mx-auto btn-block btn-sm mt-3 mb-3">Trust This
+							Browser</a>
+					</div>
+
+				</div>
+
+				<div class="mt-3 mb-4 text-center" id="util-whoami-version-view">selfdriven
+					{{util-whoami-version}}</div>
+
+			</div>
+
+			<div class="col-sm-8">
+				<div class="card shadow-lg mt-0">
+					<div class="card-body">
+						<h3 class="mb-3 mt-0">Learning Partners</h3>
+						<div id="studio-me-summary-learning-partners-view"></div>
+					</div>
+				</div>
+
+				<div class="card shadow-lg mt-4">
+					<div class="card-body">
+						<h3 class="mb-1 mt-0">Endorsements</h3>
+						<div class="text-muted small mb-3">Growth recognition by learning partners</div>
+						<div id="studio-me-summary-endorsements-view"></div>
+					</div>
+				</div>
+
+				<div class="card shadow-lg mt-4">
+					<div class="card-body">
+						<h3 class="mb-0 mt-0">Skills</h3>
+						<div class="text-muted small mb-3">Based on achievements</div>
+						<div id="studio-me-summary-skills-view"></div>
+					</div>
+				</div>
+
+				<div class="card shadow-lg mt-4 d-none">
+					<div class="card-body">
+						<h3 class="mb-0 mt-0">Tokens</h3>
+						<div id="x-studio-me-summary-tokens-view"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-me-edit" class="hidden d-none myds-view">
+</div>
+
+<div id="_studio-me-edit" class="hidden d-none myds-view-template">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card shadow-lg mt-3">
+					<div class="card-header">
+						<h2 class="my-1 mb-0">{{firstname}} {{surname}}</h2>
+						<div class="text-muted small">Me</div>
+					</div>
+					<div class="card-body">
+
+						<div class="row">
+							<div class="col-sm-6">
+								<form autocomplete="off">
+									<div class="form-group">
+										<h3 class="mb-1"><label class="mb-0 mt-1"
+												for="studio-me-edit-about-me-{{id}}">About Me</label></h3>
+										<textarea style="height:200px;" class="form-control myds-text"
+											id="studio-me-edit-attribute-note-00010000230000" data-id="{{id}}"
+											data-scope="studio-me-edit-attributes-{{id}}"
+											data-context="00010000230000"></textarea>
+									</div>
+								</form>
+
+
+							</div>
+							<div class="col-sm-6 pl-sm-5 mt-2">
+								<div class="form-group">
+									<h3 class="mb-1"><label class="mb-1 mt-1" for="studio-me-edit-image-{{id}}">Profile
+											Image</label></h3>
+									<div class="text-info small mb-0">You should crop your image before uploading.
+									</div>
+									<div class="text-info small mb-0">It works best if your image is about 400px by
+										400px.</div>
+									<div class="text-info small mb-2">Don't upload anything that is harmful!</div>
+									<form name="myds-util-attachment-upload-image-attach-container"
+										action="/rpc/attach/?method=ATTACH_FILE" enctype="multipart/form-data"
+										method="POST" target="myds-util-attachment-upload-image-attach"
+										accept-charset="utf-8">
+
+										<input type="hidden" name="maxfiles"
+											id="myds-util-attachment-upload-image-maxfiles" value="1">
+										<input type="hidden" name="object" id="myds-util-attachment-upload-image-object"
+											value="32">
+										<input type="hidden" name="objectcontext"
+											id="myds-util-attachment-upload-image-objectcontext" value="{{id}}">
+										<input type="hidden" name="filetype0"
+											id="myds-util-attachment-upload-image-filetype0"
+											value="{{profileimagetype}}">
+										<input type="hidden" name="title0" id="myds-util-attachment-upload-image-title0"
+											value="_util-import">
+										<iframe style="display:none;" name="myds-util-attachment-upload-image-attach"
+											id="myds-util-attachment-upload-image-attach-proxy"
+											class="myds-util-attachment-upload" frameborder="0"></iframe>
+
+										<div class="form-group">
+											<div class="custom-file">
+												<input id="myds-util-attachment-upload-image-file0" name="file0"
+													type="file"
+													class="custom-file-input myds-util-attachment-upload-image-attach-file">
+												<label for="myds-util-attachment-upload-image-file0"
+													class="custom-file-label">Choose file...</label>
+											</div>
+										</div>
+									</form>
+
+									<button type="button" class="btn btn-primary btn-outline myds-click"
+										id="myds-util-attachment-upload-image-upload"
+										data-controller="studio-me-edit-image-upload" data-context="image">
+										<i class="fa fa-cloud-upload-alt"></i> <span class="pl-1">Upload</span>
+									</button>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="card-footer border-top text-right">
+						<button type="button" class="btn btn-link myds-navigate" data-controller="studio-me"
+							id="studio-me-edit-cancel-{{id}}" data-id="{{id}}">Cancel</button>
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							data-controller="studio-me-edit-save" id="studio-me-edit-save-{{id}}"
+							data-id="{{id}}">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-me-studio-edit" class="hidden d-none myds-view">
+</div>
+
+<div id="_studio-me-studio-edit" class="hidden d-none myds-view-template">
+
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle text-white">
+							{{firstname}} {{surname}}
+						</h6>
+						<h1 class="header-title">
+							My Org Profile
+						</h1>
+					</div>
+					<div class="col-auto">
+						<span id="studio-me-studio-edit-message"></span>
+						<a class="btn btn-link btn-sm me-2" data-toggle="collapse" role="button"
+							href="#studio-profile-challenges-help" aria-expanded="true">Help! I Need Inspiration</a>
+						<button data-spinner class="btn btn-default btn-outline btn-sm myds-click mr-1"
+							data-controller="studio-me-studio-profile-download"><i
+								class="fa fa-file-download"></i></button>
+						<button type="button" class="btn btn-default btn-outline btn-sm myds-navigate"
+							data-controller="studio-me" data-context="{{guid}}" data-id="{{guid}}">My
+							Profile</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mx-4 my-4 collapse" id="studio-profile-challenges-help">
+		<ul>
+			<li class="text-dark fw-bold">
+				Think about what you are interested in.
+			</li>
+			<li class="text-dark fw-bold mt-2">
+				Challenges should be significant enough that they would take at least 3 months to complete as a project.
+			</li>
+			<li class="text-dark fw-bold mt-2">
+				If you have access to a Generative AI Agent, like ChatGPT, then consider asking it for ideas.
+			</li>
+			<li class="text-dark fw-bold mt-2">
+				Some random thought starters:
+			</li>
+			<ul class="text-dark">
+				<li>Build something</li>
+				<li>Create a game</li>
+				<li>Organise or participant in an event</li>
+				<li>Something relating to your community</li>
+			</ul>
+		</ul>
+	</div>
+
+	<div id="studio-me-studio-edit-view">
+	</div>
+</div>
+
+<div id="studio-me-history" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							My Profile
+						</h6>
+						<h1 class="header-title">
+							History
+						</h1>
+					</div>
+					<div class="col-auto">
+						<a href="#studio-me" class="btn btn-default btn-outline btn-sm mt-2 mr-2">My Profile</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-sm-8">
+				<div class="text-muted text-center text-sm-left">The ups and downs, and how I have changed / grown.
+				</div>
+			</div>
+			<div class="col-sm-4 text-right">
+			</div>
+		</div>
+		<div>
+			<div class="mt-3" id="studio-me-history-view"></div>
+
+			<div class="row">
+				<div class="col-12 col-sm-9">
+					<div class="card mt-1">
+						<div class="card-body pb-2">
+							<div class="float-left">
+								<h4 class="mb-3">Attributes</h4>
+								<div class="text-muted">Last 6 shown</div>
+							</div>
+						</div>
+						<div class="card-body pt-0">
+							<div id="studio-me-history-attributes-view"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-3">
+					<div class="card mt-1">
+						<div class="card-body pb-2">
+							<div class="float-left">
+								<h4 class="mb-3"><i class="fad fa-calendar-alt mr-1"></i> As At</h4>
+							</div>
+							<div class="float-right text-right" id="studio-me-history-dates-count-view">
+							</div>
+						</div>
+						<div class="card-body pt-0">
+							<div id="studio-me-history-dates-view"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-me-visual" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							My Profile
+						</h6>
+						<h1 class="header-title">
+							Visuals
+						</h1>
+					</div>
+					<div class="col-auto">
+						<a href="#studio-me" class="btn btn-default btn-outline btn-sm mt-2 mr-2">My Profile</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-sm-8">
+				<div class="text-muted">The ups and downs, and how I have changed / grown. Useful for collaboratively
+					reviewing your growth and next areas of focus.</div>
+			</div>
+			<div class="col-12 col-sm-4 text-sm-right mt-3 mt-sm-0">
+				<div class="btn-group btn-group-sm">
+					<button class="btn btn-default btn-outline active btn-sm myds-click myds-button-group" type="button"
+						id="studio-me-visual-for-general" value="leadership" data-id="general" data-category="general"
+						data-scope="studio-me-visual" data-controller="studio-me-visual-refresh"
+						data-context="category"> General
+					</button>
+					<button class="btn btn-default btn-outline btn-sm myds-click myds-button-group" type="button"
+						id="studio-me-visual-for-leadership" value="leadership" data-id="leadership"
+						data-category="leadership" data-controller="studio-me-visual-refresh"
+						data-scope="studio-me-visual" data-context="category"> Leadership
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="mt-3">
+			<div class="row">
+				<div class="col-12">
+					<ul class="nav nav-pills pb-3">
+						<li class="nav-item myds-tab">
+							<a class="nav-link active" data-toggle="tab"
+								href="#studio-me-visual-attributes-history-container"
+								data-controller="studio-me-visual-attributes" data-context="attributes"><span
+									class="d-inline" style="font-size:0.85rem;">
+									<h4 class="mb-1"><i class="far fa-chart-bar mr-1"></i> <span
+											class="d-none d-sm-block">Growth</span></h4>
+								</span>
+							</a>
+						</li>
+						<li class="nav-item myds-tab">
+							<a class="nav-link" data-toggle="tab" href="#studio-me-visual-attributes-balance-container"
+								data-controller="studio-me-visual-attributes-balance" data-context="attributes"><span
+									class="d-inline" style="font-size:0.85rem;">
+									<h4 class="mb-1"><i class="far fa-chart-pie mr-1"></i> <span
+											class="d-none d-sm-block">Balance</span></h4>
+								</span>
+							</a>
+						</li>
+						<li class="nav-item myds-tab">
+							<a class="nav-link" data-toggle="tab"
+								href="#studio-me-visual-attributes-balance-radar-container"
+								data-controller="studio-me-visual-attributes-balance-radar"
+								data-context="attributes"><span class="d-inline" style="font-size:0.85rem;">
+									<h4 class="mb-1"><i class="far fa-spider-web mr-1"></i> <span
+											class="d-none d-sm-block">Balance (Radar)</span></h4>
+								</span>
+							</a>
+						</li>
+						<li class="nav-item myds-tab">
+							<a class="nav-link" data-toggle="tab" href="#studio-me-visual-attributes-growth-container"
+								data-controller="studio-me-visual-attributes-growth" data-context="attributes"><span
+									class="d-md-inline" style="font-size:0.85rem;">
+									<h4 class="mb-1"><i class="far fa-chart-area mr-1"></i> <span
+											class="d-none d-sm-block">Balance & Growth</span></h4>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="tab-content">
+				<div class="tab-pane active" id="studio-me-visual-attributes-history-container">
+					<div class="row">
+						<div class="col-12 col-md-9">
+							<div class="card mt-1">
+								<div class="card-body pt-3">
+									<div id="studio-me-visual-attributes-view"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-3">
+							<div class="card mt-1">
+								<div class="card-body pb-2">
+									<div class="float-left">
+										<h4 class="mb-3"><i class="fad fa-calendar-alt mr-1"></i> As At</h4>
+									</div>
+									<div class="float-right text-right" id="studio-me-visual-dates-count-view">
+									</div>
+								</div>
+								<div class="card-body pt-0">
+									<div id="studio-me-visual-dates-view"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="studio-me-visual-attributes-balance-container">
+					<div class="row">
+						<div class="col-12">
+							<div class="card mt-1">
+								<div class="card-body pt-3">
+									<div id="studio-me-visual-attributes-balance-view"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="studio-me-visual-attributes-balance-radar-container">
+					<div class="row">
+						<div class="col-12">
+							<div class="card mt-1">
+								<div class="card-body pt-3">
+									<div
+										class="text-muted text-center mt-2 w-lg-75 mx-auto mb-4 font-weight-bold border-bottom pb-2">
+										For the most balanced self, you are looking for the roundest "now" line - with
+										upwards growth as you become more self-aware of each of your attributes.</div>
+									<canvas id="studio-me-visual-attributes-balance-radar-view"
+										style="margin-top:-16px; padding-left: 30px; padding-right:30px; height:300px;"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="studio-me-visual-attributes-growth-container">
+					<div class="row">
+						<div class="col-12">
+							<div class="card mt-1">
+								<div class="card-body pt-3">
+									<div
+										class="text-muted text-center mt-2 w-lg-75 mx-auto mb-1 font-weight-bold border-bottom pb-2">
+										For the most balanced self, you are looking for the flatest "now" line - with
+										upwards growth as you become more self-aware of each of your attributes.</div>
+									<div id="studio-me-visual-attributes-growth-view"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-profile" class="hidden d-none myds-view">
+</div>
+
+<div id="_studio-profile" class="hidden d-none myds-view-template">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Profile
+						</h6>
+						<h1 class="header-title">
+							{{firstname}} {{surname}}
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body p-0">
+						<img class="img-fluid w-100" src="{{_profileimage}}">
+					</div>
+
+					<div class="card-body border-bottom text-dark {{myds-hide-if-empty-email}}">
+						<div class="mb-0">
+							<a href="mailto:{{email}}">{{emailcaption}}</a>
+						</div>
+					</div>
+
+					<div class="card-body">
+						<h4>About Me</h4>
+						<div>{{notes}}</div>
+					</div>
+
+					<div class="card-body pt-0">
+						<div class="row">
+							<div class="col-sm-6 text-center">
+								<h1 class="font-bold mb-1">{{dashboard-teams-total}}</h1>
+								<div class="text-muted small">Teams</div>
+							</div>
+							<div class="col-sm-6 text-center">
+								<h1 class="font-bold mb-1">{{dashboard-tasks-total}}</h1>
+								<div class="text-muted small">Teams</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-body">
+						<h4 class="mb-3 mt-0"><i class="fa fa-user-friends mr-1"></i> Teams</h4>
+						{{teams}}
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-body">
+						<h4 class="mb-3 mt-0"><i class="fas fa-hammer mr-1"></i> Skills</h4>
+						<div id="studio-profile-achievements-view"></div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-body">
+						<h4 class="mb-3 mt-0"><i class="fa fa-list-alt mr-1"></i> Open To Do Tasks</h4>
+						{{tasks}}
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-sm-8">
+				<div class="card">
+					<div class="card-body pb-4">
+						<div class="float-left">
+							<h4 class="mb-0"><i class="fas fa-user mr-1"></i> Attributes</h4>
+						</div>
+						<div class="float-right">
+							<div class="btn-group btn-group-sm mr-1">
+								<button class="btn btn-default btn-outline active btn-sm myds-click myds-button-group"
+									type="button" id="studio-profile-attributes-general" value="general"
+									data-id="general" data-category="general"
+									data-controller="studio-profile-attributes" data-scope="studio-profile"
+									data-context="category"> General
+								</button>
+								<button class="btn btn-default btn-outline btn-sm myds-click myds-button-group"
+									type="button" id="studio-profile-attributes-leadership" value="leadership"
+									data-id="leadership" data-category="leadership"
+									data-controller="studio-profile-attributes" data-scope="studio-profile"
+									data-context="category"> Leadership
+								</button>
+							</div>
+							<a class="btn btn-default btn-outline btn-sm mr-1" href="#studio-profile-visual"><i
+									class="far fa-analytics"></i></a>
+						</div>
+					</div>
+					<div class="card-body pt-0">
+						<div id="studio-profile-attributes-view"></div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-body">
+						<h4 class="mb-1 mt-0"><i class="fas fa-comment-alt mr-1"></i> Endorsements</h4>
+						<div class="text-muted small mb-3">Relections by learning partners on growth</div>
+						<div id="studio-profile-endorsements-view"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-profile-visual" class="hidden d-none myds-view">
+	<div class="row">
+		<div class="col-8">
+			<h2 class="mt-2"><i class="fal fa-analytics mr-2"></i>Visuals</h2>
+			<div class="mt-2 text-muted">The ups and downs of growth.</div>
+		</div>
+		<div class="col-4 text-right">
+			<button class="btn btn-default btn-outline btn-sm mt-2 mr-2 myds-click"
+				data-controller="studio-profile-visual-profile">Profile</a>
+		</div>
+	</div>
+	<div class="mt-3">
+		<div class="row">
+			<div class="col-8">
+				<ul class="nav nav-pills pb-3 border-bottom">
+					<li class="nav-item myds-tab">
+						<a class="nav-link active" data-toggle="tab"
+							href="#studio-profile-visual-attributes-history-container"
+							data-controller="studio-profile-visual-attributes" data-context="attributes"><span
+								class="d-none d-md-inline" style="font-size:0.85rem;">
+								<h4 class="mb-1"><i class="far fa-chart-bar mr-1"></i> Growth</h4>
+							</span>
+						</a>
+					</li>
+					<li class="nav-item myds-tab">
+						<a class="nav-link" data-toggle="tab" href="#studio-profile-visual-attributes-balance-container"
+							data-controller="studio-profile-visual-attributes-balance" data-context="attributes"><span
+								class="d-none d-md-inline" style="font-size:0.85rem;">
+								<h4 class="mb-1"><i class="far fa-chart-pie mr-1"></i> Balance</h4>
+							</span>
+						</a>
+					</li>
+					<li class="nav-item myds-tab">
+						<a class="nav-link" data-toggle="tab"
+							href="#studio-profile-visual-attributes-balance-radar-container"
+							data-controller="studio-profile-visual-attributes-balance-radar"
+							data-context="attributes"><span class="d-none d-md-inline" style="font-size:0.85rem;">
+								<h4 class="mb-1"><i class="far fa-spider-web mr-1"></i> Balance (Radar)</h4>
+							</span>
+						</a>
+					</li>
+					<li class="nav-item myds-tab">
+						<a class="nav-link" data-toggle="tab" href="#studio-profile-visual-attributes-growth-container"
+							data-controller="studio-profile-visual-attributes-growth" data-context="attributes"><span
+								class="d-none d-md-inline" style="font-size:0.85rem;">
+								<h4 class="mb-1"><i class="far fa-chart-area mr-1"></i> Balance & Growth</h4>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-4 text-right text-muted mt-2 pr-4">
+				<div class="btn-group btn-group-sm">
+					<button class="btn btn-default btn-outline active btn-sm myds-click myds-button-group" type="button"
+						id="studio-profile-visual-for-general" value="leadership" data-id="general"
+						data-category="general" data-scope="studio-profile-visual"
+						data-controller="studio-profile-visual-refresh" data-context="category"> General
+					</button>
+					<button class="btn btn-default btn-outline btn-sm myds-click myds-button-group" type="button"
+						id="studio-profile-visual-for-leadership" value="leadership" data-id="leadership"
+						data-category="leadership" data-controller="studio-profile-visual-refresh"
+						data-scope="studio-profile-visual" data-context="category"> Leadership
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="studio-profile-visual-attributes-history-container">
+				<div class="row">
+					<div class="col-9">
+						<div class="card mt-1">
+							<div class="card-body pt-3">
+								<div id="studio-profile-visual-attributes-view"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="card mt-1">
+							<div class="card-body pb-2">
+								<div class="float-left">
+									<h4 class="mb-3"><i class="fad fa-calendar-alt mr-1"></i> As At</h4>
+								</div>
+								<div class="float-right text-right" id="studio-profile-visual-dates-count-view">
+								</div>
+							</div>
+							<div class="card-body pt-0">
+								<div id="studio-profile-visual-dates-view"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="studio-profile-visual-attributes-balance-container">
+				<div class="row">
+					<div class="col-12">
+						<div class="card mt-1">
+							<div class="card-body pt-3">
+								<div id="studio-profile-visual-attributes-balance-view"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="studio-profile-visual-attributes-balance-radar-container">
+				<div class="row">
+					<div class="col-12">
+						<div class="card mt-1">
+							<div class="card-body pt-3">
+								<div
+									class="text-muted text-center mt-2 w-75 mx-auto mb-1 font-weight-bold border-bottom pb-2">
+									For the most balanced self, you are looking for the roundest "now" line - with
+									upwards growth as you become more self-aware of each of your attributes.</div>
+								<canvas id="studio-profile-visual-attributes-balance-radar-view"
+									style="margin-top:-16px; padding-left: 30px; padding-right:30px;"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="studio-profile-visual-attributes-growth-container">
+				<div class="row">
+					<div class="col-12">
+						<div class="card mt-1">
+							<div class="card-body pt-3">
+								<div
+									class="text-muted text-center mt-2 w-75 mx-auto mb-1 font-weight-bold border-bottom pb-2">
+									For the most balanced self, you are looking for the flatest "now" line - with
+									upwards growth as you become more self-aware of each of your attributes.</div>
+								<div id="studio-profile-visual-attributes-growth-view"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-projects-templates" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Project
+						</h6>
+						<h1 class="header-title">
+							Templates
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-sm-12">
+				<form autocomplete="off">
+					<div class="card shadow-lg">
+						<div class="card-body p-3">
+							<div
+								class="input-group myds-toolbar input-group-flush input-group-merge input-group-reverse">
+								<input type="text" class="form-control myds-text"
+									placeholder="Search for a project template"
+									data-controller="studio-projects-templates-dashboard" data-context="search">
+								<div class="input-group-text">
+									<span class="fe fe-search"></span>
+								</div>
+							</div>
+						</div>
+						<div class="card-body d-non p-0" id="studio-projects-templates-dashboard-view"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-projects-template-summary" class="d-none myds-view">
+</div>
+
+<div id="_studio-projects-template-summary" class="d-none myds-view-template">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Project Template
+						</h6>
+						<h1 class="header-title">
+							{{description}}
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-12 col-xl-5">
+				<div class="card shadow-lg">
+					<div class="card-body border-bottom text-dark">
+						<div class="">
+							<div class="row d-none">
+								<div class="col-sm-12">
+									<div class="text-muted"><small>Type</small></div>
+									<h3 class="mb-0">
+										{{typetext}}
+									</h3>
+								</div>
+							</div>
+							<div class="row mt-3 {{myds-hide-if-empty-createdusertext}}">
+								<div class="col-sm-12">
+									<div class="text-muted"><small>Created By</small></div>
+									<h3 class="mb-0">
+										{{createdusertext}}
+									</h3>
+
+								</div>
+							</div>
+							<div class="row d-none mt-3 {{myds-hide-if-empty-categorytext}}">
+								<div class="col-sm-12">
+									<div class="text-muted"><small>Category</small></div>
+									<h3 class="mb-0">
+										{{categorytext}}
+									</h3>
+								</div>
+							</div>
+							<div class="row mt-3 {{myds-hide-if-empty-notes}}">
+								<div class="col-sm-12">
+									<div class="text-muted"><small>Notes</small></div>
+									<h3 class="mb-0">
+										{{notes}}
+									</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-body">
+						<button class="btn btn-default btn-outline btn-sm myds-click" data-spinner="append"
+							data-controller="studio-projects-template-clone" id="studio-projects-template-clone-{{id}}"
+							data-context="{{guid}}" data-id="{{guid}}">Clone
+							this Project Template</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-xl-7 mt-3 mt-xl-0 myds-view-body">
+
+				<div id="studio-projects-template-summary-information-container"></div>
+
+				<div id="studio-projects-template-summary-attachments-container"></div>
+
+				<div class="card mt-3 d-none">
+					<div class="card-header pt-1 pb-1 pr-2">
+						<h4 class="pull-left pt-1">Template To Do Tasks</h4>
+						<div class="pull-right">
+							<a class="ml-1 mr-1 myds-collapse-toggle" data-toggle="collapse" role="button"
+								href="#studio-projects-template-summary-tasks-collapse">
+								<i class="fa fa-chevron-down text-muted ml-1 mt-2"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="collapse myds-collapse" id="studio-projects-template-summary-tasks-collapse"
+						data-controller="util-template-tasks-show" data-project="{{id}}"
+						data-context="studio-projects-template-summary">
+						<div class="card-body p-0" id="studio-projects-template-summary-tasks-view">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-docs" class="hidden d-none myds-view">
+	<div class="header mb-2">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Organisation
+						</h6>
+						<h1 class="header-title">
+							Docs
+						</h1>
+					</div>
+					<div class="col-auto text-right">
+						<button class="d-none btn btn-sm btn-primary myds-navigate me-1"
+							data-controller="studio-">...</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid p-l-0 p-r-0">
+
+			<div class="row">
+				<div class="col-12">
+					<ul class="nav nav-tabs myds-tab">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#studio-docs-dashboard-search"
+								data-type="business" data-controller="studio-docs-dashboard">
+								<i class="fe fe-search"></i> Search
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#studio-docs-dashboard-folders"
+								data-type="person" data-controller="studio-decisions-dashboard">
+								<i class="fe fe-folder"></i> Folders
+							</a>
+						</li>
+					</ul>
+
+					<div class="tab-content">
+						<div class="tab-pane active pt-4" id="studio-docs-dashboard-business">
+							<div class="card">
+								<div class="card-header">
+									<div class="input-group input-group-flush input-group-merge input-group-reverse">
+										<input class="form-control myds-text" type="search"
+											placeholder="Search for a document" data-controller="studio-docs-dashboard"
+											data-context="search" data-type="search">
+
+										<div class="input-group-text">
+											<span class="fe fe-search"></span>
+										</div>
+									</div>
+									<div class="x-btn-group" role="x-group">
+										<a class="btn btn-sm btn-primary myds-navigate" href="#studio-docs-edit"><i
+												class="fa fa-plus mt-1"></i></a>
+									</div>
+								</div>
+
+								<div class="card-body p-0 d-none" id="studio-docs-dashboard-view"></div>
+							</div>
+						</div>
+						<div class="tab-pane pt-4" id="studio-docs-dashboard-folders">
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<div
+												class="input-group input-group-flush input-group-merge input-group-reverse">
+												<input class="form-control myds-text" type="search"
+													placeholder="Search for a folder"
+													data-controller="studio-docs-dashboard" data-context="search"
+													data-type="folders">
+
+												<div class="input-group-text">
+													<span class="fe fe-search"></span>
+												</div>
+											</div>
+										</div>
+
+										<div class="card-body p-0 d-none" id="studio-docs-dashboard-view"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-docs-summary" class="d-none myds-view">
+</div>
+
+<div id="_studio-docs-summary" class="d-none myds-view-template">
+
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Community Document
+						</h6>
+						<h1 class="header-title">
+							{{title}}
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-12 col-xl-5">
+				<div class="card">
+					<div class="card-body border-bottom text-dark">
+						<div class="">
+
+							<div class="row">
+								<div class="col-sm-12">
+									<h3 class="mb-0">
+										{{summary}}
+									</h3>
+									<div class="text-muted"><small>Summary</small></div>
+								</div>
+							</div>
+
+							<div class="row mt-3">
+								<div class="col-sm-12">
+									<h3 class="mb-0">
+										{{statustext}}
+									</h3>
+									<div class="text-muted"><small>Status</small></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="card-body pt-4 pb-2">
+						{{content}}
+					</div>
+
+					<div class="d-none card-body">
+						<button class="btn btn-default btn-outline btn-sm myds-navigate"
+							data-controller="studio-community-document-edit" id="studio-community-document-edit-{{id}}"
+							data-context="{{id}}" data-id="{{id}}">Edit
+							Document</button>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-12 col-xl-7 mt-xl-0 myds-view-body">
+
+				<div class="card">
+					<div class="card-header pt-1 pb-1 pr-2">
+						<h4 class="pull-left pt-1">Attachments (Files & Links)</h4>
+						<div class="pull-right">
+							<div class="btn-group btn-group-sm">
+								<a class="btn btn-white" role="button" data-toggle="collapse"
+									href="#studio-community-document-summary-attachments-link">
+									<i class="fa fa-link fa-fw"></i>
+								</a>
+								<a class="btn btn-white" role="button" data-toggle="collapse"
+									href="#studio-community-document-summary-attachments-upload">
+									<i class="fa fa-cloud-upload-alt fa-fw"></i>
+								</a>
+							</div>
+							<a class="ml-1 mr-1 myds-collapse-toggle" data-toggle="collapse" role="button"
+								href="#studio-community-document-summary-attachments-collapse">
+								<i class="fa fa-chevron-down text-muted ml-1"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="collapse myds-collapse" id="studio-community-document-summary-attachments-link"
+						data-controller="util-attachment-link-initialise" data-object="14" data-objectcontext="{{id}}"
+						data-context="studio-community-document-summary">
+						<div class="card-body py-2">
+							<form autocomplete="off">
+								<div class="form-group mt-2">
+									<h4><label class="text-muted mb-1"
+											for="lstudio-community-document-summary-attachments-link-url">Link
+											(URL)</label></h4>
+									<input type="text" class="form-control myds-text"
+										id="studio-community-document-summary-attachments-link-url"
+										data-controller="lstudio-community-document-summary-attachments-link"
+										data-context="url1">
+								</div>
+								<div class="form-group">
+									<h4><label class="text-muted mb-1"
+											for="studio-community-document-summary-attachments-link-description">Description
+											(optional)</label></h4>
+									<input type="text" class="form-control myds-text"
+										id="studio-community-document-summary-attachments-link"
+										data-controller="studio-community-document-summary-attachments-link"
+										data-context="title1">
+								</div>
+							</form>
+							<div class="text-center form-group">
+								<button type="button" class="btn btn-default btn-outline btn-sm mr-2 mb-3 myds-click"
+									data-object="14" data-objectcontext="{{id}}"
+									data-context="studio-community-document-summary"
+									data-controller="util-attachment-link-process">
+									Attach Link
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="collapse myds-collapse" id="studio-community-document-summary-attachments-upload"
+						data-controller="util-files-upload-initialise" data-object="1" data-objectcontext="{{id}}"
+						data-context="studio-community-document-summary">
+						<div class="card-body py-2">
+							<form class="dropzone myds-dropzone mb-3 mt-2"
+								id="studio-community-document-summary-attachments-upload-dropzone">
+								<div class="row"
+									id="studio-community-document-summary-attachments-upload-container-preview"></div>
+							</form>
+
+							<div class="text-center">
+								<button type="button" class="btn btn-default btn-outline btn-sm mr-2 mb-3 myds-click"
+									id="studio-community-document-summary-attachments-upload-process"
+									data-controller="util-attachment-upload-process"
+									data-target="#studio-community-document-summary-attachments-upload-dropzone">
+									Upload
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="collapse myds-collapse" id="studio-community-document-summary-attachments-collapse"
+						data-controller="util-files-show" data-object="1" data-objectcontext="{{id}}"
+						data-context="studio-community-document-summary">
+						<div id="studio-community-document-summary-attachments-view" class="card-body py-3">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- STUDIO | TOKENS -->
+
+<div id="studio-tokens" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Org
+						</h6>
+						<h1 class="header-title">
+							Tokens
+						</h1>
+					</div>
+					<div class="col-auto">
+						<button type="button" class="btn btn-default btn-outline btn-sm myds-navigate mb-2"
+							data-controller="studio-me-on-chain-edit" data-context="" data-id="">My On-Chain
+							Profile</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-md-9">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="card shadow-lg">
+							<div class="card-header pb-2">
+								<h2 class="mb-0">Community</h2>
+								<div class="col-auto pr-0">
+									<img class="img-fluid" style="width:35px;"
+										src="/site/2067/2068.image.selfdriven-token-cera-C.png">
+								</div>
+							</div>
+
+							<div class="card-body">
+								<div class="row">
+									<div class="col-6 text-center">
+										<h1 class="p-0 mb-2" style="font-size:3em;"><a href="#studio-tokens-use"
+												id="studio-tokens-community-dashboard-total-earned"
+												style="color:#9ecbed;">...</a></h1>
+										<small class="text-muted">Total Earned Tokens</small>
+									</div>
+									<div class="col-6 text-center">
+										<h1 class="p-0 mb-2" style="font-size:3em;"><a href="#studio-tokens-use"
+												id="studio-tokens-community-dashboard-total-used"
+												style="color:#9ecbed;">...</a></h1>
+										<small class="text-muted">Total Used Tokens</small>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body border-top p-0">
+								<div class="col-sm-12 p-0" id="studio-tokens-community-dashboard-transactions-view">
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-md-3 pl-md-4 d-none d-sm-block">
+				<div class="card shadow-lg" style="border-width: 0px;">
+					<div class="card-body p-0">
+						<img src="/site/2007/2007.image.octo.token-1.0.0.png"
+							class="img-responsive rounded-top img-fluid">
+					</div>
+					<div class="card-body">
+						<div class="text-center text-secondary">You can spend, invest or vote with your tokens.</div>
+						<div class="text-center mt-4">
+							<button class="btn btn-default btn-outline btn-sm myds-navigate w-100"
+								data-controller="studio-tokens-use" data-context="" data-id="">Use Tokens</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="card d-none">
+					<div class="card-body">
+						<div class="text-center text-muted">You can request tokens from a learning partner.</div>
+						<div class="text-center mt-4">
+							<button class="btn btn-default btn-outline btn-sm myds-navigate w-100"
+								data-controller="studio-tokens-request" data-context="" data-id="">Request
+								Tokens</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center"><span class="text-superscript">*</span> These tokens
+					can be or has been used for community services, i.e. buying food from the canteen.</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- STUDIO | TOKENS | USE -->
+
+<div id="studio-tokens-use" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle text-white">
+							My Tokens
+						</h6>
+						<h1 class="header-title">
+							Use
+						</h1>
+					</div>
+					<div class="col-auto">
+						<button type="button" class="btn btn-default btn-outline btn-sm myds-navigate mb-2"
+							data-controller="studio-tokens" data-context="" data-id="">My Tokens</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<h3 class="text-dark mb-1 w-75">Use your community (SDC) tokens to spend on community services e.g. buy
+			food, support community projects, vote on projects, or use on-chain.</h3>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row mt-4">
+			<div class="col-12 col-sm-4">
+				<div class="card h-100 shadow-lg">
+					<div class="card-header pb-2 text-center">
+						<h3 class="mb-0">Spend</h3>
+					</div>
+					<div class="card-body pb-0">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1 style="font-size:3em;""><a href=" #studio-tokens-use-spend"
+									id="studio-tokens-use-dashboard-spend" style="color:#9ecbed;">...</a></h1>
+								<div class="text-secondary w-100 mx-auto">Tokens earned by doing community service that
+									are available for moving to your spend account / spendable.</div>
+								<div class="text-muted w-75 mx-auto mt-3"><a href="#studio-tokens-use-spend">View
+										Tokens</a></div>
+								<h4 class="text-secondary mt-4 pt-4 w-75 mx-auto border-top">You have <a
+										href="#studio-tokens-use-spend" id="studio-tokens-use-dashboard-spend-spendable"
+										style="color:#9ecbed;"></a>
+									tokens in your spend account for spending on</h4>
+								<div class="text-muted w-75 mx-auto"><a href="#studio-community-services">Food /
+										Clothing</a></div>
+								<div class="text-muted w-75 mx-auto"><a href="#studio-community-improve">Community
+										Project</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-4 mt-4 mt-sm-0">
+				<div class="card h-100 shadow-lg">
+					<div class="card-header pb-2 text-center">
+						<h3 class="mb-0">Use On-Chain</h3>
+					</div>
+					<div class="card-body pb-0">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1 style="font-size:3em;"><a href="#studio-tokens-use-on-chain"
+										id="studio-tokens-use-dashboard-on-chain" style="color:#9ecbed;">...</a></h1>
+								<div class="text-secondary w-75 mx-auto">Tokens that can be moved on-chain for use with
+									other projects.</div>
+								<div class="text-muted w-75 mx-auto mt-3"><a href="#studio-tokens-use-on-chain">View
+										Tokens</a></div>
+								<h4 class="text-muted mt-4 pt-4 w-75 mx-auto border-top">Featured Projects</h4>
+								<div class="text-muted w-75 mx-auto"><a href="https://empowa.io"
+										target="_blank">empowa.io</a></div>
+								<div class="text-muted w-75 mx-auto"><a href="https://ito.veritree.com"
+										target="_blank">ito.veritree.com</a></div>
+								<div class="text-muted w-75 mx-auto"><a href="https://worldmobile.io"
+										target="_blank">worldmobile.io</a></div>
+								<div class="text-muted w-75 mx-auto"><a href="https://directed.dev"
+										target="_blank">DirectEd.dev</a></div>
+								<h4 class="text-muted mt-4 pt-4 w-75 mx-auto border-top">More Projects</h4>
+								<div class="text-muted w-75 mx-auto"><a href="https://www.cardanocube.io"
+										target="_blank">cardanocube.io</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-4 mt-4 mt-sm-0">
+				<div class="card h-100 shadow-lg">
+					<div class="card-header pb-2 text-center">
+						<h3 class="mb-0">Vote</h3>
+					</div>
+					<div class="card-body pb-0">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1 style="font-size:3em;"><a href="#studio-tokens-use-vote"
+										id="studio-tokens-use-dashboard-vote" style="color:#9ecbed;">...</a></h1>
+								<div class="text-muted w-100 mx-auto">Tokens earned by recognition within this community
+									or recoginition of accountability via check-ins. These tokens are available for
+									voting on a community decisions.</div>
+								<h4 class="text-muted mt-4 pt-4 w-75 mx-auto border-top">improve.community</h4>
+								<div class="text-muted w-75 mx-auto"><a href="#studio-community-improve">Applications
+										Open For Voting</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="row my-5 text-muted text-center">
+			<div>
+				<a href="https://www.selfdriven.education/octo" target="_blank" class="text-decoration-none">
+					<img src="/site/2134/selfdriven-art-series-3-octo.0.doing.stuff-thanks.png"
+						class="img-responsive mx-auto rounded-circle mb-3" style="height:60px;">
+				</a>
+			</div>
+			<div>
+				<a href="https://www.selfdriven.education/getting-on-chain" target="_blank" class="text-secondary"><i
+						class="far fa-info-circle mr-1"></i> Instructions to set up a wallet "On-Chain" <i
+						class="fa fa-external-link ml-1"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- STUDIO | TOKENS | USE | SPEND -->
+
+<div id="studio-tokens-use-spend" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Tokens
+						</h6>
+						<h1 class="header-title">
+							Spend On Community Services
+						</h1>
+					</div>
+					<div class="col-auto">
+						<button type="button" class="btn btn-link text-white myds-navigate mb-2"
+							data-controller="studio-tokens-use" data-context="" data-id="">Use Tokens</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<h3 class="text-dark">Spend your community tokens on community services.</h3>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row mt-0 px-3">
+			<ul class="nav nav-tabs myds-tab">
+				<li class="nav-item">
+					<a href="#studio-tokens-use-spend-move" data-toggle="tab" class="nav-link active"
+						data-controller="studio-tokens-use-spend-move">
+						Move
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#studio-tokens-use-spend-account" data-toggle="tab" class="nav-link"
+						data-controller="studio-tokens-use-spend-account">
+						My Spend Account
+					</a>
+				</li>
+			</ul>
+
+			<div class="tab-content px-0">
+				<div class="tab-pane active" id="studio-tokens-use-spend-move">
+					<div class="row align-items-end">
+						<div class="col">
+							<div class="text-dark mt-4">Select the tokens you wish to spend on community services.
+							</div>
+							<div class="text-dark">The tokens will then be available in your spend account.</div>
+						</div>
+						<div class="col-auto">
+							<button type="button" class="btn btn-default btn-outline btn-sm mb-3 myds-click"
+								data-controller="studio-tokens-use-spend-move-init" data-context="" data-id="">Move To
+								Spend Account</button>
+						</div>
+					</div>
+					<div class="card mt-4">
+						<div class="card-body p-0" id="studio-tokens-use-spend-move-view">
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="studio-tokens-use-spend-account">
+					<div class="card mt-4">
+						<div class="card-body p-0" id="studio-tokens-use-spend-account-view">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- STUDIO | TOKENS | USE | ON-CHAIN-->
+
+<div id="studio-tokens-use-on-chain" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Tokens
+						</h6>
+						<h1 class="header-title">
+							Use On-Chain
+						</h1>
+					</div>
+					<div class="col-auto">
+						<button type="button" class="btn btn-link text-white myds-navigate mb-2"
+							data-controller="studio-tokens-use" data-context="" data-id="">Use Tokens</button>
+						<button type="button" class="btn btn-default btn-outline btn-sm myds-navigate mb-2"
+							data-controller="studio-me-on-chain-edit" data-context="" data-id="">Edit Your
+							Profile</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<h3 class="text-dark">Use your tokens on the <a href="https://cardano.org" target="_blank">Cardano</a>
+			blockchain.</h3>
+		<div class="mt-4" id="studio-tokens-use-on-chain-profile"></div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row mt-0 px-3">
+			<ul class="nav nav-tabs myds-tab">
+				<li class="nav-item">
+					<a href="#studio-tokens-use-on-chain-move" data-toggle="tab" class="nav-link active"
+						data-controller="studio-tokens-use-on-chain-move">
+						Move
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#studio-tokens-use-on-chain-query" data-toggle="tab" class="nav-link"
+						data-controller="studio-tokens-use-on-chain-query">
+						View on On-Chain
+					</a>
+				</li>
+			</ul>
+
+			<div class="tab-content px-0">
+				<div class="tab-pane active" id="studio-tokens-use-on-chain-move">
+					<div class="row align-items-end">
+						<div class="col">
+							<div class="text-dark">Select the tokens you wish to move to the Cardano blockchain.</div>
+						</div>
+						<div class="col-auto">
+							<button type="button" class="btn btn-default btn-outline btn-sm mt-4 myds-click"
+								data-controller="studio-tokens-use-on-chain-move" data-context="" data-id="">Move To
+								Blockchain</button>
+						</div>
+					</div>
+					<div class="card mt-4">
+						<div class="card-body p-0" id="studio-tokens-use-on-chain-move-view">
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="studio-tokens-use-on-chain-query">
+					<div class="mt-4">
+						<div id="studio-tokens-use-on-chain-query-view">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- STUDIO | TOKENS | USE | VOTE-->
+
+<div id="studio-tokens-use-vote" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Tokens
+						</h6>
+						<h1 class="header-title">
+							Voting
+						</h1>
+					</div>
+					<div class="col-auto">
+						<button type="button" class="btn btn-link text-white myds-navigate mb-2"
+							data-controller="studio-tokens-use" data-context="" data-id="">Use Tokens</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<h3 class="text-dark">Use your tokens to vote on your community's decisions.</h3>
+	</div>
+
+	<div class="container-fluid mt-4">
+		<div class="row mt-0 px-0">
+			<div class="col-6">
+				<div class="card h-100">
+					<div class="card-header pb-2 text-center">
+						<h3 class="mb-0">Your Voting Tokens</h3>
+					</div>
+					<div class="card-body pb-0">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1 style="font-size:3em;"><a href="#" id="studio-tokens-use-dashboard-use-vote"
+										style="color:#9ecbed;">...</a></h1>
+								<div class="text-muted w-75 mx-auto">Tokens earned by doing community service that are
+									available for voting.</div>
+								<h2 class="text-muted w-75 mx-auto border-top mt-4 pt-4 mb-2"
+									id="studio-tokens-use-dashboard-use-vote-stake-allocation"></h2>
+								<div class="text-muted w-75 mx-auto">of the total community voting tokens</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="card h-100">
+					<div class="card-header pb-2 text-center">
+						<h3 class="mb-0">Community Voting Tokens</h3>
+					</div>
+					<div class="card-body pb-0">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1 style="font-size:3em;"><a href="#te"
+										id="studio-tokens-use-dashboard-use-vote-community"
+										style="color:#9ecbed;">...</a></h1>
+								<div class="text-muted w-75 mx-auto">Total voting tokens available within this
+									community.</div>
+								<h4 class="text-muted mt-4 pt-4 w-75 mx-auto border-top">improve.community</h4>
+								<div class="text-muted w-75 mx-auto"><a
+										href="#studio-community-projects/environment-improvement">Projects Open For
+										Voting</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- STUDIO | TOKENS | USE | REQUEST -->
+
+<div id="studio-tokens-request" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Tokens
+						</h6>
+						<h1 class="header-title">
+							Request
+						</h1>
+					</div>
+					<div class="col-auto">
+						<button type="button" class="btn btn-default btn-outline btn-sm myds-navigate mb-2"
+							data-controller="studio-tokens" data-context="{{guid}}" data-id="{{guid}}">My
+							Tokens</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="text-muted">Request a token that appears to be missing.</div>
+	</div>
+</div>
+
+<!-- STUDIO | ME | ON-CHAIN-->
+
+<div id="studio-me-on-chain-edit" class="hidden d-none myds-view">
+</div>
+
+<div id="_studio-me-on-chain-edit" class="hidden d-none myds-view-template">
+
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle text-white">
+							My On-Chain Profile
+						</h6>
+						<h1 class="header-title">
+							{{firstname}} {{surname}}
+						</h1>
+					</div>
+					<div class="col-auto">
+						<a href="/util-on-chain/#util-on-chain-dashboard" type="button"
+							class="btn btn-default btn-outline btn-sm myds-navigate mb-2 me-2">Connect Wallet</a>
+						<button type="button" class="btn btn-default btn-outline btn-sm myds-navigate mb-2"
+							data-controller="studio-tokens" data-context="{{guid}}" data-id="{{guid}}">My
+							Tokens</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="card mt-1">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-sm-12">
+								<form autocomplete="off">
+									<div class="form-group">
+										<h3 class="mb-1"><label class="form-label mb-0 mt-1">
+												Your Primary Cardano Account / Address</label>
+										</h3>
+										<div class="text-secondary my-3">
+											The public address or account (staking) key for your Cardano wallet.
+										</div>
+										<div class="text-secondary my-3">
+											You can also have it set by connecting to your wallet using the <a
+												href="/util-on-chain/#util-on-chain-dashboard">Connect Wallet</a>
+											option.
+										</div>
+										<textarea style="height:100px;" class="form-control myds-text"
+											id="studio-me-on-chain-edit-primary-address-{{id}}" data-id="{{id}}"
+											data-scope="studio-me-on-chain-edit-{{id}}"
+											data-context="cardano-primary-address"></textarea>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer border-top text-right">
+						<button type="button" class="btn btn-link myds-navigate" data-controller="studio-me"
+							id="studio-me-on-chain-edit-cancel-{{id}}" data-id="{{id}}">Cancel</button>
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							data-controller="studio-me-on-chain-edit-save" id="studio-me-on-chain-edit-save-{{id}}"
+							data-id="{{id}}">Save</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 pl-sm-5">
+				<div class="card">
+					<div class="card-header">
+						<div class="text-center">
+							<h3 class="mb-0">Wallet Set Up</h3>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="text-center text-secondary">If you don't already have a Cardano wallet, you will
+							need to set up one to store your identity, achievement & community tokens.</div>
+						<div class="text-center mt-4">
+							<a href="https://slfdrvn.education/getting-on-chain" target="_blank">Step by Step
+								Instuctions</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- STUDIO | FEED (WHAT'S UP) -->
+
+<div id="studio-feed" class="hidden d-none myds-view">
+	<div class="header mb-2">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Organisation
+						</h6>
+						<h1 class="header-title">
+							What's Up?
+						</h1>
+						<div class="text-dark mt-3">
+							A feed of recent updates to your to do tasks and zaps based on your connections to members
+							of the community, e.g. a zap or a reflection by a learning partner.
+						</div>
+					</div>
+					<div class="col-auto text-right pr-3 pb-3">
+						<i class="fe fe-zap text-white" style="font-size:2.2rem;"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid p-l-0 p-r-0">
+		<ul class="nav nav-tabs myds-tab">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#studio-feed-projects" data-type="projects"
+					data-controller="studio-feed">
+					<i class="fe fe-folder"></i> Projects
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#studio-feed-studio-profile" data-type="studio-profile"
+					data-controller="studio-feed">
+					<i class="fe fe-user"></i> Org Profile
+				</a>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane active pt-4" id="studio-feed-projects">
+				<div class="card">
+					<div class="card-header">
+						<form autocomplete="off">
+							<div class="input-group input-group-flush input-group-merge input-group-reverse">
+								<input type="text" class="form-control myds-text"
+									placeholder="Search my project tasks feed" data-controller="studio-feed-dashboard"
+									data-context="search">
+								<div class="input-group-text">
+									<span class="fe fe-search"></span>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="card-body" id="studio-feed-dashboard-view">
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane pt-4" id="studio-feed-studio-profile">
+				<div class="card">
+					<div class="card-header">
+						<form autocomplete="off">
+							<div class="input-group input-group-flush input-group-merge input-group-reverse">
+								<input type="text" class="form-control myds-text"
+									placeholder="Search my Org profile reflections/comments feed"
+									data-scope="studio-feed-dashboard-studio-profile"
+									data-controller="studio-feed-dashboard" data-context="search">
+								<div class="input-group-text">
+									<span class="fe fe-search"></span>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="card-body" id="studio-feed-dashboard-studio-profile-view">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- STUDIO | SETUP | TEMPLATES -->
+
+<div id="studio-setup-templates" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Setup
+						</h6>
+						<h1 class="header-title">
+							Templates
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-12 col-md-8">
+				<div class="row">
+					<div class="col-sm-12">
+						<form autocomplete="off">
+							<div class="card shadow-lg">
+								<div class="card-header">
+									<div class="input-group input-group-flush input-group-merge input-group-reverse">
+										<input class="form-control myds-text" type="search"
+											placeholder="Search for a template" data-controller="studio-setup-templates"
+											data-context="search">
+									</div>
+
+									<div class="x-btn-group" role="group">
+										<a class="btn btn-sm btn-primary myds-navigate"
+											href="#studio-setup-template-edit"><i class="fa fa-plus mt-1"></i></a>
+										<button class="d-none myds-export btn btn-sm btn-primary myds-navigate"
+											role="button" type="button" data-scope="studio-setup-templates"
+											data-filename="project-templates.csv">
+											<i class="fa fa-cloud-download-alt"></i>
+										</button>
+									</div>
+								</div>
+
+								<div class="card-body p-0 d-none" id="studio-setup-templates-view">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 pl-md-4 d-none d-sm-block">
+				<div class="card shadow">
+					<div class="card-body">
+						<h2 class="text-center" style="color: #8bc34a;">Need Help?</h2>
+						<div class="text-center text-secondary">Check out the guide to help you build a template,
+							including
+							worksheet templates, how to use Generative AI & more.</div>
+						<div class="text-center mt-4">
+							<a class="btn btn-default btn-outline btn-sm myds-navigate w-100"
+								href="https://slfdrvn.education/building-a-template" target="_blank">Guide
+								<i class="fe fe-external-link"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="card shadow">
+					<div class="card-body mt-3">
+						<h2 class="text-center" style="color: #8bc34a;">skillzeb Templates Explorer</h2>
+						<div class="text-center text-secondary">Search for a community shared template to use as-is or
+							modify
+							to your needs.</div>
+						<div class="text-center text-secondary mt-2">Download it, and then attach it to the template you
+							are creating.</div>
+						<div class="text-center text-secondary mt-2">You can also share your templates for other
+							learning partners & communities to use.</div>
+						<div class="text-center mt-4">
+							<a class="btn btn-default btn-outline btn-sm myds-navigate w-100"
+								href="https://skillzeb.io/template-explorer" target="_blank">Explorer <i
+									class="fe fe-external-link"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-setup-template-summary" class="d-none myds-view">
+</div>
+
+<div id="_studio-setup-template-summary" class="d-none myds-view-template">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Setup Template
+						</h6>
+						<h1 class="header-title">
+							{{description}}
+						</h1>
+					</div>
+					<div class="col-auto text-right">
+						{{_publishButton}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-xl-12">
+				<div class="card">
+					<div class="card-body pt-3 pb-4">
+						<div class="row">
+							<div class="col-12 col-md-3">
+								<div class="text-muted"><small>Reference</small></div>
+								<h3 class="mb-0">
+									{{reference}}
+								</h3>
+							</div>
+							<div class="col-12 col-md-4">
+								<div class="text-muted"><small>Created By</small></div>
+								<h3 class="mb-0">
+									{{createdusertext}}
+								</h3>
+							</div>
+							
+							<div class="col-12 col-md-4">
+								<div class="text-muted"><small>Template ID</small></div>
+								<h3 class="mb-0">
+									{{guid}}
+								</h3>
+							</div>
+							<div class="col-12 col-md-1 mt-3 mt-md-0 text-right pt-3">
+								<button class="btn btn-default btn-outline btn-sm myds-navigate"
+									data-controller="studio-setup-template-edit" id="studio-setup-template-edit-{{id}}"
+									data-context="{{id}}" data-id="{{id}}">Edit</button>
+							</div>
+						</div>
+					</div>
+					<div class="card-body pb-2 border-top {{myds-hide-if-empty-notes}}">
+						{{notes}}
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-xl-12">
+				<div class="card">
+					<div class="card-header pt-1 pb-1 pr-2">
+						<div class="float-left">
+							<h3 class="pt-1 mb-0">Template Definition</h3>
+							<div class="text-muted small" id="studio-setup-template-summary-information-filename">
+								Based on attached template file
+							</div>
+						</div>
+						<div class="float-right">
+							<button class="myds-click btn btn-sm btn-default mr-1" role="button"
+								data-controller="studio-setup-template-summary-information-edit">
+								<i class="fa fa-edit"></i> Edit
+							</button>
+
+							<button class="myds-click btn btn-sm btn-default mr-1" role="button"
+								data-controller="studio-setup-template-summary-information-show">
+								<i class="fa fa-sync"></i>
+							</button>
+
+							<a class="btn btn-default btn-sm myds-collapse-toggle" data-toggle="collapse" role="button"
+								href="#studio-setup-template-summary-information-collapse" data-view-only="true">
+								View
+								<i class="fa fa-chevron-down"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="collapse myds-collapse" id="studio-setup-template-summary-information-collapse"
+						data-controller="studio-setup-template-summary-information-show" data-project="{{id}}"
+						data-context="studio-setup-template-summary">
+						<div id="studio-setup-template-summary-information-view" class="card-body py-3">
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-3" id="util-template-structure-edit"></div>
+
+				<div class="mt-3" id="studio-setup-template-summary-attachments-container"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-setup-template-edit" class="d-none myds-view">
+</div>
+
+<div id="_studio-setup-template-edit" class="hidden d-none myds-view-template">
+	<div class="container-fluid">
+		<div class="row mt-4">
+			<div class="col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h2 class="my-1">Edit Template</h2>
+					</div>
+					<div class="card-body">
+						<form autocomplete="off">
+							<div class="row">
+								<div class="col-12">
+									<div class="form-group w-50">
+										<h4 class="mb-0"><label class="mb-0 text-secondary"
+												for="studio-setup-template-edit-reference-{{id}}">Reference</label></h4>
+										<div class="text-muted small mb-2">Leave blank for default</div>
+										<input type="text" class="form-control input-lg myds-text"
+											id="studio-setup-template-edit-reference-{{id}}" value="" data-value=""
+											data-id="{{id}}" data-scope="studio-setup-template-edit-{{id}}"
+											data-context="reference">
+									</div>
+									<div class="d-none form-group">
+										<h4><label class="mb-1 mt-1 text-secondary"
+												for="studio-setup-template-edit-type-{{id}}">Type</label>
+										</h4>
+										<select class="form-control input-lg myds-select"
+											id="studio-setup-template-edit-type-{{id}}" style="width:100%;"
+											data-id="{{type}}" data-scope="studio-setup-template-edit-{{id}}"
+											data-context="type" data-text="{{typetext}}">
+										</select>
+									</div>
+									<div class="d-none form-group">
+										<h4><label class="mb-1 mt-1 text-secondary"
+												for="studio-setup-template-edit-category-{{id}}">Size</label>
+										</h4>
+										<select class="form-control input-lg myds-select"
+											id="studio-setup-template-edit-category-{{id}}" style="width:100%;"
+											data-id="{{category}}" data-scope="studio-setup-template-edit-{{id}}"
+											data-context="category" data-text="{{categorytext}}">
+										</select>
+									</div>
+
+									<div class="form-group">
+										<h4><label class="mb-0 mt-1 text-secondary"
+												for="studio-setup-template-edit-description-{{id}}">Title</label>
+										</h4>
+										<textarea style="height:80px;" class="form-control myds-text myds-validate"
+											data-validate-mandatory id="studio-setup-template-edit-{{id}}"
+											data-id="{{id}}" data-scope="studio-setup-template-edit-{{id}}"
+											data-context="description"></textarea>
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="form-group">
+										<h4><label class="mb-0 mt-1 text-secondary"
+												for="studio-setup-template-edit-notes-{{id}}">Description /
+												Notes</label>
+										</h4>
+										<textarea style="height:315px;" class="form-control myds-text myds-validate"
+											data-validate-mandatory id="studio-setup-template-edit-notes-{{id}}"
+											data-id="{{id}}" data-scope="studio-setup-template-edit-{{id}}"
+											data-context="notes"></textarea>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="card-footer border-top text-right">
+						<button type="button" class="btn btn-link myds-navigate"
+							data-controller="studio-setup-template-summary"
+							id="studio-setup-template-edit-cancel-{{id}}" data-id="{{id}}">Cancel</button>
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							data-controller="studio-setup-template-edit-save"
+							id="studio-setup-template-edit-save-{{id}}" data-id="{{id}}">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- STUDIO | EXPLORER -->
+
+<div id="studio-explorer" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							skillzeb
+						</h6>
+						<h1 class="header-title">
+							Explorer
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<div class="card shadow">
+					<div class="card-body">
+						<h1 class="text-center" style="color: #8bc34a;">Templates</h1>
+						<div class="text-center text-secondary">Search for a community shared template to use as-is or
+							modify
+							to your needs.</div>
+						<div class="text-center text-secondary mt-2">Simply download it, and then attach it to the
+							template you are creating.</div>
+
+						<div class="text-center mt-4">
+							<a class="btn btn-default btn-outline btn-sm myds-navigate w-50"
+								href="https://skillzeb.io/template-explorer" target="_blank">Explore <i
+									class="fe fe-external-link"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="card shadow">
+					<div class="card-body">
+						<h1 class="text-center" style="color: #8bc34a;">Skills</h1>
+						<div class="text-center text-secondary">Search for a Universal Skill to use with your templates.
+						</div>
+						<div class="text-center text-secondary mt-2"></div>
+						<div class="text-center mt-4">
+							<a class="btn btn-default btn-outline btn-sm myds-navigate w-50"
+								href="https://skillzeb.io/skillset-explorer" target="_blank">Explore <i
+									class="fe fe-external-link"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="studio-connections" class="hidden d-none myds-view">
+	<div class="header mb-0">
+		<div class="container-fluid">
+			<div class="header-body pt-3 pb-0">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Studio
+						</h6>
+						<h1 class="header-title">
+							Learners
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 mt-0">
+				<ul class="nav nav-tabs myds-tab">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab"
+							href="#studio-connections-dashboard-learners" data-view-type="learners"
+							data-controller="studio-connections-dashboard">
+							<i class="fe fe-user"></i> Learners You're Supporting
+						</a>
+					</li>
+					<li class="d-none nav-item">
+						<a class="nav-link" data-toggle="tab"
+							href="#studio-connections-dashboard-learning-verify"
+							data-view-type="learning-verify"
+							data-controller="studio-connections-dashboard-learning-verify">
+							<i class="far fa-check-square"></i> Verify Learning
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab"
+							href="#studio-connections-dashboard-learning"
+							data-view-type="learning-verify"
+							data-controller="studio-connections-dashboard-learning">
+							<i class="far fa-check-square"></i> Completed Learning
+						</a>
+					</li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane active pt-4" id="studio-connections-dashboard-learners">
+						<div class="row">
+							<div class="col-12 col-md-8">
+								<div class="row">
+									<div class="col-12">
+										<form autocomplete="off">
+											<div class="card shadow-lg">
+												<div class="card-body p-3">
+													<div
+														class="input-group input-group-flush input-group-merge myds-toolbar">
+														<input type="text" class="pl-2 form-control myds-text"
+															placeholder="Search for a learner"
+															data-controller="studio-connections-dashboard"
+															data-context="search" data-view-type="learners">
+
+													</div>
+												</div>
+											</div>
+										</form>
+										<div class="p-0 mt-4" id="studio-connections-view">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-md-4 pl-md-4">
+
+								<div class="card shadow-lg">
+									<div class="card-body pb-3">
+										<div class="text-center">
+											<h3>Sign Up a Learner</h3>
+											<div class="text-secondary mt-3">
+												Generate a unique sign up link for a learner.
+											</div>
+											<div class="text-secondary mt-2 mb-2">
+												The learner will be automatically connected to you.
+											</div>
+											<div class="text-center mt-4 pb-3">
+												<a href="#studio-connections-dashboard-learners-signup-collapse" data-toggle="collapse"
+													class="btn btn-default btn-outline btn-sm">
+													Sign Up <i
+														class="fa fa-chevron-down ml-1"></i></a>
+											</div>
+
+											<div class="text-center mt-2 collapse entityos-collapse" id="studio-connections-dashboard-learners-signup-collapse"
+												data-controller="studio-connections-dashboard-learners-signup-init">
+												<form autocomplete="off">
+													<div class="form-group">
+														<input type="text" class="form-control form-control-lg text-center mx-auto entityos-text"
+															id="studio-connections-dashboard-learners-signup-firstname"
+															data-scope="studio-connections-dashboard-learners-signup-learner"
+															data-context="contactpersonfirstname"
+															placeholder="First Name">
+													</div>
+													<div class="form-group pt-1">
+														<input type="text" class="form-control form-control-lg text-center mx-auto entityos-text"
+															id="studio-connections-dashboard-learners-signup-lastname"
+															data-scope="studio-connections-dashboard-learners-signup-learner"
+															data-context="contactpersonlastname" placeholder="Last Name">
+													</div>
+													<div class="form-group pt-1">
+														<input type="text" class="form-control form-control-lg text-center mx-auto entityos-text"
+															id="studio-connections-dashboard-learners-signup-lastname"
+															data-scope="studio-connections-dashboard-learners-signup-learner"
+															data-context="contactpersonemail"
+															placeholder="Email">
+													</div>
+												</form>
+												<div class="d-none text-center ">
+													<button class="mt-2 btn btn-default btn-outline entityos-click"
+														data-controller="studio-connections-dashboard-learners-signup"
+														data-type="generate">
+														Send Invite <i
+															class="fa fa-paper-plane ml-1"></i></button>
+												</div>
+												<div class="text-center mt-2">
+													<button class="btn btn-default btn-outline entityos-click"
+														data-controller="studio-connections-dashboard-learners-signup"
+														data-type="generate">
+														Generate Link</button>
+												</div>
+												<div id="studio-connections-dashboard-learners-signup-view" class="text-center mt-2 pb-3"></div>
+
+												<div class="text-secondary mt-2">
+													The sign up link will include your unique code, and for each sign up you will earn <a href="#learner-tokens">Octo tokens</a>.
+												</div>
+												<div class="text-secondary mt-2 mb-2">
+													You can use these Octos for useful resources within your community.
+												</div>
+												<div class="text-secondary mt-2 mb-2">
+													<a href="https://docs.selfdriven.foundation/octomics/diagram" target="_blank">More about octomics <i class="fe fe-external-link"></i></a>
+												</div>
+											
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane pt-4" id="studio-connections-dashboard-learning-verify">
+						<div class="row">
+							<div class="col-12">
+								<form autocomplete="off">
+									<div class="card shadow-lg">
+										<div class="card-body p-3">
+											<div class="input-group input-group-flush input-group-merge myds-toolbar">
+												<input type="text" class="pl-2 form-control myds-text"
+													placeholder="Search for a connection i.e. learner you are supporting to verify their learning"
+													data-controller="studio-connections-dashboard-learning-verify"
+													data-context="search" data-view-type="learning-verify">
+											</div>
+										</div>
+									</div>
+								</form>
+								<div class="p-0 mt-4" id="studio-connections-learning-verify-view">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane pt-4" id="studio-connections-dashboard-learning">
+						<div class="row">
+							<div class="col-12">
+								<div class="card shadow">
+									<div class="card-body px-1 py-0" id="studio-connections-learning-view">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

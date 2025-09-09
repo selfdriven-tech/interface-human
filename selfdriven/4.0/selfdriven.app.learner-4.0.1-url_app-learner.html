@@ -1,0 +1,617 @@
+<!--
+  {
+      title: "Form; App; Learner",
+      design: ""
+    }
+-->
+
+<!-- ROLE | LEARNER -->
+
+<div id="learner-dashboard" class="d-none entityos-view">
+	<div class="x-container-fluid">
+		<div class="row">
+			<!-- Sidebar -->
+			<div class="col-md-3 sidebar p-4 ps-5">
+
+				<div class="header">
+					<div class="selfdriven-app-dashboard-header">Dashboard</div>
+					<button class="add-button">+</button>
+				</div>
+
+				<!-- Profile Section -->
+				<div class="profile-section">
+					<div class="avatar">
+						KS
+					</div>
+					<div class="selfdriven-app-profile-info-container">
+						<div class=""><span class="entityos-logon-first-name">&nbsp;</span> <span
+								class="entityos-logon-surname"></span></div>
+						<div>
+							<a href="#learner-profile" class="text-app profile-section-link">Profile</a>
+						</div>
+						<div>
+							<a href="#" class="text-app entityos-logoff profile-section-link">Log off</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Stats Section -->
+				<div class="selfdriven-app-dashboard-simple-container">
+					<div class="selfdriven-app-dashboard-simple-item">
+						<div class="selfdriven-app-dashboard-simple-number">1</div>
+						<div class="selfdriven-app-dashboard-simple-label">Projects</div>
+					</div>
+					<div class="selfdriven-app-dashboard-simple-item">
+						<div class="selfdriven-app-dashboard-simple-number">0</div>
+						<div class="selfdriven-app-dashboard-simple-label">Challenges</div>
+					</div>
+					<div class="selfdriven-app-dashboard-simple-item">
+						<div class="selfdriven-app-dashboard-simple-number">0</div>
+						<div class="selfdriven-app-dashboard-simple-label">Connections</div>
+					</div>
+				</div>
+
+
+				<hr>
+				<div class="nav-tabs-container">
+					<ul class="nav selfdriven-app-tabs-simple">
+						<span>
+							<button class="nav-link selfdriven-app-tab" id="pills-home-tab" data-bs-toggle="pill"
+								data-bs-target="#pills-home" type="button" role="tab">What's up</button>
+						</span>
+						<span>
+							<button class="nav-link active selfdriven-app-tab" id="pills-home-tab-p"
+								data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+								role="tab">Projects</button>
+						</span>
+					</ul>
+				</div>
+
+				<!-- Project Card -->
+				<div class="project-card">
+					<div class="project-icon">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M0 7.30788L7.22845 0V7.30788L0 14.6158V7.30788ZM7.33714 20.0003H0L14.5112 5.32959V12.7474L7.33714 20.0003ZM12.8809 19.9458L20.0006 12.7478V19.9458H12.8809Z"
+								fill="url(#paint0_linear_277_1877)" />
+							<defs>
+								<linearGradient id="paint0_linear_277_1877" x1="9.70676" y1="19.7818" x2="8.42237"
+									y2="0.0837463" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#420633" />
+									<stop offset="1" stop-color="#420633" stop-opacity="0.75" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div>
+
+					<div class="project-info">
+						<div class="project-title">Onboarding project</div>
+						<div class="d-flex align-items-center">
+							<div class="progress flex-grow-1">
+								<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+									aria-valuemax="100"></div>
+							</div>
+							<span class="progress-text">0%</span>
+						</div>
+					</div>
+
+					<div class="chevron-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+							viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9 p-4">
+				<div class="selfdriven-app-header">Your selfdriven projects</div>
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Active</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Completed</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Archived</a>
+					</li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane active">
+						<div class="card mt-4">
+							<div class="card-body p-0">
+								<div class="row">
+									<div class="col-auto">
+										<svg width="234" height="153" viewBox="0 0 234 153" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_277_1898)">
+												<path
+													d="M0 8C0 3.58172 3.58172 0 8 0H234V153H8C3.58172 153 0 149.418 0 145V8Z"
+													fill="#DE5A31" />
+												<rect x="16" y="137" width="32" height="32" rx="3.2"
+													transform="rotate(-90 16 137)" fill="#DE5A31" />
+												<rect x="15.5" y="137.5" width="33" height="33" rx="3.7"
+													transform="rotate(-90 15.5 137.5)" stroke="white"
+													stroke-opacity="0.2" />
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													d="M24 118.846L29.7828 113V118.846L24 124.692V118.846ZM29.8697 129H24L35.609 117.264V123.198L29.8697 129ZM34.3047 128.956L40.0005 123.198V128.956H34.3047Z"
+													fill="url(#paint0_linear_277_1898)" />
+												<g opacity="0.2">
+													<path
+														d="M108.654 48.4318L112.914 64.4986L200.762 368.098L475.106 303.217L489.391 299.412L201.02 367.622L108.654 48.4318ZM87.9116 -29.7499L91.9609 -14.475L207.965 353.876L545.758 284.408L559.299 280.797L208.443 352.966L87.9116 -29.7499ZM495.779 -214.379L69.0667 -100.747L84.9189 -40.993L215.175 339.641L569.376 278.112L622.698 263.913L495.779 -214.379ZM445.95 -115.964L454.483 -96.385L445.585 -115.244L426.911 -114.622L445.95 -115.964ZM438.815 -101.877L456.229 -64.9868L438.102 -100.469L402.097 -100.661L438.815 -101.877ZM431.676 -87.7815L458.288 -35.6951L430.625 -85.7061L378.819 -88.0492L431.676 -87.7815ZM424.525 -73.663L460.547 -8.54976L423.148 -70.977L357.117 -76.7098L424.525 -73.663ZM417.357 -59.5432L463.003 16.6465L415.7 -56.2389L336.639 -66.5581L417.357 -59.5432ZM410.204 -45.3882L465.559 39.9252L408.239 -41.5421L317.77 -57.4474L410.204 -45.3882ZM403.015 -31.2284L468.21 61.4059L400.795 -26.8436L300.116 -49.3229L403.015 -31.2284ZM395.838 -17.0574L471.018 81.3648L393.359 -12.1637L283.556 -42.1233L395.838 -17.0574ZM388.648 -2.86092L473.841 99.7518L385.942 2.51486L268.174 -35.7238L388.648 -2.86092ZM381.452 11.3462L476.714 116.727L378.508 17.1581L253.847 -30.074L381.452 11.3462ZM374.262 25.5764L479.56 132.336L371.106 31.8075L240.604 -25.0749L374.262 25.5764ZM367.052 39.8108L482.387 146.72L363.694 46.4416L228.203 -20.7041L367.052 39.8108ZM359.841 54.0472L485.246 160.008L356.278 61.0488L216.678 -16.8902L359.841 54.0472ZM352.619 68.307L488.147 172.298L348.893 75.663L205.976 -13.5596L352.619 68.307ZM345.381 82.5632L491.001 183.614L341.414 90.2205L195.891 -10.7662L345.381 82.5632ZM338.084 96.7967L493.847 194.05L334.103 104.864L186.565 -8.34736L338.084 96.7967ZM330.918 111.119L496.774 203.714L326.717 119.448L177.731 -6.41083L330.918 111.119ZM323.696 125.412L499.86 212.713L319.317 134.024L169.328 -4.99857L323.696 125.412ZM316.453 139.712L502.927 220.98L311.947 148.609L161.537 -3.88357L316.453 139.712ZM309.218 153.997L506.249 228.655L304.564 163.187L154.043 -3.33185L309.218 153.997ZM301.963 168.289L509.723 235.746L297.181 177.764L146.933 -3.20357L301.963 168.289ZM294.723 182.581L513.477 242.27L289.785 192.332L140.068 -3.69009L294.723 182.581ZM287.49 196.896L517.503 248.256L282.421 206.904L133.569 -4.59205L287.49 196.896ZM280.248 211.195L521.937 253.7L275.032 221.494L127.186 -6.30044L280.248 211.195ZM273.005 225.495L526.859 258.603L267.648 236.073L121.028 -8.65706L273.005 225.495ZM265.767 239.787L532.085 262.938L260.245 250.655L115.08 -11.7407L265.767 239.787ZM258.515 254.071L538.11 266.698L252.855 265.246L109.295 -15.6655L258.515 254.071ZM251.283 268.35L544.617 269.834L245.47 279.861L103.659 -20.5244L251.283 268.35ZM244.068 282.629L551.684 272.326L238.063 294.451L98.1915 -26.3472L244.068 282.629ZM236.83 296.885L559.71 274.11L230.662 309.064L92.8461 -33.3041L236.83 296.885ZM229.606 311.149L568.425 275.152L223.257 323.684L87.6843 -41.4219L229.606 311.149ZM215.845 338.317L82.7235 -50.7072L222.385 325.406L578.029 275.403L215.845 338.317Z"
+														fill="#13110F" />
+												</g>
+											</g>
+											<defs>
+												<linearGradient id="paint0_linear_277_1898" x1="31.7654" y1="128.825"
+													x2="30.7378" y2="113.067" gradientUnits="userSpaceOnUse">
+													<stop stop-color="#420633" />
+													<stop offset="1" stop-color="#420633" stop-opacity="0.75" />
+												</linearGradient>
+												<clipPath id="clip0_277_1898">
+													<path
+														d="M0 8C0 3.58172 3.58172 0 8 0H234V153H8C3.58172 153 0 149.418 0 145V8Z"
+														fill="white" />
+												</clipPath>
+											</defs>
+										</svg>
+									</div>
+									<div class="col-auto">
+										<div class="selfdriven-app-card-body-header">Onboarding project</div>
+										<div class="selfdriven-app-card-body-text">Understand the selfdriven platform
+											better step by step.</div>
+										<div class="mt-3">
+											<span class="badge selfdriven-app-card-body-badge">selfdriven</span>
+											<span class="badge selfdriven-app-card-body-badge">Onboarding</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="selfdriven-app-notification">
+					<div class="selfdriven-app-notification-header">Future projects will be listed here</div>
+					<div class="selfdriven-app-notification-text">After completing the 'Onboarding' project you are able
+						to create projects based on learning
+						templates.</div>
+					<div class="mt-4">
+						<button class="btn selfdriven-app-btn">Start a project</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="learner-whats-up" class="d-none entityos-view">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 p-4">
+				<div class="selfdriven-app-header">What's Up?</div>
+				<div class="pt-3">
+					<div class="d-inline-block">
+						<ul class="nav selfdriven-app-tabs-simple entityos-tab">
+							<li class="nav-item">
+								<a class="nav-link selfdriven-app-tab active" data-toggle="tab"
+									href="#learner-whats-up-all" data-type="activity"
+									data-controller="learner-whats-up">
+									All
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link selfdriven-app-tab" data-toggle="tab"
+									href="#learner-whats-up-updates" data-type="projects"
+									data-controller="learner-whats-up">
+									Updates
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link selfdriven-app-tab" data-toggle="tab"
+									href="#learner-whats-up-projects" data-type="level-up-profile"
+									data-controller="learner-whats-up">
+									Projects
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tab-content">
+						<div class="tab-pane active pt-4" id="learner-whats-up-all">
+							<div id="learner-whats-up-all-view"></div>
+						</div>
+						<div class="tab-pane pt-4" id="learner-whats-up-updates">
+							[Updates]
+						</div>
+						<div class="tab-pane pt-4" id="learner-whats-up-projects">
+							[Projects]
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="learner-projects" class="d-none entityos-view">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 p-4">
+				<div class="selfdriven-app-header">Projects</div>
+				<div id="learner-projects-dashboard-view-project-container"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="learner-connections" class="d-none entityos-view">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 p-4">
+				<div class="selfdriven-app-header">Connections</div>
+				<div id="learner-connections-view"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="learner-achievements" class="d-none entityos-view">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 p-4">
+				<div class="selfdriven-app-header">Achievements</div>
+				<div id="learner-achievements-view"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="learner-tokens" class="d-none entityos-view">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 p-4">
+				<div class="selfdriven-app-header">Tokens</div>
+				<div class="pt-3">
+					<div class="row">
+						<div class="col-12 col-md-9">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-6 text-center">
+													<h1 class="p-0 mb-2" style="font-size:3em;"><a
+															href="#learner-tokens-use"
+															id="learner-tokens-community-dashboard-total-earned"
+															style="color:#9ecbed;">...</a></h1>
+													<small class="text-muted">Total Earned
+														Tokens</small>
+												</div>
+												<div class="col-6 text-center">
+													<h1 class="p-0 mb-2" style="font-size:3em;"><a
+															href="#learner-tokens-use"
+															id="learner-tokens-community-dashboard-total-used"
+															style="color:#9ecbed;">...</a></h1>
+													<small class="text-muted">Total Used Tokens</small>
+												</div>
+											</div>
+										</div>
+
+										<div class="card-body border-top p-0">
+											<div class="col-sm-12 p-0"
+												id="learner-tokens-community-dashboard-transactions-view">
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12 col-md-3 pl-md-4 d-none d-sm-block">
+							<div class="card" style="border-width: 0px;">
+								<div class="d-none card-body p-0">
+									<img src="/site/2007/2007.image.octo.token-1.0.0.png"
+										class="img-responsive rounded-top img-fluid">
+								</div>
+								<div class="card-body">
+									<div class="text-center text-secondary">You can spend, invest or
+										vote with your
+										tokens.</div>
+									<div class="text-center mt-4">
+										<button class="btn btn-default btn-outline btn-sm myds-navigate w-100"
+											data-controller="learner-tokens-use" data-context="" data-id="">Use
+											Tokens</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="card d-none">
+								<div class="card-body">
+									<div class="text-center text-muted">You can request tokens from a
+										learning
+										partner.</div>
+									<div class="text-center mt-4">
+										<button class="btn btn-default btn-outline btn-sm myds-navigate w-100"
+											data-controller="learner-tokens-request" data-context="" data-id="">Request
+											Tokens</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="text-center"><span class="text-superscript">*</span> These
+								tokens
+								can be or has been used for community services, i.e. buying food from
+								the canteen.
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="learner-tokens-use" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle text-white">
+							My Tokens
+						</h6>
+						<h1 class="header-title">
+							Use
+						</h1>
+					</div>
+					<div class="col-auto">
+						<button type="button" class="btn btn-default btn-outline btn-sm myds-navigate mb-2"
+							data-controller="learner-tokens" data-context="" data-id="">My
+							Tokens</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<h3 class="text-dark mb-1 w-75">Use your community (SDC) tokens to spend on
+			community services
+			e.g. buy
+			food, support community projects, vote on projects, or use on-chain.</h3>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row mt-4">
+			<div class="col-12 col-sm-4">
+				<div class="card h-100 shadow-lg">
+					<div class="card-header pb-2 text-center">
+						<h3 class="mb-0">Spend</h3>
+					</div>
+					<div class="card-body pb-0">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1 style="font-size:3em;""><a href=" #learner-tokens-use-spend"
+									id="learner-tokens-use-dashboard-spend" style="color:#9ecbed;">
+									...</a></h1>
+								<div class="text-secondary w-100 mx-auto">Tokens earned by
+									doing
+									community service that
+									are available for moving to your spend account /
+									spendable.</div>
+								<div class="text-muted w-75 mx-auto mt-3"><a href="#learner-tokens-use-spend">View
+										Tokens</a></div>
+								<h4 class="text-secondary mt-4 pt-4 w-75 mx-auto border-top">
+									You have <a href="#learner-tokens-use-spend"
+										id="learner-tokens-use-dashboard-spend-spendable" style="color:#9ecbed;"></a>
+									tokens in your spend account for spending on</h4>
+								<div class="text-muted w-75 mx-auto"><a href="#learner-community-services">Food /
+										Clothing</a></div>
+								<div class="text-muted w-75 mx-auto"><a href="#learner-community-improve">Community
+										Project</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-4 mt-4 mt-sm-0">
+				<div class="card h-100 shadow-lg">
+					<div class="card-header pb-2 text-center">
+						<h3 class="mb-0">Use On-Chain</h3>
+					</div>
+					<div class="card-body pb-0">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1 style="font-size:3em;"><a href="#learner-tokens-use-on-chain"
+										id="learner-tokens-use-dashboard-on-chain" style="color:#9ecbed;">...</a></h1>
+								<div class="text-secondary w-75 mx-auto">Tokens that can be
+									moved
+									on-chain for use with
+									other projects.</div>
+								<div class="text-muted w-75 mx-auto mt-3"><a href="#learner-tokens-use-on-chain">View
+										Tokens</a></div>
+								<h4 class="text-muted mt-4 pt-4 w-75 mx-auto border-top">
+									Featured
+									Projects</h4>
+								<div class="text-muted w-75 mx-auto"><a href="https://empowa.io"
+										target="_blank">empowa.io</a></div>
+								<div class="text-muted w-75 mx-auto"><a href="https://ito.veritree.com"
+										target="_blank">ito.veritree.com</a></div>
+								<div class="text-muted w-75 mx-auto"><a href="https://worldmobile.io"
+										target="_blank">worldmobile.io</a></div>
+								<div class="text-muted w-75 mx-auto"><a href="https://mav100.com"
+										target="_blank">mav100.com</a></div>
+								<div class="text-muted w-75 mx-auto"><a href="https://directed.dev"
+										target="_blank">DirectEd.dev</a></div>
+								<h4 class="text-muted mt-4 pt-4 w-75 mx-auto border-top">
+									More Projects
+								</h4>
+								<div class="text-muted w-75 mx-auto"><a href="https://www.cardanocube.io"
+										target="_blank">cardanocube.io</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-4 mt-4 mt-sm-0">
+				<div class="card h-100 shadow-lg">
+					<div class="card-header pb-2 text-center">
+						<h3 class="mb-0">Vote</h3>
+					</div>
+					<div class="card-body pb-0">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1 style="font-size:3em;"><a href="#learner-tokens-use-vote"
+										id="learner-tokens-use-dashboard-vote" style="color:#9ecbed;">...</a></h1>
+								<div class="text-muted w-100 mx-auto">Tokens earned by
+									recognition
+									within this community
+									or recoginition of accountability via check-ins. These
+									tokens are
+									available for
+									voting on a community decisions.</div>
+								<h4 class="text-muted mt-4 pt-4 w-75 mx-auto border-top">
+									improve.community</h4>
+								<div class="text-muted w-75 mx-auto"><a href="#learner-community-improve">Applications
+										Open For Voting</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="row my-5 text-muted text-center">
+			<div>
+				<a href="https://www.selfdriven.education/octo" target="_blank" class="text-decoration-none">
+					<img src="/site/2134/selfdriven-art-series-3-octo.0.doing.stuff-thanks.png"
+						class="img-responsive mx-auto rounded-circle mb-3" style="height:60px;">
+				</a>
+			</div>
+			<div>
+				<a href="https://www.selfdriven.education/getting-on-chain" target="_blank" class="text-secondary"><i
+						class="far fa-info-circle mr-1"></i>
+					Instructions to set
+					up a wallet "On-Chain" <i class="fa fa-external-link ml-1"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="learner-tokens-use-on-chain" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Tokens
+						</h6>
+						<h1 class="header-title">
+							Use On-Chain
+						</h1>
+					</div>
+					<div class="col-auto">
+						<button type="button" class="btn btn-link text-white myds-navigate mb-2"
+							data-controller="learner-tokens-use" data-context="" data-id="">Use
+							Tokens</button>
+						<button type="button" class="btn btn-default btn-outline btn-sm myds-navigate mb-2"
+							data-controller="learner-me-on-chain-edit" data-context="" data-id="">Edit
+							Your
+							Profile</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<h3 class="text-dark">Use your tokens on the <a href="https://cardano.org" target="_blank">Cardano</a>
+			blockchain.</h3>
+		<div class="mt-4" id="learner-tokens-use-on-chain-profile"></div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row mt-0 px-3">
+			<ul class="nav nav-tabs myds-tab">
+				<li class="nav-item">
+					<a href="#learner-tokens-use-on-chain-move" data-toggle="tab" class="nav-link active"
+						data-controller="learner-tokens-use-on-chain-move">
+						Move
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#learner-tokens-use-on-chain-query" data-toggle="tab" class="nav-link"
+						data-controller="learner-tokens-use-on-chain-query">
+						View on On-Chain
+					</a>
+				</li>
+			</ul>
+
+			<div class="tab-content px-0">
+				<div class="tab-pane active" id="learner-tokens-use-on-chain-move">
+					<div class="row align-items-end">
+						<div class="col">
+							<div class="text-dark">Select the tokens you wish to move to the
+								Cardano
+								blockchain.</div>
+						</div>
+						<div class="col-auto">
+							<button type="button" class="btn btn-default btn-outline btn-sm mt-4 myds-click"
+								data-controller="learner-tokens-use-on-chain-move" data-context="" data-id="">Move To
+								Blockchain</button>
+						</div>
+					</div>
+					<div class="card mt-4">
+						<div class="card-body p-0" id="learner-tokens-use-on-chain-move-view">
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="learner-tokens-use-on-chain-query">
+					<div class="mt-4">
+						<div id="learner-tokens-use-on-chain-query-view">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="settings" class="d-none entityos-view">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 p-4">
+				<div class="selfdriven-app-header">Settings</div>
+				<div class="btn-group btn-group-sm mr-1 mb-2 mt-1">
+					<button class="btn btn-mode btn-xoutline active btn-sm myds-click myds-button-group" type="button"
+						id="util-view-theme-mode-light" value="light" data-id="light" data-mode="light"
+						data-controller="util-view-theme-mode-select" data-scope="util-view-theme"
+						data-context="mode"><img src="/site/2007/light-white.svg" style="width:22px;" class="p-1">
+					</button>
+					<button class="btn btn-mode btn-xoutline btn-sm myds-click myds-button-group" type="button"
+						id="util-view-theme-mode-dark" value="dark" data-id="dark" data-mode="dark"
+						data-controller="util-view-theme-mode-select" data-scope="util-view-theme"
+						data-context="mode"><img src="/site/2007/dark-white.svg" style="width:22px;" class="p-1">
+					</button>
+					<button class="btn btn-mode btn-xoutline btn-sm myds-click myds-button-group" type="button"
+						id="util-view-theme-mode-light-auto" value="auto" data-id="auto" data-mode="auto"
+						data-controller="util-view-theme-mode-select" data-scope="util-view-theme"
+						data-context="mode"><img src="/site/2007/light-dark-white.svg" style="width:22px;" class="p-1">
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

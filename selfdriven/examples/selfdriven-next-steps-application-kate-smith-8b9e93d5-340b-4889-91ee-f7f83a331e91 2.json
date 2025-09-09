@@ -1,0 +1,539 @@
+{
+	"nextsteps": {
+		"learningpartner": {
+			"application": {
+				"id": "3b204650-4bff-41a4-8f8a-a535b43b9449",
+				"description": "Macquarie University WPU LEAP Application"
+			}
+		},
+		"learner": {
+			"application": {
+				"id": "8b9e93d5-340b-4889-91ee-f7f83a331e91",
+				"learnername": "Kate Smith",
+				"learnerid": "888c7eac-4b9b-465f-baa8-ea3137f4ccd6",
+				"description": "Next Steps Application By Kate Smith",
+				"created": "30 Dec 2021 07:55:10",
+				"lastupdated": "6 Feb 2022 14:49:31",
+				"lastupdatedby": "888c7eac-4b9b-465f-baa8-ea3137f4ccd6",
+				"information": {
+					"attributes": [
+						{
+							"name": "leap",
+							"notes": "Learning, Education, Aspiration & Participation.",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"profile": {
+									"attributes": []
+								},
+								"tokens": {
+									"sdc": 0
+								},
+								"skills": [
+									{
+										"name": "LEAP-1",
+										"value": 10
+									},
+									{
+										"name": "LEAP-2",
+										"value": 20
+									},
+									{
+										"name": "LEAP-3",
+										"value": 0
+									},
+									{
+										"name": "LEAP-4",
+										"value": 0
+									},
+									{
+										"name": "LEAP-5",
+										"value": 0
+									},
+									{
+										"name": "LEAP-6",
+										"value": 0
+									},
+									{
+										"name": "LEAP-7",
+										"value": 0
+									}
+								]
+							},
+							"sdn": {
+								"tokens": {
+									"total": 30,
+									"type": {
+										"dashboard": 0,
+										"profile": 0,
+										"tokens": 0,
+										"skills": 30
+									}
+								}
+							}
+						},
+						{
+							"name": "teamwork",
+							"notes": "Collaboration & Teamwork",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"dashboard": {
+									"name": "learner-me-teams"
+								},
+								"profile": {
+									"attributes": [
+										{
+											"name": "collaboration",
+											"value": 20,
+											"title": "Collaboration"
+										},
+										{
+											"name": "teamwork",
+											"value": 80,
+											"title": "Teamwork"
+										}
+									]
+								},
+								"tokens": {
+									"sdc": 0
+								},
+								"skills": []
+							},
+							"sdn": {
+								"tokens": {
+									"total": 110,
+									"type": {
+										"dashboard": 10,
+										"profile": 100,
+										"tokens": 0,
+										"skills": 0
+									}
+								}
+							}
+						},
+						{
+							"name": "consultation",
+							"notes": "Collaboration & Communication",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"dashboard": {
+									"name": "learner-me-dashboard-reflections"
+								},
+								"profile": {
+									"attributes": [
+										{
+											"name": "collaboration",
+											"value": 20,
+											"title": "Collaboration"
+										},
+										{
+											"name": "teamwork",
+											"value": 80,
+											"title": "Teamwork"
+										}
+									]
+								},
+								"tokens": {
+									"sdc": 0
+								},
+								"skills": []
+							},
+							"sdn": {
+								"tokens": {
+									"total": 140,
+									"type": {
+										"dashboard": 40,
+										"profile": 100,
+										"tokens": 0,
+										"skills": 0
+									}
+								}
+							}
+						},
+						{
+							"name": "skillbuilding",
+							"notes": "Achievements / Skills",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"dashboard": {
+									"name": "learner-me-dashboard-achievements"
+								},
+								"profile": {
+									"attributes": [
+										{
+											"name": "creativity",
+											"value": 50,
+											"title": "Creativity"
+										},
+										{
+											"name": "meaning",
+											"value": 30,
+											"title": "Make & Express Meaning"
+										}
+									]
+								},
+								"tokens": {
+									"sdc": 0
+								},
+								"skills": []
+							},
+							"sdn": {
+								"tokens": {
+									"total": 110,
+									"type": {
+										"dashboard": 30,
+										"profile": 80,
+										"tokens": 0,
+										"skills": 0
+									}
+								}
+							}
+						},
+						{
+							"name": "empathy",
+							"notes": "Altruism & Empathy",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"dashboard": {
+									"name": "learner-me-projects"
+								},
+								"profile": {
+									"attributes": [
+										{
+											"name": "altruism",
+											"value": 80,
+											"title": "Altruism"
+										},
+										{
+											"name": "empathy",
+											"value": 10,
+											"title": "Empathy"
+										}
+									]
+								},
+								"tokens": {
+									"sdc": 0
+								},
+								"skills": []
+							},
+							"sdn": {
+								"tokens": {
+									"total": 280,
+									"type": {
+										"dashboard": 190,
+										"profile": 90,
+										"tokens": 0,
+										"skills": 0
+									}
+								}
+							}
+						},
+						{
+							"name": "community",
+							"notes": "Endorsements & SDC tokens earned.",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"dashboard": {
+									"name": "learner-me-dashboard-endorsements"
+								},
+								"profile": {
+									"attributes": [
+										{
+											"name": "engagement",
+											"value": 30,
+											"title": "Engagement"
+										}
+									]
+								},
+								"tokens": {
+									"sdc": 12
+								},
+								"skills": []
+							},
+							"sdn": {
+								"tokens": {
+									"total": 160,
+									"type": {
+										"dashboard": 10,
+										"profile": 30,
+										"tokens": 120,
+										"skills": 0
+									}
+								}
+							}
+						},
+						{
+							"name": "mentorship",
+							"notes": "Relationships as a mentor",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"dashboard": {
+									"name": "learner-me-dashboard-connections"
+								},
+								"profile": {
+									"attributes": [
+										{
+											"name": "influence",
+											"value": 60,
+											"title": "Influence"
+										}
+									]
+								},
+								"tokens": {
+									"sdc": 0
+								},
+								"skills": []
+							},
+							"sdn": {
+								"tokens": {
+									"total": 80,
+									"type": {
+										"dashboard": 20,
+										"profile": 60,
+										"tokens": 0,
+										"skills": 0
+									}
+								}
+							}
+						},
+						{
+							"name": "coaching",
+							"notes": "Teams coordinator role",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"dashboard": {
+									"name": "learner-community-teams"
+								},
+								"profile": {
+									"attributes": [
+										{
+											"name": "collaboration",
+											"value": 20,
+											"title": "Collaboration"
+										},
+										{
+											"name": "communication",
+											"value": 30,
+											"title": "Communication"
+										},
+										{
+											"name": "creativity",
+											"value": 50,
+											"title": "Creativity"
+										}
+									]
+								},
+								"tokens": {
+									"sdc": 0
+								},
+								"skills": []
+							},
+							"sdn": {
+								"tokens": {
+									"total": 240,
+									"type": {
+										"dashboard": 140,
+										"profile": 100,
+										"tokens": 0,
+										"skills": 0
+									}
+								}
+							}
+						},
+						{
+							"name": "determination",
+							"notes": "Perseverance.  Projects completed.",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"dashboard": {
+									"name": "learner-me-projects"
+								},
+								"profile": {
+									"attributes": [
+										{
+											"name": "perseverance",
+											"value": 90,
+											"title": "Perseverance"
+										},
+										{
+											"name": "grit",
+											"value": 50,
+											"title": "Grit"
+										},
+										{
+											"name": "thinkwhy",
+											"value": 10,
+											"title": "Think Why"
+										}
+									]
+								},
+								"tokens": {
+									"sdc": 0
+								},
+								"skills": []
+							},
+							"sdn": {
+								"tokens": {
+									"total": 340,
+									"type": {
+										"dashboard": 190,
+										"profile": 150,
+										"tokens": 0,
+										"skills": 0
+									}
+								}
+							}
+						},
+						{
+							"name": "selfawareness",
+							"notes": "Critical Reflection.  Reflections.",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"dashboard": {
+									"name": "learner-me-dashboard-reflections"
+								},
+								"profile": {
+									"attributes": [
+										{
+											"name": "criticalreflection",
+											"value": 20,
+											"title": "Critical Reflection"
+										}
+									]
+								},
+								"tokens": {
+									"sdc": 0
+								},
+								"skills": []
+							},
+							"sdn": {
+								"tokens": {
+									"total": 60,
+									"type": {
+										"dashboard": 40,
+										"profile": 20,
+										"tokens": 0,
+										"skills": 0
+									}
+								}
+							}
+						},
+						{
+							"name": "identifyingskills",
+							"notes": "Identifying Skills, Strengths & Weaknesses.",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"dashboard": {
+									"name": "learner-me-dashboard-reflections"
+								},
+								"profile": {
+									"attributes": [
+										{
+											"name": "criticalreflection",
+											"value": 20,
+											"title": "Critical Reflection"
+										}
+									]
+								},
+								"tokens": {
+									"sdc": 0
+								},
+								"skills": []
+							},
+							"sdn": {
+								"tokens": {
+									"total": 60,
+									"type": {
+										"dashboard": 40,
+										"profile": 20,
+										"tokens": 0,
+										"skills": 0
+									}
+								}
+							}
+						},
+						{
+							"name": "technicalcapacity",
+							"notes": "Technical skills for this pathway.",
+							"template": {
+								"sdn": {
+									"tokens": "10"
+								}
+							},
+							"source": {
+								"profile": {
+									"attributes": []
+								},
+								"tokens": {
+									"sdc": 0
+								},
+								"skills": [
+									{
+										"name": "Mathematics 11-1-75",
+										"value": 100
+									}
+								]
+							},
+							"sdn": {
+								"tokens": {
+									"total": 100,
+									"type": {
+										"dashboard": 0,
+										"profile": 0,
+										"tokens": 0,
+										"skills": 100
+									}
+								}
+							}
+						}
+					]
+				},
+				"thoughts": "Thinking about doing .... and ...",
+				"sdnTokens": 1710
+			}
+		}
+	}
+}

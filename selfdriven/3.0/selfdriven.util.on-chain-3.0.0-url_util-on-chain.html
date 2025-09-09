@@ -1,0 +1,131 @@
+<!--
+  	{
+      title: "Connect On-Chain to Cardano CIP-CO Wallet",
+      usage: "View tokens, authenicate etc"
+    }
+
+AUTH: Trusted auth using Wallet.
+Link User Account to Wallet.
+Sign an internal transaction based on LogonKey and then send to TRUSTED endpoint.
+For verification.
+
+DID: Issue DID to Wallet.
+VC: Can log on using trusted wallet.
+
+TOKENS:
+View NFFs/VCs using CIP-30 Wallet.
+Remember wallet preference on user profile and also in Browser Storage
+
+-->
+
+<!-- ON-CHAIN: WALLET CONNECT: VIEW TOKENS-->
+
+<div id="util-on-chain-dashboard" class="hidden d-none myds-view">
+	<div class="header mb-3">
+        <div class="container-fluid">
+          <div class="header-body py-3">
+            <div class="row align-items-end">
+				<div class="col">
+					<h6 class="header-pretitle">
+						Setup
+					</h6>
+					<h1 class="header-title">
+						On-Chain
+					</h1>
+				</div>
+				<div class="col-auto">
+					<button class="btn btn-default btn-outline btn-sm myds-navigate" data-controller="util-on-chain-account-my-on-chain-profile">
+						My On-Chain Profile
+					</button>
+					<a href="/util-on-chain/#util-on-chain-account" type="button" class="btn btn-default btn-outline btn-sm myds-navigate ms-2">My On-Chain Accounts</a>
+				</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+	<div class="container-fluid p-l-0 p-r-0">
+    	<div class="row">
+      		<div class="col-sm-12">
+				<div class="">
+					<button id="util-on-chain-connect" type="button" class="btn btn-outline-primary disabled d-none" data-container="body"
+						data-toggle="popover" data-placement="bottom">
+						Connect
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="util-on-chain-view">
+			<div class="mt-4 text-secondary lead">
+				Initialising...
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="util-on-chain-account" class="hidden d-none myds-view">
+	<div class="header mb-3">
+        <div class="container-fluid">
+          <div class="header-body py-3">
+            <div class="row align-items-end">
+				<div class="col">
+					<h6 class="header-pretitle">
+						On-Chain
+					</h6>
+					<h1 class="header-title">
+						Accounts
+					</h1>
+				</div>
+				<div class="col-auto text-right">
+                    <button class="btn btn-default btn-outline btn-sm myds-navigate" data-controller="util-on-chain-account-my-profile">
+						My Profile
+					</button>
+				</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+	<div class="container-fluid p-l-0 p-r-0">
+    	<div class="row">
+      		<div class="col-12 col-md-8">
+				<div class="card shadow text-center mt-3">
+					<div class="card-header">
+						<h2 class="mb-0 text-info">
+							Fully Managed On-Chain Account
+						</h2>
+					</div>
+					<div class="card-body">
+						<div class="text-dark fw-bold">
+							This is fully managed account and focused on your identity assets. e.g. the ability to create (mint) a SSI DID in account linked to your selfdriven User Account.
+						</div>
+						<div class="text-secondary mt-2">
+							It is an easy way for you get started on-chain.
+						</div>
+						<div class="text-secondary">
+							You should not store any assets of value in this account.
+						</div>
+						<div id="util-on-chain-account-view"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-4">
+				<div class="card shadow text-center mt-3">
+					<div class="card-body">
+						<div class="text-dark fw-bold">
+							On-Chain Safety Tips
+						</div>
+						<div class="mt-3">
+							<a href="https://cardano.ninja" target="_blank">Cardano Ninja <i class="fe fe-external-link"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<script src="/site/2152/cbor.js"></script>
+<!--<script src="/site/2007/typhonjs.min-1.2.8.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/@stricahq/typhonjs@1.2.8/dist/index.min.js"></script>
+<script type="module" src="/site/2007/selfdriven.util.on.chain-3.0.0.js"></script>

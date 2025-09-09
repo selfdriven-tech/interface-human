@@ -1,0 +1,627 @@
+{
+	"template": {
+		"status": "Work in progress. Feedback to team@selfdriven.foundation.",
+		"project": {
+			"name": "mav100-reseller",
+			"title": "MAV100 Reseller",
+			"url": "https://mav100.org",
+			"urlCaption": "MAV100.org",
+			"version": {
+				"number": "0.0.1",
+				"date": "14DEC2023",
+				"notes": "Initial Setup"
+			},
+			"source": {
+				"sharing": {
+					"type": "Creative Commons CC0",
+					"description": "Creative Commons CC0 Universal (Public Domain Dedication)."
+				},
+				"name": "MAV100 with the selfdriven Foundation",
+				"notes": "",
+				"url": "https://mav100.com"
+			},
+			"sharing": {
+				"type": "Creative Commons CC0",
+				"description": "Creative Commons CC0 Universal (Public Domain Dedication)",
+				"notes": "Created by the selfdriven Foundation",
+				"resources":
+				[
+					{
+						"type": "image-thumbnail",
+						"url": "https://mav100.com",
+						"imageURL": "https://levelup.slfdrvn.app/site/2154/mav100-logo-students.png"
+					}
+				]
+			},
+			"usage": "Introduction to WorldMobile.  Why? What? How?",
+			"description": "Theoretical, technical, and social dimensions of becoming a MAV100 connectivity influencer.",
+			"summary": "A comprehensive guide on building a generation of young people that will lead the global society into a decentralized future.",
+			"durationdays": {
+				"minimum": 0,
+				"maximum": 0
+			},
+			"outcomes": [
+				{
+					"by": "learner",
+					"description": "Understand the value of WorldMobile."
+				},
+				{
+					"by": "learner",
+					"description": "The science behind it."
+				}
+			],
+			"team": {
+				"notes": "Teams or Pairs",
+				"roles": [
+					{
+						"name": "",
+						"notes": ""
+					}
+				]
+			},
+			"rules": [
+				{
+					"for": "learner",
+					"subject": "",
+					"description": ""
+				}
+			],
+			"resources": [
+				{
+					"subject": "",
+					"description": [
+						""
+					],
+					"imageurl": "",
+					"for": [
+						"learner",
+						"learning-partner"
+					]
+				}
+			],
+			"milestones": [
+				{
+					"reference": "1",
+					"subject": "ISP Network Theory",
+					"description": "",
+					"durationdays": {
+						"minimum": 1,
+						"maximum": 10
+					},
+					"controller": "",
+					"tasks": [
+						{
+							"reference": "1-1",
+							"subject": "Fundamentals of Network Infrastructure",
+							"description": "How Internet Service Providers (ISPs) work.",
+							"by": "individual",
+							"durationdays": {
+								"maximum": 7
+							},
+							"resources": [
+								{
+									"subject": "mav100.com/network-basics",
+									"url": "https://mav100.com/network-basics/"
+								},
+								{
+									"subject": "www.verizon.com/about/blog/isp-meaning",
+									"url": "https://www.verizon.com/about/blog/isp-meaning"
+								},
+								{
+									"subject": "Infographics",
+									"url": "https://mav100.com/infographics"
+								},
+								{
+									"subject": "Explanatory short videos",
+									"url": "https://mav100.com/videos"
+								}
+							],
+							"reflections": [
+								{
+									"by": "learner",
+									"method": "observation",
+									"type": "mandatory",
+									"description": "What is the main function of an ISP?"
+								}
+							],
+							"supportitems":[
+								{
+									"for": "learning-partner",
+									"description": "Theoretical understanding of how Internet Service Providers (ISPs) manage and distribute internet connectivity to users."
+								},
+								{
+									"for": "learning-partner",
+									"description": "A more normative approach to the work of ISPs in respect to bringing communication and connectivity to the world."
+								},
+								{
+									"for": "learning-partner",
+									"description": "Fundamentals of Network Infrastructure: This milestone would cover the basics of network design and infrastructure, including the role of ISPs in internet connectivity, types of networks (like LAN, WAN), and key network components (routers, switches, servers)."
+								}
+							],
+							"percentagecomplete": "true"
+						},
+						{
+							"reference": "1-2",
+							"subject": "Data Routing and Bandwidth Management",
+							"description": "How Internet Service Providers (ISPs) manage and distribute internet connectivity to users. It involves understanding network infrastructure, data routing, bandwidth allocation, and the interplay between different ISPs.",
+							"by": "individual",
+							"durationdays": {
+								"maximum": 7
+							},
+							"resources": [
+								{
+									"subject": "mav100.com/network-basics",
+									"url": "https://mav100.com/network-basics/"
+								},
+								{
+									"subject": "www.verizon.com/about/blog/isp-meaning",
+									"url": "https://www.verizon.com/about/blog/isp-meaning"
+								},
+								{
+									"subject": "Infographics & Statistics",
+									"url": "https://mav100.com/infographics"
+								},
+								{
+									"subject": "Explanatory short video",
+									"url": "https://mav100.com/videos"
+								}
+							],
+							"reflections": [
+								{
+									"by": "learner",
+									"method": "observation",
+									"type": "mandatory",
+									"description": "Describe how data routing works"
+								}
+							],
+							"supportitems": [
+								{
+									"for": "learning-partner",
+									"description": "Theoretical understanding of how Internet Service Providers (ISPs) manage and distribute internet connectivity to users."
+								},
+								{
+									"for": "learning-partner",
+									"description": "This section would delve into how data is routed through networks, exploring concepts like IP addressing, DNS, and routing protocols. It would also cover bandwidth management and how ISPs allocate resources to ensure efficient data transmission."
+								}
+							]
+						},
+						{
+							"reference": "1-3",
+							"subject": "Inter-ISP Collaboration and Future Trends",
+							"description": "Focusing on the relationships between different ISPs, peering and transit agreements, and the challenges of network scalability. It would also explore emerging trends and future directions in ISP network technology, such as the impact of 5G and IoT on network management and transition to decentralised, blockchain-powered mobile network World Mobile.",
+							"by": "individual",
+							"durationdays": {
+								"maximum": 7
+							},
+							"resources": [
+								{
+									"subject": "mav100.com/network-basics",
+									"url": "https://mav100.com/network-basics/"
+								},
+								{
+									"subject": "www.verizon.com/about/blog/isp-meaning",
+									"url": "https://www.verizon.com/about/blog/isp-meaning"
+								},
+								{
+									"subject": "Infographics & Statistics",
+									"url": "https://mav100.com/infographics"
+								},
+								{
+									"subject": "Explanatory short video",
+									"url": "https://mav100.com/videos"
+								}
+							],
+							"reflections": [
+								{
+									"by": "learner",
+									"method": "observation",
+									"type": "mandatory",
+									"description": "Describe how ISPs Collaborate."
+								}
+							],
+							"supportitems":[
+								{
+									"for": "learning-partner",
+									"description": "Theoretical understanding of ISPs and internet connectivity – pros and cons."
+								},
+								{
+									"for": "learning-partner",
+									"description": "This section would delve into how data is routed through networks, exploring concepts like IP addressing, DNS, and routing protocols. It would also cover bandwidth management and how ISPs allocate resources to ensure efficient data transmission."
+								}
+							]
+						},
+						{
+							"reference": "1-4",
+							"subject": "Pros and Cons of centralized and decentralized ISPs",
+							"description": "Centralized ISPs offer reliable, consistent service and efficient maintenance but can lead to monopolies, potentially reducing innovation and customer choice. Decentralized ISPs promote competition and innovation, but might face challenges in providing consistent, widespread coverage and maintaining network infrastructure.",
+							"by": "individual",
+								"reflections": [
+								{
+									"by": "learner",
+									"method": "observation",
+									"type": "mandatory",
+									"description": "Describe pros and cons of centralized and decentralized ISPs"
+								},
+								{
+									"by": "learner",
+									"method": "structured",
+									"type": "mandatory",
+									"description": "Decentralized ISPs",
+									"hint": "",
+									"structure": {
+										"options": [
+											{
+												"name": "increase-innovation",
+												"sequence": 1,
+												"points": 1,
+												"caption": "Increase Innovation"
+											},
+											{
+												"name": "decrease-innovation",
+												"sequence": 2,
+												"points": 0,
+												"caption": "Decrease Innovation"
+											}
+										],
+										"controllers": [
+											{
+												"type": "if",
+												"comparison": "equal-to",
+												"points": 1,
+												"status": "complete"
+											},
+											{
+												"type": "if",
+												"comparison": "equal-to",
+												"points": 0,
+												"status": "in-progress"
+											}
+										]
+									}
+								}
+							],
+							"supportitems":[
+								{
+									"for": "learning-partner",
+									"description": "Reflexive thinking. Critical Thinking. Knowledgable. Technical understanding. Social aspects of communication and commercialization"
+								}
+							]
+						}
+					]
+				},
+				{
+					"reference": "2",
+					"subject": "World Mobile & MAV100",
+					"description": "",
+					"durationdays": {
+						"minimum": 1,
+						"maximum": 10
+					},
+					"tasks": [
+						{
+							"reference": "2-1",
+							"subject": "What is World Mobile?",
+							"description": "Basic facts, wallets, nodes and tokens.",
+							"durationdays": {
+								"maximum": 7
+							},
+							"by": "individual",
+							"resources": [
+								{
+									"subject": "worldmobile.io",
+									"url": "https://worldmobile.io"
+								},
+								{
+									"subject": "airnode.worldmobile.io/map",
+									"url": "https://airnode.worldmobile.io/map"
+								},
+								{
+									"subject": "worldmobile.io/en/manifesto",
+									"url": "https://worldmobile.io/en/manifesto"
+								}
+							],
+							"reflections": [
+								{
+									"by": "learner",
+									"method": "observation",
+									"type": "mandatory",
+									"description": "What is the mission of World Mobile?"
+								}
+							],
+							"supportitems": [
+								{
+									"subject": "Manifesto"
+								},
+								{
+									"subject": "Interactive Map"
+								},
+								{
+									"for": "learning-partner",
+									"description": "Basic information and facts about World Mobile."
+								},
+								{
+									"for": "learning-partner",
+									"description": "Basic information about wallets, nodes and token."
+								}
+							]
+						},
+						{
+							"reference": "2-2",
+							"subject": "How does World Mobile operate?",
+							"description": "How does World Mobile's blockchain-based sharing economy work? What is the unique connectivity solution, where decentralised network infrastructure is owned and operated by the people?",
+							"durationdays": {
+								"maximum": 7
+							},
+							"by": "individual",
+							"resources": [
+								{
+									"subject": "mav100.com/network-basics",
+									"url": "https://mav100.com/network-basics/"
+								},
+								{
+									"subject": "worldmobile.io/en/smartvillage",
+									"url": "https://worldmobile.io/en/smartvillage/"
+								}
+							],
+							"reflections": [
+								{
+									"by": "learner",
+									"method": "observation",
+									"type": "mandatory",
+									"description": "Describe how World Mobile operates?"
+								}
+							],
+							"supportitems": [
+								{
+									"subject": "How Blockchain can enable community owned telecommunications"
+								},
+								{
+									"subject": "Infographics / Video"
+								},
+								{
+									"subject": "Case Study: Tanzania"
+								},
+								{
+									"for": "learning-partner",
+									"description": "How does World Mobile's blockchain-based sharing economy work?" 
+								},
+								{
+									"for": "learning-partner",
+									"description": "What is the unique connectivity solution, where decentralised network infrastructure is owned and operated by the people?"
+								}
+							]
+						},
+						{
+							"reference": "2-3",
+							"subject": "MAV100 and World Mobile Integration",
+							"description": "Who is MAV100 and how is it linked to the work of World Mobile? Theoretical overview over the 5 phases.",
+							"by": "individual",
+							"durationdays": {
+								"maximum": 7
+							},
+							"resources": [
+								{
+									"subject": "worldmobile.io",
+									"url": "https://worldmobile.io/"
+								},
+								{
+									"subject": "Learn About MAV100",
+									"url": "https://mav100.com/learn-about-mav100/#nutshell"
+								},
+								{
+									"subject": "MAV100 NFT Ecosystem",
+									"url": "https://mav100.com/learn-about-mav100/#nft-ecosystem"
+								},
+								{
+									"subject": "MAV100 WorldMobile Integration",
+									"url": "https://mav100.com/wm-integration/"
+								},
+								{
+									"subject": "MAV100 LAD Adoption WorldMobile",
+									"url": "https://mav100.com/learn-about-mav100/#lad-adoption-wm"
+								}
+							],
+							"reflections": [
+								{
+									"by": "learner",
+									"method": "observation",
+									"type": "mandatory",
+									"description": "What is the mission of MAV100?"
+								}
+							],
+							"supportitems": [
+								{
+									"subject": "Theoretical overview. Process sequences. Project management. Awareness."
+								},
+								{
+									"subject": "Phase 0 Donate Air Node to Schools"
+								},
+								{
+									"subject": "Phase 1 Community Integration and On Boarding"
+								},
+								{
+									"subject": "Phase 2 Community Cooperative NFT Mint"
+								},
+								{
+									"subject": "Phase 3 Build Minimum Viable Network"
+								},
+								{
+									"subject": "Phase 4 DAO Ratification and assumption of responsibility"
+								},
+								{
+									"subject": "2 Infographics (Technical & social understanding)"
+								},
+								{
+									"subject": "Individual milestones and tasks for the 5 phases can be carried out on these milestones, which relate to both the technological and social components of the phases"
+								},
+								{
+									"for": "learning-partner",
+									"description": "Who is MAV100 and how is it linked to the work of World Mobile?" 
+								},
+								{
+									"for": "learning-partner",
+									"description": "Theoretical overview over the 5 phases"
+								}
+							]
+						},
+						{
+							"reference": "2-4",
+							"subject": "Building and connecting Air Nodes with MAV100 ",
+							"usage": "Resources for people to learn how Air Nodes work and how to build a comprehensive Air Node Network with the help of MAV100",
+							"description": "AirNodes are devices that people can purchase or build themselves to offer voice, text and data services on the World Mobile network. Learning the basics of Electromagnetic Waves, Network Hardware, and Network Hardware Topology as well as applying this to some of the actual air node antennas MAV100 has tested.",
+							"by": "individual",
+							"durationdays": {
+								"minimum": 7,
+								"maximum": 21
+							},
+							"resources": [
+								{
+									"subject": "mav100.com",
+									"url": "https://mav100.com/"
+								},
+								{
+									"subject": "MAV100 Network Basics",
+									"url": "https://mav100.com/network-basics/"
+								},
+								{
+									"subject": "WorldMobile What Is AirNode",
+									"url": "https://worldmobile.io/blog/post/what-is-an-airnode"
+								},
+								{
+									"subject": "Connecting an AirNode (Youtube)",
+									"url": "https://www.youtube.com/watch?v=y04NXBom7no"
+								},
+								{
+									"subject": "Evolution of Communication",
+									"url": "https://www.youtube.com/watch?v=NUovkXWe15s"
+								}
+							],
+							"supportitems": [
+								{
+									"subject": "Local entrepreneurs can connect their communities themselves, allowing them to earn rewards for the Internet access they provide."
+								},
+								{
+									"subject": "Capability. Knowledgable."
+								},
+								{
+									"subject": "Topics: Electromagnetic Wave Basics. Signal To Noise Ratio. Amplitude, Frequency, and Phase. Phase Modulation and Analog vs. Digital. Network Topology. Basic EM Wave Properties. Phones are Small Antennas with Stuff. Radio vs. Microwave"
+								}
+							],
+							"reflections": [
+								{
+									"by": "learner",
+									"method": "structured",
+									"type": "mandatory",
+									"description": "What type of mobile technology does a MAV100 Airnode use?",
+									"hint": "",
+									"structure": {
+										"options": [
+											{
+												"name": "4GLTE",
+												"sequence": 1,
+												"points": 1,
+												"caption": "4G LTE"
+											},
+											{
+												"name": "5G",
+												"sequence": 2,
+												"points": 0,
+												"caption": "5G"
+											}
+										],
+										"controllers": [
+											{
+												"type": "if",
+												"points": {
+													"comparison": "equal-to",
+													"value": 1
+												},
+												"status": "complete"
+											},
+											{
+												"type": "if",
+												"points": {
+													"comparison": "equal-to",
+													"value": 0
+												},
+												"status": "in-progress"
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"skills": {
+				"scope-contexts": [
+					{
+						"name": "Baby Octo",
+						"capacity": "A",
+						"image-uri": "/site/2134/artomics-selfdriven-art-s2-baby-octo.0.png",
+						"style": "color:#FF0000;",
+						"tokens": {
+							"sdc": "0"
+						}
+					},
+					{
+						"name": "Cycling Octo",
+						"capacity": "C",
+						"image-uri": "/site/2134/artomics-selfdriven-art-s2-cycling-octo.0.png",
+						"style": "color:#FE9900;",
+						"tokens": {
+							"sdc": "50"
+						}
+					},
+					{
+						"name": "Flying Octo",
+						"capacity": "K",
+						"image-uri": "/site/2134/artomics-selfdriven-art-s2-flying-octo.0.png",
+						"style": "color: #bbbc75;",
+						"tokens": {
+							"sdc": "100"
+						}
+					},
+					{
+						"name": "Rocket Octo",
+						"capacity": "N",
+						"image-uri": "/site/2134/artomics-selfdriven-art-s2-rocket-octo.0.png",
+						"style": "color: #28a745;",
+						"tokens": {
+							"sdc": "200"
+						}
+					}
+				],
+				"learner-proposed": "true",
+				"based-on-uri": "https://skillzeb.io/explorer",
+				"gained": [
+					{
+						"scope": {
+							"name": "Baby Octo; Curosity",
+							"contexts": [
+								"Baby Octo"
+							]
+						},
+						"uri": "090200000?0001",
+						"name": "WorldMobile Intro [0-C]",
+						"sdi": "...",
+						"level": "07",
+						"capacity": "00",
+						"validation": {
+							"notes": "Do they have a based understanding of the WorldMobile project.",
+							"evidence": [
+								{
+									"description": "Can answer 5 basic questions.",
+									"methods": [
+										"observation"
+									]
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

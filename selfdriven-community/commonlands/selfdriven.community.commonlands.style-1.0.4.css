@@ -1,0 +1,142 @@
+body {
+    background-color: transparent !important;
+    font-family: system-ui !important;
+}
+
+.popover {
+    background-color: #1a1518 !important;
+    border-color: #4c4c4c !important;
+    border-width: 1px !important;
+}
+
+.entityos-click {
+    color: #4c4c4c;
+    font-size: 1.2rem !important;
+}
+
+a.entityos-click {
+    color: rgb(0, 123, 255);;
+}
+
+.bs-popover-bottom>.popover-arrow:after {
+    border-bottom-color: #4c4c4c;
+}
+
+.bs-popover-right>.popover-arrow:after {
+    border-right-color: #4c4c4c;
+}
+
+.bs-popover-left>.popover-arrow:after {
+    border-left-color: #4c4c4c;
+}
+
+.entityos-dropdown {
+    color: #4c4c4c !important;
+    font-size: 1.2rem !important;
+}
+
+a.x {
+    color: #343a40
+}
+
+a:hover {
+    color: rgb(0, 123, 255);
+}
+
+.btn-outline-primary {
+    border-color: rgb(0, 123, 255);
+    color: rgb(0, 123, 255) !important;
+}
+
+.btn-outline-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary:hover {
+    background-color: rgb(0, 123, 255);
+    border-color: rgb(0, 123, 255);
+    color: white !important;
+}
+
+.btn-outline-primary.disabled {
+    background-color: transparent;
+    border-color: #7f7f7f;
+    color: #7f7f7f !important;
+}
+
+h4 {
+    color: #4196B9;
+}
+
+.card {
+    border-radius: 14px !important;
+}
+
+h2 {
+    color: #4296b9;
+}
+
+h1.text-primary, h1 > span.text-primary {
+    color: #4296b9 !important;
+}
+
+h1.span.border-primary {
+    border-color: #007bff !important;
+}
+
+.btn-default
+{
+    border-radius: 50px !important;
+}
+
+.ms-2 {
+    margin-left: .375rem !important;
+}
+
+.me-2 {
+    margin-right: .375rem !important;
+}
+
+h3
+{
+	font-size: 1.2rem;
+}
+
+label.text-secondary
+{
+	color: rgb(33, 37, 41) !important;
+}
+
+.myds-logoff
+{
+	cursor: pointer;
+}
+
+.alert-warning {
+    background-color: #f6c343;
+    border-color: #f6c343;
+	border-radius: 10px;
+}
+
+.alert-success {
+    background-color: #00d97e;
+    border-color: #00d97e;
+	border-radius: 10px;
+}
+
+.btn-primary
+{
+	color: white !important;
+	border-radius: 50rem !important;
+}
+
+.badge-success {
+    background-color: #00d97e;
+}
+
+.alert-warning > a.entityos-click {
+	text-decoration: none;
+}
+
+span.badge.text-primary {
+	color: #007bff !important;
+}
+

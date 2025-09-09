@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon" href="images/selfdriven-2-logo-small-orange.png">
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/app.css" />
+
+	<title>selfdriven Foundation Governance App</title>
+</head>
+
+<body style="font-family: sans-serif;">
+	<div class="container mt-4 pb-4">
+		<h1>
+			<img src="images/selfdriven-2-logo-gov-orange-transparent.png" style="height:50px;">
+		</h1>
+		<h2 style="color:#de5a31; font-weight: 400;">
+			App 1.0.0
+		</h2>
+		<div><a href="docs/selfdriven-gov-technical-guide.pdf" target="_blank">selfdriven Foundation Governance Technical Guide (PDF)</a></div>
+		<div id="selfdriven-gov-app-status-message"></div>
+		<ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link" id="identity-tab" data-toggle="tab" href="#identity" role="tab"
+					aria-controls="identity" aria-selected="true">Identity</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" id="voting-tab" data-toggle="tab" href="#voting" role="tab"
+					aria-controls="voting" aria-selected="false">Voting</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="view-transaction-tab" data-toggle="tab" href="#view-transaction" role="tab"
+					aria-controls="view-transaction" aria-selected="false">View Transaction Data</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="backup-ab" data-toggle="tab" href="#backup" role="tab" aria-controls="backup"
+					aria-selected="false">Backup</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="recover-tab" data-toggle="tab" href="#recover" role="tab"
+					aria-controls="recover" aria-selected="false">Restore</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="notes-tab" data-toggle="tab" href="#notes" role="tab" aria-controls="notes"
+					aria-selected="false">Notes</a>
+			</li>
+		</ul>
+		<div class="tab-content mt-4" id="myTabContent">
+			<div class="tab-pane fade" id="identity" role="tabpanel" aria-labelledby="identity-tab">
+				<div class="mt-2 mb-3 text-danger">Only use the functions on this tab in a browser on your offline/cold
+					computer.</div>
+				<h4 class="mb-3" style="color:#0f4156; font-weight: 800;">Generate Your X509 Keys</h4>
+				<div class="mt-4">
+					<div class="form-group">
+						<div><label class="text-muted" for="selfdriven-gov-app-firstname">First Name</label></div>
+						<input type="text" class="form-control input-lg" id="selfdriven-gov-app-firstname">
+					</div>
+					<div class="form-group">
+						<div><label class="text-muted" for="selfdriven-gov-app-lastname">Last Name</label></div>
+						<input type="text" class="form-control input-lg" id="selfdriven-gov-app-lastname">
+					</div>
+					<div class="form-group">
+						<div><label class="text-muted" for="selfdriven-gov-app-code">selfdriven Gov ID Code (8 chars)</label></div>
+						<input type="text" class="form-control input-lg" id="selfdriven-gov-app-code">
+					</div>
+					<div class="form-group">
+						<div><label class="text-muted" for="selfdriven-gov-app-country">Country Code (2 chars)</label></div>
+						<input type="text" class="form-control input-lg" id="selfdriven-gov-app-country">
+					</div>
+					<div class="form-group">
+						<div><label class="text-muted" for="selfdriven-gov-app-state">State</label></div>
+						<input type="text" class="form-control input-lg" id="selfdriven-gov-app-state">
+					</div>
+					<div class="form-group">
+						<div><label class="text-muted" for="selfdriven-gov-app-location">Location (e.g. City)</label></div>
+						<input type="text" class="form-control input-lg" id="selfdriven-gov-app-location">
+					</div>
+					<div class="form-group">
+						<div><label class="text-muted" for="selfdriven-gov-app-role">Role (leave blank for default of
+								"Voter")</label></div>
+						<input type="text" class="form-control input-lg" id="selfdriven-gov-app-role">
+					</div>
+
+					<button class="btn btn-default" id="selfdriven-gov-app-create-x509-identity">Generate X509 Identity</button>
+				</div>
+				<div class="mt-4 d-none" id="selfdriven-gov-app-create-x509-csr-view">
+					<button class="btn btn-default disabled" id="selfdriven-gov-app-create-x509-csr">Generate X509 Certificate
+						Signing Request</button>
+				</div>
+			</div>
+			<div class="tab-pane fade show active" id="voting" role="tabpanel" aria-labelledby="voting-tab">
+				<div class="mt-2 mb-3 text-danger">Only use the functions on this tab in a browser on your offline/cold
+					computer.</div>
+				<h4 class="mb-3" style="color:#0f4156; font-weight: 800;">Witness a Transaction</h4>
+
+				<div class="form-group">
+					<div><label class="text-dark font-weight-bold mb-0" for="privateKeyFile">1. X.509 Identity (Private
+							Key) File (.pem)</label></div>
+					<div class="text-secondary mb-1">Your individual X.509 file (rarely changes)</div>
+					<input type="file" id="privateKeyFile" accept=".pem">
+				</div>
+
+				<div class="form-group">
+					<div><label class="text-dark font-weight-bold mb-0" for="transactionFile">2. Transaction Hash File (.hash)</label></div>
+					<div class="text-secondary mb-1">Shared with you by the selfdriven Gov Orchestrator for each governance transaction.
+					</div>
+					<input type="file" id="transactionHashFile" accept=".hash">
+				</div>
+
+				<div class="d-none form-group">
+					<div><label class="text-dark font-weight-bold" for="privateKeyFileCardano">OR Cardano Private Key
+							File
+							(.skey)</label></div>
+					<input type="file" id="privateKeyFileCardano" accept=".skey">
+				</div>
+
+				<div class="d-none form-group">
+					<div><label class="text-dark font-weight-bold" for="transactionFile">Transaction File (.json,
+							.unsigned,
+							.raw)</label></div>
+					<input type="file" id="transactionFile" accept=".json, .unsigned, .raw">
+				</div>
+				<div class="form-group mt-4">
+					<button onclick="handleFiles()" class="btn btn-default">Witness Transaction</button>
+				</div>
+				<div class="form-group mt-4" id="voting-notes-view">
+				</div>
+
+			</div>
+
+			<div class="tab-pane fade" id="view-transaction" role="tabpanel" aria-labelledby="view-transaction-tab">
+				<h4 class="mb-3" style="color:#0f4156; font-weight: 800;">View Transaction Data</h4>
+				<div class="form-group">
+					<div><label class="text-dark font-weight-bold mb-0" for="transactionGovernanceFile">Transaction File
+							(.json)</label></div>
+					<div class="text-secondary mb-1">In the shared folder in the /transaction folder.</div>
+					<input type="file" id="transactionGovernanceFile" accept=".json">
+				</div>
+				<div class="form-group mt-3">
+					<button onclick="viewTransactionGovernanceFile()" class="btn btn-default">View</button>
+				</div>
+				<div class="form-group mt-3 text-dark" id="view-transaction-notes-view">
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="backup" role="tabpanel" aria-labelledby="backup-tab">
+				<div class="mt-2 mb-3 text-danger">Only use the functions on this tab in a browser on your offline/cold
+					computer.</div>
+
+				<h4 class="mb-3" style="color:#0f4156; font-weight: 800;">Encrypt & Backup Your PEM File</h4>
+				<div class="form-group">
+					<div><label class="text-dark font-weight-bold mb-0" for="privateKeyFileToBackup">X.509 Identity
+							(Private
+							Key) File (.pem)</label></div>
+					<div class="text-secondary mb-1">Your individual X.509 file (created using the Identity tab)</div>
+					<input type="file" id="privateKeyFileToBackup" accept=".pem">
+				</div>
+				<div class="form-group">
+					<div><label class="text-dark font-weight-bold mb-0" for="encryptionPassword">Password</label></div>
+					<div class="text-secondary mb-1">Your password for encrypting the file. <span
+							class="text-danger">Keep it safe!!</span></div>
+					<input type="password" id="encryptionPassword">
+				</div>
+				<div class="form-group mt-3">
+					<button onclick="backupFile()" class="btn btn-default">Encrypt & Backup</button>
+				</div>
+				<div class="form-group mt-3 text-secondary" id="backup-notes-view">
+					Save the file onto your "USB-S" drive(s).
+				</div>
+			</div>
+			<div class="tab-pane fade" id="recover" role="tabpanel" aria-labelledby="recover-tab">
+				<div class="mt-2 mb-3 text-danger">Only use the functions on this tab in a browser on your offline/cold
+					computer.</div>
+				<h4 class="mt-4 mb-3" style="color:#0f4156; font-weight: 800;">Decrypt & Restore Your PEM File</h4>
+				<div class="form-group">
+					<div><label class="text-dark font-weight-bold mb-0" for="backupKeyFile">Encrypted Backup X.509
+							Identity
+							(Private Key) File (.backup)</label></div>
+					<div class="text-secondary mb-1">Your encrypted individual X.509 file (typically stored on USB-S)
+					</div>
+					<input type="file" id="backupKeyFile" accept=".backup">
+				</div>
+				<div class="form-group">
+					<div><label class="text-dark font-weight-bold mb-0" for="decryptionPassword">Password</label></div>
+					<div class="text-secondary mb-1">The password you used to encrypt/backup the private key file.</div>
+					<input type="password" id="decryptionPassword">
+				</div>
+				<div class="form-group mt-3">
+					<button onclick="recoverFile()" class="btn btn-default">Decrypt & Restore</button>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-tab">
+				<h4>Orchestrator Distribute Voting Transaction for Witnessing</h4>
+				<ul>
+					<li>Building the governance action into selfdriven-gov-transaction-[govactionid].unsigned</li>
+					<li>cardano-cli transaction txid --tx-body-file selfdriven-gov-transaction-[govactionid].unsigned >
+						selfdriven-gov-transaction-[govactionid].hash</li>
+					<li>Put the selfdriven-gov-transaction-[govactionid].hash file into the /members/voting folder</li>
+					<li>Let the members know they can get the file and witness it using the selfdriven-gov App 1.0.4 or later.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+
+
+<script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/elliptic.min.js"></script>
+<script src="js/nacl.min.js"></script>
+<script src="js/nacl-util.min.js"></script>
+<script src="js/jsrsasign-all-min-good.js"></script>
+<script src="js/blake2b.js"></script>
+<script src="js/cbor-web.min.js"></script>
+<script src="js/cbor.js"></script>
+<script src="js/crypto-js.js"></script>
+
+<script src="js/app-1.0.0.js"></script>
+
+</html>

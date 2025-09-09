@@ -1,0 +1,102 @@
+<!--
+	SSI Identity
+	https://selfdriven.foundation/trust
+-->
+
+
+<div id="util-identity-dashboard" class="hidden d-none myds-view">
+	<div class="header mb-3">
+        <div class="container-fluid">
+          <div class="header-body py-3">
+            <div class="row align-items-end">
+				<div class="col">
+					<h6 class="header-pretitle">
+						Setup
+					</h6>
+					<h1 class="header-title">
+						Identity
+					</h1>
+				</div>
+				<div class="d-none col-auto">
+					<button class="btn btn-default btn-outline btn-sm myds-navigate" data-controller="util-identity-account-my-on-chain-profile">
+						My Profile
+					</button>
+					<a href="/util-on-chain/#util-identity-account" type="button" class="btn btn-default btn-outline btn-sm myds-navigate ms-2">My On-Chain Accounts</a>
+				</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+	<div class="container-fluid p-l-0 p-r-0">
+		<div id="util-identity-view">
+			<div class="mt-4 text-secondary lead">
+				Initialising...
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="util-identity-account" class="hidden d-none myds-view">
+	<div class="header mb-3">
+        <div class="container-fluid">
+          <div class="header-body py-3">
+            <div class="row align-items-end">
+				<div class="col">
+					<h6 class="header-pretitle">
+						Identity
+					</h6>
+					<h1 class="header-title">
+						Accounts
+					</h1>
+				</div>
+				<div class="col-auto text-right">
+                    <button class="btn btn-default btn-outline btn-sm myds-navigate" data-controller="util-identity-account-my-profile">
+						My Profile
+					</button>
+				</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+	<div class="container-fluid p-l-0 p-r-0">
+    	<div class="row">
+      		<div class="col-12 col-md-9">
+				<div class="card shadow text-center mt-3">
+					<div class="card-header">
+						<h2 class="mb-0 text-info">
+							Fully Managed Identity Account
+						</h2>
+					</div>
+					<div class="card-body">
+						<div class="text-dark fw-bold lead">
+							Create a Self-Sovereign Identity (SSI) Decentralised ID (DID) for yourself and link it to your selfdriven User Account.
+						</div>
+						<div class="text-secondary mt-2">
+							It is an easy way for you get started with Self-Sovereign Identity.
+						</div>
+						<div class="text-secondary mt-2">
+							You can use this account to share your achievements as SSI Verifiable-Credentials and share them in a decentralised way.
+						</div>
+						<div id="util-identity-account-view"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-3">
+				<div class="card shadow text-center mt-3">
+					<div class="card-body">
+						<div class="mt-2">
+							<a href="https://skillzeb.io/template-explorer/dsociety-self-sovereign-identity-intro" target="_blank">What is SSI?</a>
+						</div>
+						<div class="mt-3">
+							<a href="https://docs.selfdriven.foundation/identity-and-trust/governance/overview" target="_blank">selfdriven SSI Governance</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<script type="module" src="/site/2007/2007.util.identity-2.0.89.js"></script>

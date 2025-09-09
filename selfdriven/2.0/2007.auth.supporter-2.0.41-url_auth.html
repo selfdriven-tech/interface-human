@@ -1,0 +1,246 @@
+<body class="item background-cover"
+	style="background-size: cover !important; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/site/2007/2007.cover-1.0.4.jpg')">
+
+	<div>
+		<div>
+			<div class="container-fluid">
+
+				<div class="row" style="margin: 140px 40px 20px 40px;">
+
+					<div class="col-sm-12 text-center">
+						<img class="img-responsive mb-3" src="/site/2162/selfdriven-supporter-logo.png"
+							style="width:340px;">
+						<h1 class="mt-4 mb-2 d-none" style="color: #9ECBED;">Supporter</h1>
+
+
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="offset-sm-1 col-sm-3 text-right">
+					</div>
+
+					<div class="col-sm-4">
+						<form role="form" class="mx-auto text-center">
+							<div class="form-group">
+								<label id="myds-logonname-caption" class="d-none" for="myds-logonname">Username</label>
+								<input class="form-control form-control-lg text-center mx-auto" placeholder="Username"
+									id="myds-logonname">
+							</div>
+
+							<div class="form-group">
+								<label id="myds-logonpassword-caption" class="d-none"
+									for="myds-logonpassword">Password</label>
+								<input type="password" class="form-control form-control-lg text-center mx-auto"
+									placeholder="Password" id="myds-logonpassword">
+							</div>
+
+							<div class="form-group d-none" id="myds-logoncode-view">
+								<label id="myds-logoncode-caption" class="d-none" for="myds-logoncode">Code</label>
+								<input type="tel" class="form-control form-control-lg text-center mx-auto"
+									placeholder="Code" id="myds-logoncode">
+							</div>
+
+							<div class="text-center d-none">
+								<div class="g-signin2 mx-auto" x-data-onsuccess="googleOnSignIn"></div>
+							</div>
+
+						</form>
+					</div>
+
+					<div class="col-sm-3 text-left d-none" style="padding-top:70px;">
+
+					</div>
+
+				</div>
+
+				<div class="text-center">
+					<button type="button" class="btn btn-lg btn-default myds-logon" data-style="expand-left"
+						id="myds-logon">Log On</button>
+					<div class="text-center mt-4">
+						<h4 id="app-auth-message" style="color:white; padding-bottom:10px;"></h4>
+					</div>
+
+					<div class="text-center">
+						<a data-toggle="modal" href="#auth-reset" class="p-a">Forgot your password?</a>
+					</div>
+
+					<!-- myds-auth-info -->
+
+					<div class="d-none"
+						style="background-color:rgba(0,0,0,0.4); border-radius: 6px; padding:4px; width:340px;"
+						class="mx-auto text-muted m-t-md m-b small text-center">
+						<a href="https://www.selfdriven.cloud" target="_self" class="text-muted">
+							<div><strong>lab version for building</strong></div>
+						</a>
+					</div>
+
+					<div class="d-none"
+						style="background-color:rgba(0,0,0,0.4); border-radius: 6px; padding:4px; width:340px;"
+						class="mx-auto text-muted m-t-md m-b small text-center">
+						<a href="https://www.selfdriven.cloud" target="_self" class="text-muted">
+							<div><strong>lab version for testing</strong></div>
+						</a>
+					</div>
+
+					<div class="d-none"
+						style="background-color:rgba(0,0,0,0.4); border-radius: 6px; padding:4px; width:340px;"
+						class="mx-auto text-muted m-t-md m-b small text-center">
+						<a href="https://www.selfdriven.cloud" target="_self" class="text-muted">
+							<div><strong>Next User Interface Preview (Production)</strong></div>
+						</a>
+					</div>
+
+					<div class="d-none"
+						style="background-color:rgba(0,0,0,0.4); border-radius: 6px; padding:4px; width:340px;"
+						class="mx-auto text-muted m-t-md m-b small text-center">
+						<a href="https://www.selfdriven.cloud" target="_self" class="text-muted">
+							<div><strong>Help</strong></div>
+						</a>
+					</div>
+
+				</div>
+
+				<div class="text-center p-b m-t-md d-none">
+					<img class="img-responsive" src="/site/2007/selfdriven-cloud-logo.png" style="width:120px;">
+				</div>
+			</div>
+			<div class="x-overlay-bg"></div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="auth-reset" tabindex="-1" role="dialog" aria-labelledby="auth-reset-modal"
+		aria-d-none="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Reset your selfdriven.cloud Password</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-d-none="true">&times;</button>
+				</div>
+
+				<div class="modal-body m-l-md m-r-md">
+
+					<div id="auth-reset-1">
+						<div class="alert alert-info text-center">
+							Your password will be reset and sent to the email address registered with the username
+							entered below.
+						</div>
+						<div class="form-group text-center">
+							<label class="text-muted" for="auth-reset-username">Username</label>
+							<input type="email" class="form-control text-center w-lg mx-auto form-control-lg myds-text"
+								id="auth-reset-username" data-controller="auth-reset-1" data-context="username">
+						</div>
+						<div class="mb-2 text-center mt-2">
+							<button type="button" class="btn btn-primary btn-outline myds" id="auth-reset-send">Continue
+								with the password reset</button>
+						</div>
+					</div>
+
+					<div id="auth-reset-2" class="d-none">
+						<div class="alert alert-info text-center mb-3">
+							Password reset and sent!
+						</div>
+
+						<div class="text-muted text-center">
+							If you do not receive the email, then please check your junk/spam folder and make sure you
+							correctly entered your username, else please contact <a href="mailto:team@selfdriven.cloud"
+								class="text-muted">team@selfdriven.cloud</a>.
+						</div>
+
+						<div class="mb-2 text-center mt-4">
+							<button type="button" data-dismiss="modal"
+								class="btn btn-primary btn-outline">Close</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="auth-password" data-source="expired" tabindex="-1" role="dialog"
+		aria-labelledby="auth-password-modal" aria-d-none="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h4 class="modal-title">Change your password</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-d-none="true">&times;</button>
+				</div>
+
+				<div class="modal-body m-l-md m-r-md">
+					<div id="auth-password-1" class="auth-password">
+						<div class="alert alert-info w-lg text-center mx-auto">
+							<div style="font-weight: 600;">Your password has expired!</div>
+							<div>The new password needs to be at least six characters long and contain at least one
+								number.</div>
+						</div>
+						<div class="form-group text-center">
+							<label class="text-muted" for="auth-password-existing">Existing/reset password</label>
+							<input type="password"
+								class="form-control text-center w-lg mx-auto form-control-lg myds-text"
+								id="auth-password-existing">
+						</div>
+						<div class="form-group text-center">
+							<label class="text-muted" for="auth-password-new">New password</label>
+							<input type="password" class="form-control text-center w-lg mx-auto form-control-lg"
+								id="auth-password-new">
+						</div>
+						<div class="form-group text-center">
+							<label class="text-muted" for="auth-password-new-confirm">Confirm new password</label>
+							<input type="password" class="form-control text-center w-lg mx-auto form-control-lg"
+								id="auth-password-new-confirm">
+						</div>
+						<div class="mb-2 text-center mt-2">
+							<button type="button" class="btn btn-primary btn-outline myds"
+								id="auth-password-change">Continue with changing your password</button>
+						</div>
+					</div>
+
+					<div id="auth-password-2" class="d-none auth-password">
+						<div class="alert alert-info text-center">
+							Your password has been changed.
+						</div>
+
+						<div class="text-muted text-center">
+							If you have any issues please contact <a href="mailto:help@selfdriven.cloud"
+								class="text-muted">help@selfdriven.cloud</a>.
+						</div>
+
+						<div class="mb-2 text-center mt-2">
+							<button type="button" id="auth-password-final"
+								class="btn btn-primary btn-outline myds-click">Continue</button>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap core JavaScript
+  ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+
+	<script src="/site/1901/jquery-3.1.1.min.js"></script>
+	<script src="/site/1987/popper.min.js"></script>
+	<script src="/site/1987/bootstrap.min.js"></script>
+
+	<script src="/site/1771/lodash.min.js"></script>
+	<script src="/site/1771/underscore.string.min.js"></script>
+	<script src="/site/1771/moment.min.js"></script>
+	<script src="/site/1901/he.js"></script>
+	<script src="/jscripts/md5-min.js"></script>
+	<script src="/site/1789/bootstrap-notify.min.js"></script>
+	<script src="/site/1901/numeral.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+	<script src="/site/2007/entityos-3.9.5.js"></script>
+	<script src="/site/2007/entityos.util-4.9.7.js"></script>
+	<script src="/site/2007/mydigitalstructure.util.security-1.0.3.js"></script>
+	<script src="/site/2007/2007.auth.app-2.0.41.js"></script>
+	<script src="/site/2007/2007.auth-2.0.21.js"></script>
+</body>
+
+</html>

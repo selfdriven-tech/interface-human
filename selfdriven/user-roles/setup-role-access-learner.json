@@ -1,0 +1,54 @@
+﻿{
+	"template":
+	{
+		"roles":
+		[
+			{
+				"title": "Learner",
+				"methods":
+				[
+					{"title": "ACTION_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "ATTACH_FILE", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CONTACT_ATTRIBUTE_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CONTACT_BUSINESS_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CONTACT_PERSON_MANAGE", "canuse": "N", "canadd": "Y", "canupdate": "Y", "canremove": "Y", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CONTACT_PERSON_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CONTACT_RELATIONSHIP_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_ATTACHMENT_FROM_BASE64", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_ATTACHMENT_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_DEBUG_LOG_MANAGE", "canuse": "N", "canadd": "Y", "canupdate": "N", "canremove": "Y", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_EDITOR_LINK_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_FILE_READ", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_LOGOFF", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_MORE_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_PROTECT_KEY_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_SECURE_TOKEN_MANAGE", "canuse": "N", "canadd": "Y", "canupdate": "Y", "canremove": "Y", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_SECURE_TOKEN_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_URL_LINK_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "CORE_URL_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "LOGON", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "PROJECT_MANAGE", "canuse": "N", "canadd": "Y", "canupdate": "Y", "canremove": "Y", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "PROJECT_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "PROJECT_TASK_MANAGE", "canuse": "N", "canadd": "Y", "canupdate": "Y", "canremove": "Y", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "PROJECT_TASK_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "PROJECT_TEAM_MANAGE", "canuse": "N", "canadd": "Y", "canupdate": "Y", "canremove": "Y", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "PROJECT_TEAM_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "SETUP_CONTACT_ATTRIBUTE_MANAGE", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "SETUP_CONTACT_ATTRIBUTE_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "SETUP_EVENT_TYPE_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "SETUP_LOGON_GENERATE_TOKEN", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "SETUP_PROJECT_ROLE_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "SETUP_PROJECT_TASK_STATUS_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "SETUP_PROJECT_TYPE_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "SETUP_STRUCTURE_ELEMENT_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "SETUP_USER_MANAGE", "canuse": "N", "canadd": "Y", "canupdate": "Y", "canremove": "Y", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""},
+					{"title": "SETUP_USER_SEARCH", "canuse": "Y", "canadd": "N", "canupdate": "N", "canremove": "N", "guidmandatory": "N", "allowedproperties": "", "disallowedproperties": ""}
+				],
+				"properties":
+				[
+
+				]
+			}
+		]
+	}
+}

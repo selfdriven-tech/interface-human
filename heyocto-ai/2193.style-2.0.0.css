@@ -1,0 +1,27 @@
+@media only screen {
+    body {
+        background-color: #f6f6f6 !important;
+		font-family: 'Poppins'
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        background-color: #B4A1FB;
+        color: #fff
+    }
+
+    .nav-link {
+        color: #420633;
+    }
+
+    .nav-link:hover {
+        color: #420633;
+    }
+
+    a {
+        color: #1b2a4f;
+    }
+    a:hover {
+        color: #B4A1FB;
+    }
+}

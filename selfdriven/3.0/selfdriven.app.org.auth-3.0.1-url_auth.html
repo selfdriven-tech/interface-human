@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/site/2204/selfdriven.icon-4.0.0.png" type="image/png" />
+	<title>selfdriven | Login</title>
+	<link href="/site/2204/bootstrap.min.css" rel="stylesheet">
+	<link href="/site/2007/selfdriven.app.light-3.0.0.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="container d-flex justify-content-center align-items-center">
+		<div class="login-box text-center pt-0">
+			<!-- Logo -->
+			<img src="/site/2179/selfdriven-2-org-logo-small-orange.png" alt="selfdriven Logo" class="logo">
+
+			<!-- Title -->
+			<h2 class="mt-2 auth-header">Log in to selfdriven</h2>
+
+			<!-- Form -->
+			<form class="mt-4">
+				<!-- Email Input -->
+				<div class="form-group">
+					<label id="myds-logonname-caption" class="d-none" for="myds-logonname">Username</label>
+					<input class="form-control form-control-lg text-center mx-auto" placeholder="Username"
+						id="myds-logonname">
+				</div>
+
+				<div class="form-group">
+					<label id="myds-logonpassword-caption" class="d-none" for="myds-logonpassword">Password</label>
+					<input type="password" class="form-control form-control-lg text-center mx-auto"
+						placeholder="Password" id="myds-logonpassword">
+				</div>
+
+				<div class="form-group d-none" id="myds-logoncode-view">
+					<label id="myds-logoncode-caption" class="d-none" for="myds-logoncode">Code</label>
+					<input type="tel" class="form-control form-control-lg text-center mx-auto" placeholder="Code"
+						id="myds-logoncode">
+				</div>
+
+				<!-- Remember Me & Forgot Password -->
+				<div class="d-flex justify-content-between align-items-center mb-0">
+					<div class="d-none form-check">
+						<input class="form-check-input" type="checkbox" id="remember">
+						<label class="form-check-label" for="remember">Remember me</label>
+					</div>
+
+				</div>
+
+				<div class="text-center mb-3">
+					<a data-toggle="modal" href="#auth-reset" class="text-app">Forgot Password?</a>
+				</div>
+
+				<button type="button" class="btn btn-dark w-100 myds-logon" id="myds-logon">Log In</button>
+
+				<div class="text-center my-4 font-weight-bold" id="app-auth-message">
+				</div>
+
+				<div class="text-center" id="app-auth-trusted-view">
+				</div>
+
+				<!--
+				
+				<div class="text-center">
+					<a href="/auth-on-chain" class="text-app small">Log on using your Cardano wallet</a>
+				</div>
+				<p class="mt-3 text-muted">
+					Don't have an account yet? <a href="#" class="text-app fw-bold">Sign up</a>
+				</p>
+
+				-->
+
+			</form>
+		</div>
+	</div>
+
+	<div class="modal fade" id="auth-reset" tabindex="-1" role="dialog" aria-labelledby="auth-reset-modal"
+		aria-d-none="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Reset your selfdriven.cloud Password</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-d-none="true">&times;</button>
+				</div>
+
+				<div class="modal-body m-l-md m-r-md">
+
+					<div id="auth-reset-1">
+						<div class="alert alert-light text-center">
+							Your password will be reset and sent to the email address registered with the username
+							entered below.
+						</div>
+						<div class="form-group text-center">
+							<label class="text-muted" for="auth-reset-username">Username</label>
+							<input type="email" class="form-control text-center w-lg mx-auto form-control-lg myds-text"
+								id="auth-reset-username" data-controller="auth-reset-1" data-context="username">
+						</div>
+						<div class="mb-2 text-center mt-2">
+							<button type="button" class="btn btn-dark btn-block myds" id="auth-reset-send">Continue
+								with the password reset</button>
+						</div>
+					</div>
+
+					<div id="auth-reset-2" class="d-none">
+						<div class="alert alert-info text-center mb-3">
+							Password reset and sent!
+						</div>
+
+						<div class="text-muted text-center">
+							If you do not receive the email, then please check your junk/spam folder and make sure you
+							correctly entered your username, else please contact <a href="mailto:team@selfdriven.cloud"
+								class="text-muted">team@selfdriven.cloud</a>.
+						</div>
+
+						<div class="mb-2 text-center mt-4">
+							<button type="button" data-dismiss="modal"
+								class="btn btn-primary btn-outline">Close</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="auth-password" data-source="expired" tabindex="-1" role="dialog"
+		aria-labelledby="auth-password-modal" aria-d-none="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h4 class="modal-title">Change your password</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-d-none="true">&times;</button>
+				</div>
+
+				<div class="modal-body m-l-md m-r-md">
+					<div id="auth-password-1" class="auth-password">
+						<div class="alert alert-info w-lg text-center mx-auto">
+							<div style="font-weight: 600;">Your password has expired!</div>
+							<div>The new password needs to be at least six characters long and contain at least one
+								number.</div>
+						</div>
+						<div class="form-group text-center">
+							<label class="text-muted" for="auth-password-existing">Existing/reset password</label>
+							<input type="password"
+								class="form-control text-center w-lg mx-auto form-control-lg myds-text"
+								id="auth-password-existing">
+						</div>
+						<div class="form-group text-center">
+							<label class="text-muted" for="auth-password-new">New password</label>
+							<input type="password" class="form-control text-center w-lg mx-auto form-control-lg"
+								id="auth-password-new">
+						</div>
+						<div class="form-group text-center">
+							<label class="text-muted" for="auth-password-new-confirm">Confirm new password</label>
+							<input type="password" class="form-control text-center w-lg mx-auto form-control-lg"
+								id="auth-password-new-confirm">
+						</div>
+						<div class="mb-2 text-center mt-2">
+							<button type="button" class="btn btn-primary btn-outline myds"
+								id="auth-password-change">Continue with changing your password</button>
+						</div>
+					</div>
+
+					<div id="auth-password-2" class="d-none auth-password">
+						<div class="alert alert-info text-center">
+							Your password has been changed.
+						</div>
+
+						<div class="text-muted text-center">
+							If you have any issues please contact <a href="mailto:help@selfdriven.cloud"
+								class="text-muted">help@selfdriven.cloud</a>.
+						</div>
+
+						<div class="mb-2 text-center mt-2">
+							<button type="button" id="auth-password-final"
+								class="btn btn-primary btn-outline myds-click">Continue</button>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="/site/1901/jquery-3.1.1.min.js"></script>
+	<script src="/site/1987/popper.min.js"></script>
+	<script src="/site/1987/bootstrap.min.js"></script>
+
+	<script src="/site/1771/lodash.min.js"></script>
+	<script src="/site/1771/underscore.string.min.js"></script>
+	<script src="/site/1771/moment.min.js"></script>
+	<script src="/site/1901/he.js"></script>
+	<script src="/jscripts/md5-min.js"></script>
+	<script src="/site/1789/bootstrap-notify.min.js"></script>
+	<script src="/site/1901/numeral.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+	<script src="/site/2007/entityos-3.9.5.js"></script>
+	<script src="/site/2007/entityos.util-5.0.33.js"></script>
+	<script src="/site/2007/entityos.util.security-1.1.6.js"></script>
+	<script src="/site/2007/entityos.util.security-1.1.6.js"></script>
+	<script src="/site/2007/selfdriven.auth.app-3.0.0.js"></script>
+	<script src="/site/2007/selfdriven.auth-3.0.0.js"></script>
+
+	<script src="/site/2007/selfdriven.util.identity.webauthn-3.0.0.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!--
+  {
+    To find out about this webpapp, in the browser console run; app.invoke('util-whoami')
+  }
+-->
+
+<div id="myds-toast" class="position-fixed fixed-top w-100 d-flex flex-column p-4" aria-live="assertive"
+	aria-atomic="true" style="z-index: 0"></div>
+
+<nav class="navbar navbar-vertical fixed-start navbar-expand-md navbar-light pl-3 pr-0" id="sidebar">
+	<div class="container-fluid">
+		<div class="card shadow w-100 mt-3">
+			<div class="card-body pt-3">
+				<!-- Toggler -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse"
+					aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Brand -->
+				<a class="navbar-brand pt-sm-2 pb-sm-2 entityos-app-logo" href="/">
+					<img src="/site/2179/selfdriven-org-logo-dark.png"
+						class="d-xs-block d-sm-none navbar-brand-img mx-auto" alt="..."
+						style="max-height:1.9rem !important;">
+					<img src="/site/2179/selfdriven-org-logo-dark.png"
+						class="d-none d-sm-block navbar-brand-img mx-auto" alt="..."
+						style="text-align: left; margin-left:-6px !important; max-height: 3.6rem !important;">
+				</a>
+
+				<!-- User (xs) -->
+				<div class="navbar-user d-md-none">
+
+					<!-- Dropdown -->
+					<div class="dropdown">
+
+						<!-- Toggle -->
+						<a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							<div class="avatar avatar-sm avatar-online">
+								<img src="/site/2007/2007.image.octo-logging-on.png"
+									class="avatar-img rounded-circle myds-logon-image" alt="...">
+							</div>
+						</a>
+
+						<!-- Menu -->
+						<div class="dropdown-menu dropdown-menu-end" aria-labelledby="sidebarIcon">
+							<a href="#org-me" class="dropdown-item">Profile</a>
+							<hr class="dropdown-divider">
+							<a href="#" class="dropdown-item myds-logoff">Log off</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- Collapse -->
+				<div class="collapse navbar-collapse myds-menu" id="sidebarCollapse">
+
+					<div id="side-menu-view">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="/app-org/#org-dashboard">
+									<i class="fe fe-home"></i> Dashboard
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-org/#org-feed" class="nav-link">
+									<i class="fe fe-zap"></i> What's Up?
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-org/#org-conversations" class="nav-link">
+									<i class="fe fe-message-square"></i> Conversations
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-org/#org-contacts" class="nav-link">
+									<i class="fe fe-users"></i> Contacts
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-org/#org-opportunities" class="nav-link">
+									<i class="fe fe-sun"></i> Opportunities
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-org/#org-projects" class="nav-link">
+									<i class="fe fe-folder"></i> Projects
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-org/#org-decisions" class="nav-link">
+									<i class="fe fe-share-2"></i> Decisions
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-org/#org-docs" class="nav-link">
+									<i class="fe fe-book-open"></i> Docs
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-org/#org-tokens" class="nav-link">
+									<i class="fe fe-disc"></i> Tokens
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="/app-org/#org-operations" class="nav-link">
+									<i class="fe fe-refresh-cw"></i> Operations
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-org/#org-financials" class="nav-link">
+									<i class="fe fe-activity"></i> Financials
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-org/#org-reports" class="nav-link">
+									<i class="fe fe-search"></i> Reports
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-setup" data-bs-toggle="collapse" role="button"
+									aria-controls="side-menu-view-setup">
+									<i class="fe fe-settings"></i> Setup
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-setup">
+									<ul class="nav nav-sm flex-column">
+										<li class="d-none nav-item">
+											<a href="/app-org/#org-setup-general" class="nav-link">
+												General
+											</a>
+										</li>
+										<li class="d-none nav-item">
+											<a href="/app-org/#org-setup-users" class="nav-link">
+												Users
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-org/#org-setup-templates" class="nav-link">
+												Templates
+											</a>
+										</li>
+										<li class="d-none nav-item">
+											<a href="/app-org/#org-setup-financials" class="nav-link">
+												Financials
+											</a>
+										</li>
+										<li class="d-none nav-item">
+											<a href="/app-org/#org-setup-on-chain" class="nav-link">
+												On-Chain
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Push content down -->
+					<div class="mt-auto"></div>
+
+					<!-- User (md) -->
+					<div class="navbar-user d-none d-md-flex" id="sidebarUser">
+
+						<!-- Icon -->
+						<a class="navbar-user-link">
+							<span class="icon">
+								<a href="/app-org/#org-me" class="text-secondary">
+									<i class="fe fe-user"></i>
+								</a>
+							</span>
+						</a>
+
+						<!-- Dropup -->
+						<div class="dropup">
+
+							<!-- Toggle -->
+							<a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button"
+								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<div class="avatar avatar-sm avatar-online">
+									<img id="myds-logon-image" style="width: 40px;"
+										src="/site/2007/2007.image.octo-logging-on.png" class="rounded-circle"
+										alt="...">
+								</div>
+							</a>
+
+							<!-- Menu -->
+							<div class="dropdown-menu text-center bg-muted shadow-lg mb-0"
+								aria-labelledby="sidebarIconCopy">
+								<div class="btn-group btn-group-sm mr-1 mb-2 mt-1 bg-muted">
+									<button
+										class="btn btn-default btn-outline active btn-sm myds-click myds-button-group"
+										type="button" id="util-view-theme-mode-light" value="light" data-id="light"
+										data-mode="light" data-controller="util-view-theme-mode-select"
+										data-scope="util-view-theme" data-context="mode"><img
+											src="/site/2007/light-white.svg" style="width:22px;" class="p-1">
+									</button>
+									<button class="btn btn-default btn-outline btn-sm myds-click myds-button-group"
+										type="button" id="util-view-theme-mode-dark" value="dark" data-id="dark"
+										data-mode="dark" data-controller="util-view-theme-mode-select"
+										data-scope="util-view-theme" data-context="mode"><img
+											src="/site/2007/dark-white.svg" style="width:22px;" class="p-1">
+									</button>
+									<button class="btn btn-default btn-outline btn-sm myds-click myds-button-group"
+										type="button" id="util-view-theme-mode-light-auto" value="auto" data-id="auto"
+										data-mode="auto" data-controller="util-view-theme-mode-select"
+										data-scope="util-view-theme" data-context="mode"><img
+											src="/site/2007/light-dark-white.svg" style="width:22px;" class="p-1">
+									</button>
+								</div>
+
+								<!--<hr class="dropdown-divider">
+						<a class="dropdown-item myds-click" data-controller="util-profile-show">My Profile</a>
+						<a class="d-none btn w-100 btn-primary" data-bs-toggle="offcanvas" href="#offcanvasDemo"
+							aria-controls="offcanvasDemo">
+							Settings
+						</a>-->
+								<hr class="dropdown-divider">
+								<a href="#auth-trust" data-toggle="modal" class="dropdown-item text-center">Trust This
+									Browser</a>
+								<a href="#" class="dropdown-item myds-logoff">Log off</a>
+
+							</div>
+
+						</div>
+
+						<!-- Icon -->
+						<a class="navbar-user-link myds-logoff" data-bs-toggle="offcanvas" href="#" aria-controls="">
+							<span class="icon">
+								<i class="fe fe-log-out"></i>
+							</span>
+						</a>
+
+					</div>
+					<div class="text-center text-muted"><span class="myds-logon-first-name">&nbsp;</span> <span
+							class="myds-logon-surname"></span></div>
+					<div id="stylesheetLight"></div>
+					<div id="stylesheetDark"></div>
+				</div> <!-- / .navbar-collapse -->
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- MAIN-->
+
+<div class="main-content">
+
+	<!--
+	<nav class="navbar navbar-expand-md navbar-light d-none d-md-flex" id="topbar" style="display: none !important">
+		<div class="container-fluid">
+			<div class="row">
+				
+			</div>
+	  	</div>
+	</nav>
+-->
+
+	<div class="mt-3">
+		<-mydigitalstructure:content->
+	</div>
+
+</div>
+
+<div class="modal fade" id="auth-password" tabindex="-1" role="dialog" aria-labelledby="auth-password-modal"
+	aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<h4 class="modal-title">Change your password</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+
+			<div class="modal-body">
+				<div id="auth-password-1" class="auth-password">
+					<div class="alert alert-info w-lg alert-sm text-center mx-auto">
+						Your password needs to be at least six characters long and contain at least one number.
+					</div>
+					<div class="form-group text-center">
+						<label class="text-muted" for="auth-password-existing">Existing password</label>
+						<input type="password" class="form-control text-center w-lg m-x-auto input-lg myds-text"
+							id="auth-password-existing">
+					</div>
+					<div class="form-group text-center">
+						<label class="text-muted" for="auth-password-new">New password</label>
+						<input type="password" class="form-control text-center w-lg mx-auto input-lg"
+							id="auth-password-new">
+					</div>
+					<div class="form-group text-center">
+						<label class="text-muted" for="auth-password-new-confirm">Confirm new password</label>
+						<input type="password" class="form-control text-center w-lg mx-auto input-lg"
+							id="auth-password-new-confirm">
+					</div>
+					<div class="mb-2 text-center mt-3">
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							id="auth-password-change">Continue with changing your password</button>
+					</div>
+				</div>
+
+				<div id="auth-password-2" class="hidden auth-password">
+					<div class="alert alert-info alert-sm text-center">
+						Your password has been changed.
+					</div>
+
+					<div class="text-muted text-center">
+						If you have any issues please contact <a href="mailto:journal@ths.community"
+							class="text-muted">journal@ths.community</a>.
+					</div>
+
+					<div class="m-b-md text-center m-t-md">
+						<button type="button" data-dismiss="modal" class="btn btn-default btn-outline">Close</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="auth-trust" tabindex="-1" role="dialog" aria-labelledby="auth-trust-modal"
+	aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<h4 class="modal-title">Trust this browser</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+
+			<div class="modal-body ml-2 mr-2">
+				<div id="auth-trust-OK" class="d-none auth-trust">
+					<div class="alert alert-info alert-sm text-center p-2 mx-auto" id="auth-trust-1-message-OK">
+						Instead of entering a 2nd factor code when logging on, you can trust this browser.
+					</div>
+
+					<div class="mb-2 text-center mt-2 d-none" id="auth-trust-1-set">
+						<div class="text-muted text-center mb-3">
+							<strong>You currently don't trust this browser.</strong>
+						</div>
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							data-controller="auth-trust-set">Trust this browser</button>
+					</div>
+
+					<div class="mb-2 text-center mt-2 d-none" id="auth-trust-1-remove">
+						<div class="text-muted text-center mb-3">
+							<strong>You currently trust this browser.</strong>
+						</div>
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							data-controller="auth-trust-remove">I no longer trust this browser</button>
+					</div>
+
+					<div class="mb-2 text-center mt-4">
+						<button type="button" data-dismiss="modal" class="btn btn-default btn-outline">Close</button>
+					</div>
+
+				</div>
+
+				<div id="auth-trust-ER" class="d-none auth-trust">
+					<div class="alert alert-info alert-sm text-center p-2 mx-auto" id="auth-trust-1-message-ER">
+						<div><strong>Your user account has not been enabled to trust a browser.</strong></div>
+						<div>Please contact your system administrator for more information.</div>
+					</div>
+
+					<div class="mb-2 text-center mt-2">
+						<button type="button" data-dismiss="modal" class="btn btn-default btn-outline">Close</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<script src="/site/1901/jquery-3.1.1.min.js"></script>
+<script src="/site/1987/popper.min.js"></script>
+<script src="/site/1987/bootstrap.min.js"></script>
+<script src="/site/1987/jquery.metisMenu.js"></script>
+<script src="/site/1987/jquery.slimscroll.min.js"></script>
+<script src="/site/1901/lodash.min.js"></script>
+<script src="/site/1901/underscore.string.min.js"></script>
+<script src="/site/1901/moment.min.js"></script>
+<script src="/site/1901/numeral.min.js"></script>
+<script src="/site/1901/he.js"></script>
+<script src="/site/1901/d3.min.js"></script>
+<script src="/site/1901/c3.min.js"></script>
+
+<script src="/site/1901/1901.popconfirm-1.0.0.js"></script>
+<script src="/site/1987/inspinia.js"></script>
+<script src="/site/1987/pace.min.js"></script>
+<script src="/site/1901/jquery.sparkline.min.js"></script>
+<script src="/site/1901/jquery.gritter.min.js"></script>
+<script src="/site/2007/base64.js"></script>
+<script src="/site/1929/select2.full.js"></script>
+<script src="/site/1991/xlsx.full.min.js"></script>
+<script src="/site/1903/xss.js"></script>
+<script src="/site/1991/faker.js"></script>
+<script src="/site/1991/html2pdf.bundle.min.js"></script>
+<script src="/site/1789/malsup.jquery.form.js"></script>
+
+<script src="/site/1929/dropzone.js"></script>
+<script src="/site/2007/core.js"></script>
+<script src="/site/2007/hmac.js"></script>
+<script src="/site/2007/sha256.js"></script>
+<script src="/site/2007/enc-base64.js"></script>
+<script src="/site/2007/jsrsasign-all-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.0.0/tinymce.min.js"></script>
+<script src="/site/2007/fullcalendar-5.3.2.min.js"></script>
+
+<script src="/site/2007/hybrid-crypto.js"></script>
+
+<script src="/site/2008/chartist.min.js"></script>
+<script src="/site/2007/pdfmake.min.js"></script>
+<script src="/site/2007/vfs_fonts.js"></script>
+<script src="/site/2067/dashkit.vendor.bundle.js"></script>
+<script src="/site/2067/dashkit.theme.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/site/1901/tempusdominus-bootstrap-4.min.js"></script>
+
+<script src="/site/1901/crypto-js.js"></script>
+
+<script src="/site/2007/entityos-3.9.14.js"></script>
+<script src="/site/2007/entityos.util-5.0.18.js"></script>
+<script src="/site/2007/entityos.util.security-1.1.5.js"></script>
+<script src="/site/2007/entityos.util.identity-1.0.0.js"></script>
+<script src="/site/2007/entityos.util.protect-1.0.5.js"></script>
+<script src="/site/2007/entityos.util.import-1.1.9.js"></script>
+<script src="/site/2007/entityos.util.export-1.1.15.js"></script>
+<script src="/site/2007/entityos.util.dashboard-1.0.11.js"></script>
+<script src="/site/2007/entityos.util.search-1.1.20.js"></script>
+<script src="/site/2007/entityos.util.editor-1.0.2.js"></script>
+<script src="/site/2007/entityos.util.calendar-1.0.0.js"></script>
+<script src="/site/2007/entityos.util.chart-1.0.4.js"></script>
+
+<script src="/site/2179/2007.app.org-2.0.71.js"></script>
+<script src="/site/2007/2007.auth-2.0.13.js"></script>
+<script src="/site/2067/2068.app.notifications-2.0.5.js"></script>
+
+<script src="/site/2007/2007.app.util-2.0.58.js"></script>
+<script src="/site/2007/2007.app.util.actions-2.0.32.js"></script>
+<script src="/site/2007/2007.app.util.attachment-2.0.69.js"></script>
+<script src="/site/2007/2007.app.util.projects-2.0.72.js"></script>
+<script src="/site/2007/2007.app.util.projects.story-2.0.45.js"></script>
+<script src="/site/2007/2007.app.util.community.members-2.0.13.js"></script>
+<script src="/site/2007/2007.app.util.community.facilitators-1.1.5.js"></script>
+<script src="/site/2067/2068.app.util.community.calendar-2.0.8.js"></script>
+<script src="/site/2067/2068.app.util.community.reflection-2.0.2.js"></script>
+<script src="/site/2067/2068.app.util.community.improve-2.0.5.js"></script>
+<script src="/site/2007/2007.app.util.dashboard-1.1.2.js"></script>
+<script src="/site/2007/2007.app.util.pdf-2.0.48.js"></script>
+<script src="/site/2007/2007.app.util.export-1.1.4.js"></script>
+<script src="/site/2007/2007.app.util.import.community.members-2.0.10.js"></script>
+<script src="/site/2007/2007.app.util.import.community.tokens-2.0.10.js"></script>
+<script src="/site/2007/2007.app.util.import.setup.skills-2.0.11.js"></script>
+<script src="/site/2067/2068.app.util.visuals-2.0.8.js"></script>
+<script src="/site/2007/2007.app.util.level.up-2.0.54.js"></script>
+<script src="/site/2007/2007.app.util.templates-2.0.55.js"></script>
+<script src="/site/2007/2007.app.util.messaging-2.0.62.js"></script>
+
+<script src="/site/2007/2007.app.util.contact.person-2.0.59.js"></script>
+
+<script src="/site/2179/2007.app.org.me-2.0.61.js"></script>
+<script src="/site/2179/2007.app.org.me.on.chain-2.0.59.js"></script>
+<script src="/site/2179/2007.app.org.dashboard-2.0.62.js"></script>
+<script src="/site/2179/2007.app.org.opportunities-2.0.57.js"></script>
+<script src="/site/2179/2007.app.org.projects-2.0.59.js"></script>
+<script src="/site/2179/2007.app.org.conversations-2.0.72.js"></script>
+<script src="/site/2179/2007.app.org.decisions-2.0.58.js"></script>
+<script src="/site/2179/2007.app.org.contacts-2.0.58.js"></script>
+<script src="/site/2179/2007.app.org.docs-2.0.58.js"></script>
+<script src="/site/2179/2007.app.org.financials-2.0.57.js"></script>
+<script src="/site/2179/2007.app.org.tokens-2.0.57.js"></script>
+<script src="/site/2179/2007.app.org.operations-2.0.68.js"></script>
+<script src="/site/2179/2007.app.org.report-2.0.59.js"></script>
+<script src="/site/2179/2007.app.org.feed-2.0.68.js"></script>

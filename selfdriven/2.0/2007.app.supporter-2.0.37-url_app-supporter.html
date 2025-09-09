@@ -1,0 +1,679 @@
+<!--
+  {
+      title: "Form; App; Level UP",
+      design: ""
+    }
+-->
+
+<!-- ROLE; SUPPORTER-->
+
+<div id="supporter-dashboard" class="hidden d-none myds-view">
+
+	<div class="container-fluid">
+		<div class="row pt-4">
+			<div class="col-12 col-lg-12 pl-md-0 pr-md-0">
+				<ul class="d-none nav nav-tabs myds-tab mb-2 ml-2">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#level-up-dashboard-me">
+							<button class="btn btn-default btn-outline btn-rounded"><i
+									class="fas fa-user mr-1"></i>My</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-2" data-toggle="tab" href="#level-up-dashboard-community">
+							<button class="btn btn-default btn-outline btn-rounded"><i class="fa fa-users"></i>
+								Community</button></a>
+					</li>
+					<li class="nav-item d-none">
+						<a class="nav-link px-2" data-toggle="tab" href="#level-up-dashboard-connections"
+							style="background-color:transparent; border-color:transparent;">
+							<button class="btn btn-default btn-outline btn-rounded"> <i
+									class="fa fa-project-diagram mr-1"></i> Connections</button></a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active pt-3" id="supporter-dashboard-me">
+						<div class="ml-md-2">
+							<div class="row">
+								<div class="col-12 col-md-6">
+									<div class="card lift shadow-lg">
+										<div class="card-header pb-2">
+											<h4 class="mb-0" style="font-size: 1.3rem;">Liquidity</h4>
+										</div>
+										<div class="card-body">
+											<h1 class="p-0" style="font-size: 3rem;"><a href="#supporter-energy"
+													id="supporter-dashboard-liquidity">...</a></h1>
+											<small class="text-muted">Total SDAX Tokens</small>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6">
+									<div class="card lift shadow-lg">
+										<div class="card-header pb-2">
+											<h4 class="mb-0" style="font-size: 1.3rem;">Communities</h4>
+										</div>
+										<div class="card-body">
+											<h1 class="p-0" style="font-size: 3rem;"><a href="#supporter-communities"
+													id="supporter-dashboard-communities">...</a></h1>
+											<small class="text-muted">Total Supported Communities</small>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6">
+									<div class="card lift shadow-lg">
+										<div class="card-header pb-2">
+											<h4 class="mb-0" style="font-size: 1.3rem;">Projects</h4>
+										</div>
+										<div class="card-body">
+											<h1 class="p-0" style="font-size: 3rem;"><a href="#supporter-projects"
+													id="supporter-dashboard-projects">...</a></h1>
+											<small class="text-muted">Total Supported Projects</small>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6">
+									<div class="card lift shadow-lg">
+										<div class="card-header pb-2">
+											<h4 class="mb-0" style="font-size: 1.3rem;">My Tokens</h4>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-12">
+													<h1 class="p-0" style="font-size: 3rem;"><a
+															href="#supporter-my-tokens"
+															id="supporter-dashboard-my-tokens">...</a></h1>
+													<small class="text-muted">Total Community (SDC) Tokens</small>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-0 d-none">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+
+							<div class="card mt-3">
+								<div class="card-header pt-2 pr-2">
+									<h4 class="float-left mt-2 ml-1 mb-0">How Going?</h4>
+									<div class="float-right">
+										<i class="fas fa-question mr-2 mt-2 text-muted"></i>
+									</div>
+								</div>
+								<div class="card-body inspinia-timeline">
+									<label class="form-check-label mb-1 w-100"
+										for="learner-dashboard-wellbeing-howgoing">
+										<div class="row">
+											<div class="col-6 text-muted small float-left">Could be better</div>
+											<div class="col-6 text-muted small float-right text-right">Going OK<i
+													class="far fa-thumbs-up ml-1 text-muted"></i></div>
+										</div>
+									</label>
+									<input type="range" min="0" max="100" value="0" step="10"
+										class="form-control-range myds-range" data-scope="learner-dashboard-wellbeing"
+										data-controller="learner-dashboard-wellbeing-save" data-context="_howgoing"
+										id="learner-dashboard-wellbeing-howgoing">
+									<a id="learner-community-dashboard-howgoing-reach-out-for-me"
+										href="#learner-wellbeing-how-going"
+										class="d-none btn btn-default btn-outline btn-sm mt-3 w-100">
+										Reach Out For Help
+									</a>
+									<a id="learner-community-dashboard-howgoing-reach-out-for-community"
+										href="#learner-wellbeing-how-going"
+										class="d-none btn btn-default btn-outline btn-sm mt-3 w-100">
+										Help Others
+									</a>
+									<a id="learner-community-dashboard-howgoing-stay-fit"
+										href="#learner-wellbeing-how-going"
+										class="d-none btn btn-primary btn-sm mt-3 w-100">
+										Tips For Staying Physically & Mentally Fit
+									</a>
+								</div>
+							</div>
+
+							<div class="card lift">
+								<div class="card-header pb-2 text-center">
+									<h4>Community Tokens</h4>
+								</div>
+								<div class="card-body">
+									<div class="row">
+										<div class="col-6 text-center">
+											<h1 class="p-0" style="font-size:2.4em;"><a href="#learner-tokens"
+													id="projects-dashboard-tokens-earned" style="color:#9ecbed;">...</a>
+											</h1>
+											<small class="text-muted">Total Earned</small>
+										</div>
+										<div class="col-6 text-center">
+											<h1 class="p-0" style="font-size:2.4em;"><a href="#learner-tokens"
+													id="projects-dashboard-tokens-used" style="color:#9ecbed;">...</a>
+											</h1>
+											<small class="text-muted">Total Used</small>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="d-none card mt-4">
+								<div class="card-header pt-2 pr-2">
+									<h4 class="float-left mt-2 ml-1">Updates</h4>
+									<div class="float-right">
+										<i class="fas fa-rss mr-2 mt-2 text-muted"></i>
+									</div>
+								</div>
+								<div class="card-body inspinia-timeline" id="learner-community-dashboard-updates">
+								</div>
+							</div>
+
+							<div class="card d-none">
+								<div class="card-header pr-3 text-center">
+									<h4 class="mb-1 mt-2">Need help with something?</h4>
+								</div>
+								<div class="card-body">
+									<div class="text-secondary text-center">
+										There are other members of the community that can help you.
+									</div>
+									<a href="#learner-community-facilitators"
+										class="btn btn-default btn-outline btn-sm mt-3 w-100">
+										Find a Facilitator
+									</a>
+								</div>
+								<div class="card-body border-top text-center pb-3">
+									<a href="https://www.selfdriven.education/octo" target="_blank"
+										class="text-decoration-none">
+										<img src="/site/2134/selfdriven-art-series-3-octo.0.doing.stuff-thanks.png"
+											class="img-responsive mx-auto rounded-circle mb-3 w-50 w-md-25">
+									</a>
+									<div class="text-secondary text-center">
+										Need help with using the App?
+									</div>
+									<div>
+										<a href="https://www.selfdriven.education/getting-started-app-learner"
+											target="_blank" class="btn btn-default btn-outline btn-sm mt-3 w-100">Check
+											Out the Getting Started Guide</a>
+									</div>
+									<div class="mt-3 text-center">
+										<a href="https://www.selfdriven.education" target="_blank"
+											class="text-secondary w-100">More Guides ...</a>
+									</div>
+								</div>
+								<div class="card-body border-top">
+									<div class="text-secondary text-center">
+										Need help with learning decisions ie your next steps
+									</div>
+									<a href="#learner-next" class="btn btn-default btn-outline btn-sm mt-3 w-100">Next
+										Steps</a>
+								</div>
+								<div class="card-body border-top">
+									<div class="text-secondary text-center">
+										Get support for your community improvement project using improve.community!
+									</div>
+									<a href="#learner-community-improve"
+										class="btn btn-default btn-outline btn-sm mt-3 w-100">Improve.Community</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- SUPPORTER; FEED (WHAT'S UP) -->
+
+<div id="supporter-feed" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Supporter
+						</h6>
+						<h1 class="header-title">
+							What's Up?
+						</h1>
+						<div class="text-secondary mt-2 small">
+							A feed of recent changes based on your connections to members of the community (projects
+							etc)
+						</div>
+					</div>
+					<div class="col-auto text-right pr-3 pb-3">
+						<i class="fe fe-zap" style="color:#a0cced; font-size:2.2rem;"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="card mt-3">
+			<div class="card-header">
+				<form autocomplete="off">
+					<div class="input-group input-group-flush input-group-merge input-group-reverse">
+						<input type="text" class="form-control myds-text" placeholder="Search my feed"
+							data-controller="learning-partner-connections-feed-dashboard" data-context="search">
+						<div class="input-group-text">
+							<span class="fe fe-search"></span>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="card-body" id="supporter-feed-dashboard-view">
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- SUPPORTER; ENERGY; LIQUIDITY TOKENS -->
+
+<div id="supporter-energy" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Supporter Energy
+						</h6>
+						<h1 class="header-title">
+							Liquidity
+						</h1>
+					</div>
+					<div class="col-auto">
+						<button type="button" class="btn text-white btn-sm myds-click mb-2"
+							data-controller="supporter-energy"><i class="fe fe-refresh-cw"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-12 col-sm-9">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="card shadow-lg">
+							<div class="card-header pb-2">
+								<h2 class="mb-0">Liquidity Provided By You</h2>
+								<small class="text-muted">SDAX Tokens</small>
+								<div class="col-auto pr-0">
+									<img class="img-fluid" style="width:35px;"
+										src="/site/2007/2007.image.selfdriven-token-sdax.png">
+								</div>
+							</div>
+
+							<div class="card-body">
+								<div class="row">
+									<div class="col-6 text-center">
+										<h1 class="p-0 mb-2" style="font-size:3em;""><a href="
+											#supporter-energy-transactions/in" id="supporter-energy-dashboard-total-in"
+											style="color:#9ecbed;">...</a></h1>
+										<small class="text-muted">Provided</small>
+									</div>
+									<div class="col-6 text-center">
+										<h1 class="p-0 mb-2" style="font-size:3em;""><a href="
+											#supporter-energy-transactions/out"
+											id="supporter-energy-dashboard-total-out" style="color:#9ecbed;">...</a>
+										</h1>
+										<small class="text-muted">Used (Unlocked)</small>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body border-top p-0">
+								<div id="supporter-energy-dashboard-transactions-view">
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-3 pl-4">
+				<div class="card shadow-lg">
+					<div class="card-body">
+						<div class="text-center text-secondary">Add Liquidity (Energy)</div>
+						<div class="text-center mt-4">
+							<button class="btn btn-default btn-outline btn-sm myds-navigate"
+								data-controller="supporter-energy-token-edit" data-context="" data-id="">Add</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="d-none card shadow-lg">
+					<div class="card-body">
+						<div class="text-center text-muted">Bulk add or record usage of tokens using a template.</div>
+						<div class="text-center mt-4">
+							<button class="btn btn-default btn-outline btn-sm myds-navigate"
+								data-controller="learning-partner-connections-tokens-import" data-context=""
+								data-id="">Import Tokens</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="rounded shadow-lg">
+					<div class="card-body">
+						<div class="text-center text-white">Your liquidity helps support the growth-cycle!</div>
+						<div class="text-center mt-2">
+							<a href="https://slfdrvn.io/growth-cycle" target="_blank" class="text-white" style="font-size:1.6rem;"><i class="fe fe-external-link"></i></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="supporter-energy-token-edit" class="hidden d-none myds-view">
+</div>
+
+<div id="_supporter-energy-token-edit" class="hidden d-none myds-view-template">
+	<div class="container-fluid">
+		<div class="row mt-4">
+			<div class="col-sm-12">
+				<div class="card shadow-lg">
+					<div class="card-header">
+						<h2 class="my-1">Add Liquidity</h2>
+						<div class="text-muted small mb-0">SDAX Token</div>
+					</div>
+					<div class="card-body pb-1">
+						<form autocomplete="off">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<h4 class="mb-0"><label class="mb-1"
+												for="supporter-energy-token-edit-subject-{{id}}">Description</label></h4>
+										<div class="text-muted small mb-0">For your own reference</div>
+										<input type="text" class="form-control input-lg myds-text"
+											id="supporter-energy-token-edit-subject-{{id}}" value="" data-value=""
+											data-id="{{id}}" data-scope="supporter-energy-token-edit-{{id}}"
+											data-context="subject">
+									</div>
+									<div class="d-none form-group">
+										<h4 class="mb-0"><label class="mb-1"
+												for="supporter-energy-token-edit-contactperson">Community</label></h4>
+										<div class="text-muted small mb-0">Which community members can unlock these tokens?</div>
+										<select class="form-control input-lg myds-select"
+											id="supporter-energy-token-edit-contactbusiness" style="width:100%;"
+											data-id="{{contactbusiness}}" data-scope="supporter-energy-token-edit-{{id}}"
+											data-context="contactbusiness" data-text="{{contactbusinesstext}}">
+										</select>
+									</div>
+									<div class="form-group mb-3">
+										<h4 class="mb-0"><label class="mb-1"
+												for="supporter-energy-token-edit-units-{{id}}">Amount</label></h4>
+										<div class="text-muted small mb-0">The number of SDAX tokens</div>
+										<input type="text" class="form-control input-lg myds-text"
+											id="supporter-energy-token-edit-amount-{{id}}" value="" data-value=""
+											data-id="{{id}}" data-scope="supporter-energy-token-edit-{{id}}"
+											data-context="amount">
+									</div>
+
+									<div class="form-group">
+										<h4 class="mb-0"><label class="mb-1" for="supporter-energy-token-edit-date">Date Available</label></h4>
+										<div class="text-muted small mb-0">Date that the liquidity becomes available</div>
+										<div class="text-muted small mb-0">i.e. when the SDAX tokens are created</div>
+										<div class="input-group date myds-date" data-target-input="nearest"
+											id="supporter-energy-token-edit-date-view">
+											<input type="text"
+												class="form-control input-lg datetimepicker-input myds-validate"
+												data-validate-mandatory
+												data-target="#supporter-energy-token-edit-date-view"
+												id="supporter-energy-token-edit-date" data-id=""
+												data-scope="supporter-energy-token-edit-{{id}}" data-context="date"
+												value="{{date}}" data-value="{{startdate}}" />
+											<div class="input-group-append"
+												data-target="#supporter-energy-token-edit-date-view"
+												data-toggle="datetimepicker">
+												<div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<h4><label class="mb-1 mt-1"
+												for="supporter-energy-token-edit-description">Notes</label></h4>
+										<textarea style="height:160px;" class="form-control myds-text"
+											id="supporter-energy-token-edit-description" data-id="{{id}}"
+											data-scope="supporter-energy-token-edit-{{id}}"
+											data-enter="ok"
+											data-context="description"></textarea>
+									</div>
+								</div>
+
+								<div class="col-sm-6 pl-sm-4">
+									<div class="form-group">
+										<h4 class="mb-0"><label class="mb-1"
+												for="supporter-energy-token-edit-locked-tokens-{{id}}">Locked Tokens</label></h4>
+										<div class="text-muted small mb-0">The tokens that will be unlocked. e.g. ADA, DJED</div>
+										<input type="text" class="form-control input-lg myds-text"
+											id="supporter-energy-token-edit-locked-tokens-{{id}}" value="" data-value=""
+											data-id="{{id}}" data-scope="supporter-energy-token-edit-{{id}}"
+											data-context="locked-tokens">
+									</div>
+
+									<div class="form-group">
+										<h4 class="mb-0"><label class="mb-1"
+												for="supporter-energy-token-edit-locked-tokens-amount-{{id}}">Locked Tokens Amount</label></h4>
+										<div class="text-muted small mb-0">The number of locked tokens.</div>
+										<div class="text-muted small mb-0">The number of tokens per SDAX unlock, is this amount divided by the total number of SDAX.</div>
+										<input type="text" class="form-control input-lg myds-text"
+											id="supporter-energy-token-edit-locked-tokens-amount-{{id}}" value="" data-value=""
+											data-id="{{id}}" data-scope="supporter-energy-token-edit-{{id}}"
+											data-context="locked-tokens-amount">
+									</div>
+
+									<div class="form-group mb-3">
+										<h2 class="mb-0 text-info"><label class="mb-1">Unlocking Parameters</label></h2>
+										<div class="text-muted small mb-0">Used to find matching Achievements (SDAs)</div>
+									</div>
+
+									<div class="form-group mb-3">
+										<h4 class="mb-0"><label class="mb-1"
+												for="supporter-energy-token-edit-unlockissuedby">Achievement Issued By</label></h4>
+										<div class="text-muted small mb-0">Who issued the Achievement?</div>
+										<select class="form-control input-lg myds-select"
+											id="supporter-energy-token-edit-unlockissuedby" style="width:100%;"
+											data-id="{{unlockissuedby}}" data-scope="supporter-energy-token-edit-{{id}}"
+											data-context="unlockissuedby" data-text="{{unlockissuedbytext}}">
+										</select>
+									</div>
+
+									<div class="form-group">
+										<h4 class="mb-0"><label class="mb-1 mt-1"
+												for="supporter-energy-token-edit-unlockskills">Skill Gained URIs</label></h4>
+										<div class="text-muted small mb-0"><a href="https://slfdrvn.io/skills" target="_blank" class="text-muted">Skills Explorer <i class="fe fe-external-link"></i></a></div>
+										<textarea style="height:80px;" class="form-control myds-text"
+											id="supporter-energy-token-edit-unlockskills" data-id="{{id}}"
+											data-scope="supporter-energy-token-edit-{{id}}"
+											data-enter="ok"
+											data-context="unlockskills"></textarea>
+									</div>
+
+									<div class="form-group mb-3">
+										<h4 class="mb-0"><label class="mb-1"
+												for="supporter-energy-token-edit-unlocksendtokensto">Send Unlocked Tokens To</label></h4>
+										<div class="text-muted small mb-0">Recipient of the tokens.</div>
+										<select class="form-control input-lg myds-select"
+											id="supporter-energy-token-edit-unlocksendtokensto" style="width:100%;"
+											data-id="{{unlocksendtokensto}}" data-scope="supporter-energy-token-edit-{{id}}"
+											data-context=unlocksendtokensto" data-text="{{unlocksendtokenstotext}}">
+										</select>
+									</div>
+
+									
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="card-footer border-top text-right">
+						<button type="button" class="btn btn-link myds-navigate"
+							data-controller="learning-partner-connections-tokens"
+							id="learning-partner-connections-token-cancel-{{id}}" data-id="{{guid}}"
+							data-context="{{guid}}">Cancel</button>
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							data-controller="supporter-energy-token-edit-save"
+							id="supporter-energy-token-edit-save-{{id}}" data-id="{{id}}">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- SUPPORTER; COMMUNITIES -->
+
+<div id="supporter-communities" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Supporter
+						</h6>
+						<h1 class="header-title">
+							Communities
+						</h1>
+					</div>
+					<div class="col-auto">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-12 col-sm-9">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- SUPPORTER; PROJECTS -->
+
+<div id="supporter-projects" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Supporter
+						</h6>
+						<h1 class="header-title">
+							Projects
+						</h1>
+					</div>
+					<div class="col-auto">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-12 col-sm-9">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- SUPPORTER; MY TOKENS -->
+
+<div id="supporter-tokens" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Supporter
+						</h6>
+						<h1 class="header-title">
+							My Tokens
+						</h1>
+					</div>
+					<div class="col-auto">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-12 col-sm-9">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- SUPPORTER; MY PROFILE -->
+
+<div id="supporter-me" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Supporter
+						</h6>
+						<h1 class="header-title">
+							My Profile
+						</h1>
+					</div>
+					<div class="col-auto">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-12 col-sm-9">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- SUPPORTER; HELP -->
+
+<div id="help" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Supporter
+						</h6>
+						<h1 class="header-title">
+							Help
+						</h1>
+					</div>
+					<div class="col-auto">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-12 col-sm-9">
+			</div>
+		</div>
+	</div>
+</div>

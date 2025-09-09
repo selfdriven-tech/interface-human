@@ -1,0 +1,279 @@
+{
+	"schema":
+	{
+		"text": {"size": ["small", "medium", "large"]},
+		"outcomes": {"by": [{"name": "learner", "caption": "Learner"}, {"name": "team", "caption": "Team"}, {"name": "learning-partner", "caption": "Learning Partner"}]},
+		"rules": {"for": [{"name": "learner", "caption": "Learner"}, {"name": "team", "caption": "Team"}, {"name": "learning-partner", "caption": "Learning Partner"}]},
+		"template-project":
+		{
+			"name": {"type": "text"},
+			"title": {"type": "text"},
+			"url": {"type": "text"},
+			"urlCaption": {"type": "text"},
+			"version":
+			{
+				"number": {"type": "text"},
+				"date": {"type": "date"},
+				"notes": {"type": "text"}
+			},
+			"usage": {"type": "text"},
+			"description": {"type": "text"},
+			"summary": {"type": "text"},
+			"duration-days": 
+			{
+				"minimum": 0,
+				"maximum": 0
+			},
+			"source":
+			{
+				"sharing": 
+				{
+					"type": {"type": "text", "example": "Creative Commons CC0"},
+					"description": {"type": "text", "example": "Creative Commons CC0 Universal (Public Domain Dedication)."}
+				},
+				"name": {"type": "text"},
+				"notes":{"type": "text"},
+				"url": {"type": "text"}
+			},
+			"sharing": 
+			{
+				"type":  {"type": "text", "example": "Creative Commons CC0"},
+				"description": {"type": "text", "example": "Creative Commons CC0 Universal (Public Domain Dedication)."},
+				"notes": {"type": "text", "example": "Created by the selfdriven Foundation"}
+			},
+			"outcomes":
+			[
+				{
+					"reference": {"type": "number"},
+					"description": {"type": "text", "size": "medium"},
+					"by": {"type": "select", "values": ["learner", "team", "learning-partner"]},
+					"related-project": {"name": {"type": "text", "size": "medium"}, "sdo": {"type": "did"}},
+					"skills" : {"gained": []},
+					"verification":
+					{
+						"notes": {"type": "text", "size": "medium", "example": "You are looking for curiosity attributes when playing."},
+						"evidence":
+						[
+							{
+								"description": {"type": "text", "size": "medium", "example": "Relies on external drivers for ideas."},
+								"methods": {"type": "select", "values": ["observation", "self", "document"]}
+							}
+						]
+					}
+				}
+			],
+			"team": 
+			{
+				"notes": {"type": "text", "example": "Teams or Pairs"},
+				"members":
+				[
+					{
+						"reference": {"type": "number"},
+						"name": {"type": "text", "example": "Jane Smith"},
+						"notes": {"type": "text", "size": "medium"}
+					}
+				],
+				"roles":
+				[
+					{
+						"name": {"type": "text", "example": "Designer / Creator"},
+						"notes": {"type": "text", "size": "medium"}
+					}
+				]
+			},
+			"support": 
+			{
+				"notes": {"type": "text"},
+				"connections":
+				[
+					{
+						"reference": {"type": "number"},
+						"name": {"type": "text", "example": "Jane Smith"},
+						"sdi": {"type": "did"},
+						"notes": {"type": "text", "size": "medium"}
+					}
+				]
+			},
+			"rules":
+			[
+				{
+					"for": {"type": "select", "values": ["learner", "team", "learning-partner"]},
+					"subject": {"type": "text", "size": "small"},
+					"description": {"type": "text", "size": "medium"}
+				}
+			],
+			"resources":
+			[
+				{
+					"subject": {"type": "text", "size": "small"},
+					"description": {"type": "text", "size": "medium"},
+					"image-url": {"type": "text", "size": "small"},
+					"url": {"type": "text", "size": "small"},
+					"for": {"type": "select", "values": ["learner", "team", "learning-partner"]}
+				}
+			],
+			"milestones":
+			[
+				{
+					"reference": {"type": "text", "typically": "number", "unique": "true"},
+					"subject": {"type": "text", "size": "small"},
+					"description": {"type": "text", "size": "medium"},
+					"duration-days": 
+					{
+						"minimum": {"type": "number"},
+						"maximum": {"type": "number"}
+					},
+					"tasks":
+					[
+						{
+							"subject": {"type": "text", "size": "small"},
+							"description": {"type": "text", "size": "medium"},
+							"by": {"type": "select", "values": ["learner", "team", "learning-partner"]},
+							"type": {"type": "select", "values": ["listening", "interpret"]},
+							"resources":
+							[
+								{
+									"subject": {"type": "text", "size": "small"},
+									"description": {"type": "text", "size": "medium"},
+									"image-url": {"type": "text", "size": "small"},
+									"url": {"type": "text", "size": "small"}
+								}
+							],
+							"skills" : {"gained": []},
+							"reflections":
+							[
+								{
+									"by": ["learner", "learning-partner"],
+									"method": ["observation", "structured", "document"],
+									"type": ["optional", "mandatory"],
+									"notes": {"type": "text", "size": "medium", "example": ""},
+									"structure":
+									{
+										"description": {"type": "text", "size": "medium", "example": "Has achieved outcome 1."},
+										"hint": {"type": "text", "size": "medium", "example": "Hint 1."},
+										"methods": {"type": "select", "values": ["observation", "self", "document"]},
+										"options":
+										[
+											{
+												"name": {"type": "text", "size": "small"},
+												"sequence": {"type": "number"},
+												"points": {"type": "number"},
+												"caption": {"type": "text", "size": "medium"}
+											}
+										],
+										"controllers":
+										[
+											{
+												"type": {"type": "select", "values": ["if"]},
+												"points":
+												{
+													"comparison": {"type": "select", "values": ["equal-to"]},
+													"value": {"type": "number"}
+												},
+												"status":
+												{
+													"type": "select",
+													"values": ["not-started", "in-progress", "complete", "cancelled"]
+												}
+											}
+										]
+									}
+									
+								}
+							],
+							"start":
+							{
+								"when":
+								[
+									{
+										"status": ["complete"],
+										"taskuri": "",
+										"sequence": "previous"
+									}
+								]
+							}
+						}
+					],
+					"support-items":
+					[
+						{
+							"subject": {"type": "text", "size": "medium"}
+						}
+					],
+					"resources":
+					[
+						{
+							"subject": {"type": "text", "size": "small"},
+							"description": {"type": "text", "size": "medium"},
+							"image-url": {"type": "text", "size": "small"},
+							"url": {"type": "text", "size": "small"}
+						}
+					]
+				}	
+			],
+			"skills":
+			{
+				"capacities": [{"name": "A"}, {"name": "C"}, {"name": "K"}, {"name": "N"}],
+				"learner-proposed": {"type": "select", "values": ["true", "false"]},
+				"based-on-uri": "https://www.selfdriven.foundation/explorer",
+				"contexts":
+				[
+					{
+						"name": {"type": "text", "size": "small", "example": "baby-octo"},
+						"caption": {"type": "text", "size": "small", "example": "Baby Octo"},
+						"capacity": {"type": "select", "values": ["A", "C", "K", "N"]},
+						"image-url": {"type": "text", "size": "small"},
+						"style": {"type": "text", "size": "small"},
+						"tokens":
+						[
+							{
+								"name": {"type": "text", "size": "small"},
+								"amount": {"type": "text", "size": "number"}
+							}
+						]
+					}
+				],
+				"gained":
+				[
+					{
+						"context":
+						{
+							"name": {"type": "select"},
+							"notes": {"type": "text", "size": "medium"}
+						},
+						"uri": {"type": "text", "size": "small","format": "00000000000000"},
+						"name": {"type": "text", "size": "small"},
+						"sdi": {"type": "text", "size": "small", "format": "uuid", "example": "4b917028-8774-43cd-9cef-57f165995fb0"},
+						"level": {"type": "text", "size": "small", "format": "00"},
+						"capacity": {"type": "text", "size": "small", "format": "00"},
+						"notes": {"type": "text", "size": "medium", "example": "Why this skill?"},
+						"verification":
+						{
+							"notes": {"type": "text", "size": "medium", "example": "You are looking for curiosity attributes when playing."},
+							"evidence":
+							[
+								{
+									"description": {"type": "text", "size": "medium", "example": "Relies on external drivers for ideas."},
+									"methods": {"type": "select", "values": ["observation", "self", "document"]}
+								}
+							]
+						}
+					}
+				]
+			},
+			"recognition":
+			{
+				"notes": {"type": "text", "size": "medium"},
+				"types":
+				[
+					{
+						"uri": {"type": "text", "size": "small"},
+						"name": {"type": "text", "size": "small"},
+						"tokens": {"minimum": {"type": "number"}, "maximum": {"type": "number"}}
+					}
+				]
+			}
+		}
+
+	}
+}

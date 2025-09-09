@@ -1,0 +1,899 @@
+<!--
+  {
+    To find out about this webpapp, in the browser console run; app.invoke('util-whoami')
+  }
+-->
+
+<div id="myds-toast" class="position-fixed fixed-top w-100 d-flex flex-column p-4" aria-live="assertive"
+	aria-atomic="true" style="z-index: 0"></div>
+
+<nav class="navbar navbar-vertical fixed-start navbar-expand-md navbar-dark pl-3 pr-0" id="sidebar">
+	<div class="container-fluid pl-1 pr-3">
+		<div class="w-100 mt-0">
+			<div class="pt-0">
+				<!-- Toggler -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse"
+					aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Brand -->
+				<a class="navbar-brand pt-sm-3 entityos-app-logo" href="/">
+					<img src="/site/2007/selfdriven-2-logo-small-orange.png"
+						class="d-xs-block d-sm-none navbar-brand-img mx-auto" alt="..."
+						style="max-height:1.4rem !important;">
+					<img src="/site/2007/selfdriven-2-logo-small-orange.png"
+						class="d-none d-sm-block navbar-brand-img mx-auto" alt="..."
+						style="text-align: left; margin-left:0px !important; height: 30px;">
+				</a>
+
+				<!-- User (xs) -->
+				<div class="navbar-user d-md-none">
+
+					<!-- Dropdown -->
+					<div class="dropdown">
+
+						<!-- Toggle -->
+						<a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							<div class="avatar avatar-sm avatar-online">
+								<img src="/site/2007/2007.image.octo-logging-on.png"
+									class="avatar-img rounded-circle myds-logon-image" alt="...">
+							</div>
+						</a>
+
+						<!-- Menu -->
+						<div class="dropdown-menu dropdown-menu-end" aria-labelledby="sidebarIcon">
+							<a href="#learner-me" class="dropdown-item">Profile</a>
+							<hr class="dropdown-divider">
+							<a href="#" class="dropdown-item myds-logoff">Log off</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- Collapse -->
+				<div class="collapse navbar-collapse myds-menu" id="sidebarCollapse">
+
+					<div id="side-menu-view-admin" class="d-none">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link " href="/app-admin/#admin-dashboard">
+									<i class="fe fe-home"></i> Home
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-admin-my" data-bs-toggle="collapse"
+									role="button" aria-controls="side-menu-view-admin-my">
+									<i class="fe fe-user"></i> My
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-admin-my">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-admin/#learner-me" class="nav-link active">
+												Profile
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-admin/#admin-teams" class="nav-link">
+												Teams
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-admin/#admin-tasks" class="nav-link">
+												Tasks
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-admin-community" data-bs-toggle="collapse"
+									role="button" aria-controls="side-menu-view-admin-community">
+									<i class="fe fe-users"></i> Community
+								</a>
+
+								<div class="collapse myds-menu-group" id="side-menu-view-admin-community">
+									<ul class="nav nav-sm flex-column">
+										<li class="d-none">
+											<a class="nav-link" href="/app-admin/#admin-community-dashboard"><i
+													class="fa fa-tachometer-alt fa-fw"></i> <span
+													class="nav-label">Dashboard</span></a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-organisations">
+												Organisations</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-members"> Members</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-calendar">
+												Planning</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-facilitators">
+												Facilitators</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-teams"> Teams</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-projects">
+												Projects</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-tasks"> Tasks</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-events"> Events</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-communications">
+												News</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-feedback">
+												Feedback</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-documents"> Docs</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-tokens"> Tokens</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-community-on-chain">
+												On-Chain</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#side-menu-view-admin-community-reflection"
+												data-bs-toggle="collapse" role="button"
+												aria-controls="side-menu-view-admin-community-reflection">
+												<i class="fe fe-refresh-ccw"></i> Reflection
+											</a>
+
+											<div class="collapse myds-menu-group"
+												id="side-menu-view-admin-community-reflection">
+
+												<ul class="nav nav-sm flex-column">
+													<li class="nav-item">
+														<a class="nav-link"
+															href="/app-admin/#util-community-reflection-attributes">
+															Attributes</span></a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link"
+															href="/app-admin/#util-community-reflection-skills">
+															Skills</span></a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link"
+															href="/app-admin/#admin-community-reflection-wellbeing-how-going">
+															How Going?</span></a>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-admin-setup" data-bs-toggle="collapse"
+									role="button" aria-controls="side-menu-view-admin-setup">
+									<i class="fe fe-settings"></i> Set up
+								</a>
+
+								<div class="collapse myds-menu-group" id="side-menu-view-admin-setup">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a class="nav-link" href="/util-setup/#util-setup-users"> Users</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/util-setup/#util-setup-user-shares"> Sharing</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/util-setup/#util-setup-templates"> Templates</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-setup-skills"> Skills</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-admin/#admin-setup-project-roles">Project
+												Roles</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link myds-logoff" href="#">
+									<i class="fe fe-log-out"></i> Log Out
+								</a>
+							</li>
+
+						</ul>
+					</div>
+
+					<div id="side-menu-view-learning-partner" class="d-none">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link " href="/app-learning-partner/#learning-partner-dashboard">
+									<i class="fe fe-home"></i> Dashboard
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-learning-partner-my" data-bs-toggle="collapse"
+									role="button" aria-controls="side-menu-view-learning-partner-my">
+									<i class="fe fe-user"></i> My
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-learning-partner-my">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-me" class="nav-link">
+												Profile
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-projects" class="nav-link">
+												Projects
+											</a>
+										</li>
+										<li class="nav-item d-none">
+											<a href="/app-learning-partner/#learning-partner-teams" class="nav-link">
+												Teams
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-tasks" class="nav-link">
+												To Do Tasks
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-tokens" class="nav-link">
+												Tokens
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-learning-partner-community"
+									data-bs-toggle="collapse" role="button"
+									aria-controls="side-menu-view-learning-partner-community">
+									<i class="fe fe-users"></i> Community
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-learning-partner-community">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-facilitators"
+												class="nav-link">
+												Facilitators
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-projects"
+												class="nav-link">
+												Projects
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-teams"
+												class="nav-link">
+												Teams
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-tasks"
+												class="nav-link">
+												To Do Tasks
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-skills"
+												class="nav-link">
+												Skills
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-documents"
+												class="nav-link">
+												Docs
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link"
+												href="#side-menu-view-learning-partner-community-reflections"
+												data-bs-toggle="collapse" role="button"
+												aria-controls="side-menu-view-learning-partner-community-reflections">
+												Reflections
+											</a>
+
+											<div class="collapse"
+												id="side-menu-view-learning-partner-community-reflections">
+												<ul class="nav nav-sm flex-column">
+													<li class="nav-item">
+														<a class="nav-link"
+															href="/app-learning-partner/#util-community-reflection-attributes">
+															Attributes
+														</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link"
+															href="/app-learning-partner/#util-community-reflection-skills">
+															Skills
+														</a>
+													</li>
+
+												</ul>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-learning-partner-connections"
+									data-bs-toggle="collapse" role="button"
+									aria-controls="side-menu-view-learning-partner-connections">
+									<i class="fe fe-share-2"></i> Connections
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-learning-partner-connections">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-feed"
+												class="nav-link">
+												What's Up?
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-projects"
+												class="nav-link">
+												Projects
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections"
+												class="nav-link">
+												Learners
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-endorsements"
+												class="nav-link">
+												Endorsements
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-reflections"
+												class="nav-link">
+												Reflections
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-achievements"
+												class="nav-link">
+												Achievements
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-check-ins"
+												class="nav-link">
+												Check-Ins
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-tokens"
+												class="nav-link">
+												Tokens
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-next"
+												class="nav-link">
+												Next Steps
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-learning-partner-setup"
+									data-bs-toggle="collapse" role="button"
+									aria-controls="side-menu-view-learning-partner-setup">
+									<i class="fe fe-settings"></i> Setup
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-learning-partner-setup">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-setup-project-templates"
+												class="nav-link">
+												Templates
+											</a>
+										</li>
+
+
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link myds-logoff" href="#">
+									<i class="fe fe-log-out"></i> Log Out
+								</a>
+							</li>
+
+						</ul>
+					</div>
+
+					<div id="side-menu-view-learner" class="d-none">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link " href="/app-learner/#learner-dashboard">
+									<i class="fe fe-home"></i> Home
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-learner-my" data-bs-toggle="collapse"
+									role="button" aria-controls="side-menu-view-learner-my">
+									<i class="fe fe-user"></i> My
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-learner-my">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-learner/#learner-me" class="nav-link">
+												Profile
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-projects" class="nav-link">
+												Projects
+											</a>
+										</li>
+										<li class="nav-item d-none">
+											<a href="/app-learner/#learner-teams" class="nav-link">
+												Teams
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-tasks" class="nav-link">
+												To Do Tasks
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-feed" class="nav-link">
+												What's Up?
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-connections" class="nav-link">
+												Connections
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-achievements" class="nav-link">
+												Achievements
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-reflections" class="nav-link">
+												Reflections
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-endorsements" class="nav-link">
+												Endorsements
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-check-ins" class="nav-link">
+												Check-Ins
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-showcase" class="nav-link">
+												Showcase
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-tokens" class="nav-link">
+												Tokens
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-next" class="nav-link">
+												Next Steps
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-learner-community" data-bs-toggle="collapse"
+									role="button" aria-controls="side-menu-view-learner-community">
+									<i class="fe fe-users"></i> Community
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-learner-community">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-learner/#learner-community-facilitators" class="nav-link">
+												Facilitators
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-community-documents" class="nav-link">
+												Docs
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-learner/#learner-community-planning">
+												Planning</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-community-projects" class="nav-link">
+												Projects
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-community-teams" class="nav-link">
+												Teams
+											</a>
+										</li>
+										<li class="nav-item d-none">
+											<a href="/app-learner/#learner-community-tasks" class="nav-link">
+												Tasks
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-community-services" class="nav-link">
+												Services
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="https://skillzeb.io/skillset-explorer" target="_blank"
+												class="nav-link">
+												Skills
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/app-learner/#learner-community-improve">
+												Improve</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learner/#learner-community-showcase" class="nav-link">
+												Showcase
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link myds-logoff" href="#">
+									<i class="fe fe-log-out"></i> Log Out
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div id="stylesheetLight"></div>
+					<div id="stylesheetDark"></div>
+				</div> <!-- / .navbar-collapse -->
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- MAIN-->
+
+<div class="main-content">
+
+	<!--
+	<nav class="navbar navbar-expand-md navbar-light d-none d-md-flex" id="topbar" style="display: none !important">
+		<div class="container-fluid">
+			<div class="row">
+				
+			</div>
+	  	</div>
+	</nav>
+-->
+
+	<div class="mt-2">
+		<-mydigitalstructure:content->
+	</div>
+
+</div>
+
+<div class="modal fade" id="auth-password" tabindex="-1" role="dialog" aria-labelledby="auth-password-modal"
+	aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<h4 class="modal-title">Change your password</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+
+			<div class="modal-body">
+				<div id="auth-password-1" class="auth-password">
+					<div class="alert alert-info w-lg alert-sm text-center mx-auto">
+						Your password needs to be at least six characters long and contain at least one number.
+					</div>
+					<div class="form-group text-center">
+						<label class="text-muted" for="auth-password-existing">Existing password</label>
+						<input type="password" class="form-control text-center w-lg m-x-auto input-lg myds-text"
+							id="auth-password-existing">
+					</div>
+					<div class="form-group text-center">
+						<label class="text-muted" for="auth-password-new">New password</label>
+						<input type="password" class="form-control text-center w-lg mx-auto input-lg"
+							id="auth-password-new">
+					</div>
+					<div class="form-group text-center">
+						<label class="text-muted" for="auth-password-new-confirm">Confirm new password</label>
+						<input type="password" class="form-control text-center w-lg mx-auto input-lg"
+							id="auth-password-new-confirm">
+					</div>
+					<div class="mb-2 text-center mt-3">
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							id="auth-password-change">Continue with changing your password</button>
+					</div>
+				</div>
+
+				<div id="auth-password-2" class="hidden auth-password">
+					<div class="alert alert-info alert-sm text-center">
+						Your password has been changed.
+					</div>
+
+					<div class="text-muted text-center">
+						If you have any issues please contact <a href="mailto:journal@ths.community"
+							class="text-muted">journal@ths.community</a>.
+					</div>
+
+					<div class="m-b-md text-center m-t-md">
+						<button type="button" data-dismiss="modal" class="btn btn-default btn-outline">Close</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="auth-trust" tabindex="-1" role="dialog" aria-labelledby="auth-trust-modal"
+	aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<h4 class="modal-title">Trust this browser</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+
+			<div class="modal-body ml-2 mr-2">
+				<div id="auth-trust-OK" class="d-none auth-trust">
+					<div class="alert alert-info alert-sm text-center p-2 mx-auto" id="auth-trust-1-message-OK">
+						Instead of entering a 2nd factor code when logging on, you can trust this browser.
+					</div>
+
+					<div class="mb-2 text-center mt-2 d-none" id="auth-trust-1-set">
+						<div class="text-muted text-center mb-3">
+							<strong>You currently don't trust this browser.</strong>
+						</div>
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							data-controller="auth-trust-set">Trust this browser</button>
+					</div>
+
+					<div class="mb-2 text-center mt-2 d-none" id="auth-trust-1-remove">
+						<div class="text-muted text-center mb-3">
+							<strong>You currently trust this browser.</strong>
+						</div>
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							data-controller="auth-trust-remove">I no longer trust this browser</button>
+					</div>
+
+					<div class="mb-2 text-center mt-4">
+						<button type="button" data-dismiss="modal" class="btn btn-default btn-outline">Close</button>
+					</div>
+
+				</div>
+
+				<div id="auth-trust-ER" class="d-none auth-trust">
+					<div class="alert alert-info alert-sm text-center p-2 mx-auto" id="auth-trust-1-message-ER">
+						<div><strong>Your user account has not been enabled to trust a browser.</strong></div>
+						<div>Please contact your system administrator for more information.</div>
+					</div>
+
+					<div class="mb-2 text-center mt-2">
+						<button type="button" data-dismiss="modal" class="btn btn-default btn-outline">Close</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<script src="/site/1901/jquery-3.1.1.min.js"></script>
+<script src="/site/1987/popper.min.js"></script>
+<script src="/site/1987/bootstrap.min.js"></script>
+<script src="/site/1987/jquery.metisMenu.js"></script>
+<script src="/site/1987/jquery.slimscroll.min.js"></script>
+<script src="/site/1901/lodash.min.js"></script>
+<script src="/site/1901/underscore.string.min.js"></script>
+<script src="/site/1901/moment.min.js"></script>
+<script src="/site/1901/numeral.min.js"></script>
+<script src="/site/1901/he.js"></script>
+<script src="/site/1901/d3.min.js"></script>
+<script src="/site/1901/c3.min.js"></script>
+
+<script src="/site/1901/1901.popconfirm-1.0.0.js"></script>
+<script src="/site/1987/inspinia.js"></script>
+<script src="/site/1987/pace.min.js"></script>
+<script src="/site/1901/jquery.sparkline.min.js"></script>
+<script src="/site/1901/jquery.gritter.min.js"></script>
+<script src="/site/2007/base64.js"></script>
+<script src="/site/1929/select2.full.js"></script>
+<script src="/site/1991/xlsx.full.min.js"></script>
+<script src="/site/1903/xss.js"></script>
+<script src="/site/1991/faker.js"></script>
+<script src="/site/1991/html2pdf.bundle.min.js"></script>
+<script src="/site/1789/malsup.jquery.form.js"></script>
+
+<script src="/site/1929/dropzone.js"></script>
+<script src="/site/2007/core.js"></script>
+<script src="/site/2007/hmac.js"></script>
+<script src="/site/2007/sha256.js"></script>
+<script src="/site/2007/enc-base64.js"></script>
+<script src="/site/2007/jsrsasign-all-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.0.0/tinymce.min.js"></script>
+<script src="/site/2007/fullcalendar-5.3.2.min.js"></script>
+
+<script src="/site/2007/hybrid-crypto.js"></script>
+
+<script src="/site/2008/chartist.min.js"></script>
+<script src="/site/2007/pdfmake.min.js"></script>
+<script src="/site/2007/vfs_fonts.js"></script>
+<script src="/site/2067/dashkit.vendor.bundle.js"></script>
+<script src="/site/2067/dashkit.theme.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/site/1901/tempusdominus-bootstrap-4.min.js"></script>
+
+<script src="/site/1901/crypto-js.js"></script>
+
+<script src="/site/2007/entityos-3.9.20.js"></script>
+<script src="/site/2007/entityos.util-5.0.33.js"></script>
+<script src="/site/2007/entityos.util.security-1.1.6.js"></script>
+<script src="/site/2007/entityos.util.identity-1.0.0.js"></script>
+<script src="/site/2007/entityos.util.protect-1.0.5.js"></script>
+<script src="/site/2007/entityos.util.import-1.1.9.js"></script>
+<script src="/site/2007/entityos.util.export-1.1.15.js"></script>
+<script src="/site/2007/entityos.util.dashboard-1.0.11.js"></script>
+<script src="/site/2007/entityos.util.search-1.1.15.js"></script>
+<script src="/site/2007/entityos.util.editor-1.0.2.js"></script>
+<script src="/site/2007/entityos.util.calendar-1.0.0.js"></script>
+<script src="/site/2007/entityos.util.chart-1.0.4.js"></script>
+
+<script src="/site/2007/selfdriven.app-3.0.1.js"></script>
+<script src="/site/2007/2007.auth-2.0.13.js"></script>
+<script src="/site/2067/2068.app.notifications-2.0.5.js"></script>
+<script src="/site/2007/selfdriven.app.settings-3.0.0.js"></script>
+
+<script src="/site/2007/selfdriven.app.util-3.0.0.js"></script>
+<script src="/site/2007/2007.app.util.actions-2.0.32.js"></script>
+<script src="/site/2067/2007.app.util.attachment-2.0.38.js"></script>
+<script src="/site/2007/selfdriven.app.util.projects-3.0.0.js"></script>
+<script src="/site/2067/2007.app.util.projects.story-2.0.38.js"></script>
+<script src="/site/2007/2007.app.util.community.members-2.0.72.js"></script>
+<script src="/site/2007/2007.app.util.community.facilitators-1.1.5.js"></script>
+<script src="/site/2067/2068.app.util.community.calendar-2.0.8.js"></script>
+<script src="/site/2067/2068.app.util.community.reflection-2.0.2.js"></script>
+<script src="/site/2067/2068.app.util.community.improve-2.0.5.js"></script>
+<script src="/site/2007/2007.app.util.dashboard-1.1.2.js"></script>
+<script src="/site/2067/2007.app.util.pdf-2.0.38.js"></script>
+<script src="/site/2007/2007.app.util.export-1.1.4.js"></script>
+<script src="/site/2007/2007.app.util.import.community.members-2.0.10.js"></script>
+<script src="/site/2007/2007.app.util.import.community.tokens-2.0.10.js"></script>
+<script src="/site/2007/2007.app.util.import.setup.skills-2.0.65.js"></script>
+<script src="/site/2067/2068.app.util.visuals-2.0.8.js"></script>
+<script src="/site/2007/2007.app.util.templates-2.0.41.js"></script>
+<script src="/site/2007/2007.app.util.messaging-2.0.62.js"></script>
+<script src="/site/2007/2007.app.util.automation-2.0.64.js"></script>
+<script src="/site/2007/2007.app.util.ssi-2.0.64.js"></script>
+
+<script src="/site/2007/2007.util.setup.user-2.0.69.js"></script>
+<script src="/site/2007/2007.util.setup.user.signup-2.0.85.js"></script>
+<script src="/site/2007/2007.util.setup.template-1.0.2.js"></script>
+<script src="/site/2007/selfdriven.util.identity.webauthn-3.0.0.js"></script>
+
+<script src="/site/2007/2007.app.admin.dashboard-1.1.2.js"></script>
+<script src="/site/2007/2007.app.admin.community.members-2.0.85.js"></script>
+<script src="/site/2007/2007.app.admin.community.organisations-2.0.56.js"></script>
+<script src="/site/2007/2007.app.admin.community.projects-1.1.2.js"></script>
+<script src="/site/2007/2007.app.admin.community.tasks-1.1.3.js"></script>
+<script src="/site/2067/2068.app.admin.community.facilitators-2.0.0.js"></script>
+<script src="/site/2007/selfdriven.app.admin.community.teams-3.0.0.js"></script>
+<script src="/site/2007/2007.app.admin.community.documents-1.1.2.js"></script>
+<script src="/site/2007/2007.app.admin.community.events-1.1.2.js"></script>
+<script src="/site/2007/2007.app.admin.community.communications-1.1.2.js"></script>
+<script src="/site/2007/2007.app.admin.community.feedback-1.1.2.js"></script>
+<script src="/site/2007/2007.app.admin.community.reflection.wellbeing-1.1.7.js"></script>
+<script src="/site/2007/2007.app.admin.community.tokens-2.0.23.js"></script>
+<script src="/site/2007/2007.app.admin.community.on-chain-2.0.26.js"></script>
+<script src="/site/2007/2007.app.admin.projects-1.1.2.js"></script>
+<script src="/site/2007/2007.app.admin.tasks-1.1.2.js"></script>
+<script src="/site/2007/selfdriven.app.admin.teams-3.0.0.js"></script>
+<script src="/site/2007/2007.app.admin.setup-2.0.24.js"></script>
+
+<script src="/site/2007/2007.app.learner.dashboard-2.0.41.js"></script>
+<script src="/site/2007/2007.app.learner.community.projects-2.0.11.js"></script>
+<script src="/site/2007/2007.app.learner.community.tasks-2.0.41.js"></script>
+<script src="/site/2007/2007.app.learner.community.facilitators-2.0.19.js"></script>
+<script src="/site/2067/2068.app.learner.community.teams-2.0.5.js"></script>
+<script src="/site/2067/2068.app.learner.community.documents-2.0.8.js"></script>
+<script src="/site/2007/2007.app.learner.community.services-2.0.19.js"></script>
+<script src="/site/2007/2007.app.learner.community.skills-2.0.11.js"></script>
+<script src="/site/2007/2007.app.learner.community.showcase-2.0.11.js"></script>
+<script src="/site/2007/2007.app.learner.profile-1.1.6.js"></script>
+<script src="/site/2007/2007.app.learner.profile.visuals-1.1.7.js"></script>
+<script src="/site/2007/selfdriven.app.learner.me-3.0.2.js"></script>
+<script src="/site/2007/2007.app.learner.me.on.chain-2.0.11.js"></script>
+<script src="/site/2007/2007.app.learner.projects-2.0.32b.js"></script>
+<script src="/site/2007/2007.app.learner.tasks-2.0.30.js"></script>
+<script src="/site/2007/2007.app.learner.teams-2.0.20.js"></script>
+<script src="/site/2067/2068.app.learner.connections-2.0.8.js"></script>
+<script src="/site/2067/2068.app.learner.endorsements-2.0.5.js"></script>
+<script src="/site/2067/2068.app.learner.achievements-2.0.5.js"></script>
+<script src="/site/2067/2068.app.learner.reflections-2.0.5.js"></script>
+<script src="/site/2007/2007.app.learner.check.ins-3.0.0.js"></script>
+<script src="/site/2007/2007.app.learner.next-2.0.44.js"></script>
+<script src="/site/2067/2068.app.learner.wellbeing-2.0.8.js"></script>
+<script src="/site/2007/2007.app.learner.tokens-2.0.36.js"></script>
+<script src="/site/2007/2007.app.learner.next.on.chain-2.0.10.js"></script>
+<script src="/site/2007/2007.app.learner.showcase-2.0.15.js"></script>
+<script src="/site/2007/2007.app.learner.feed-2.0.27.js"></script>
+<script src="/site/2007/2007.app.learner.next.steps-2.0.44.js"></script>
+
+<script src="/site/2067/2068.app.learning.partner.dashboard-2.0.8.js"></script>
+<script src="/site/2007/2007.app.learning.partner.community.projects-2.0.25.js"></script>
+<script src="/site/2007/2007.app.learning.partner.community.facilitators-2.0.25.js"></script>
+<script src="/site/2067/2068.app.learning.partner.community.teams-2.0.5.js"></script>
+<script src="/site/2007/2007.app.learning.partner.community.documents-1.1.2.js"></script>
+<script src="/site/2067/2068.app.learning.partner.community.improve-2.0.5.js"></script>
+<script src="/site/2007/2007.app.learning.partner.community.skills-2.0.11.js"></script>
+<script src="/site/2007/selfdriven.app.learning.partner.me-3.0.1.js"></script>
+<script src="/site/2007/2007.app.learning.partner.me.on.chain-2.0.24.js"></script>
+<script src="/site/2067/2068.app.learning.partner.projects-2.0.8.js"></script>
+<script src="/site/2067/2068.app.learning.partner.tasks-2.0.8.js"></script>
+<script src="/site/2007/2007.app.learning.partner.teams-2.0.19.js"></script>
+<script src="/site/2007/2007.app.learning.partner.connections-2.0.85.js"></script>
+<script src="/site/2007/2007.app.learning.partner.connections.learners.projects-2.0.22.js"></script>
+<script src="/site/2007/2007.app.learning.partner.connections.projects-2.0.34.js"></script>
+<script src="/site/2067/2068.app.learning.partner.connections.endorsements-2.0.5.js"></script>
+<script src="/site/2067/2068.app.learning.partner.connections.reflections-2.0.5.js"></script>
+<script src="/site/2007/2007.app.learning.partner.connections.achievements-2.0.33.js"></script>
+<script src="/site/2007/2007.app.learning.partner.connections.tokens-2.0.82.js"></script>
+<script src="/site/2067/2068.app.learning.partner.connections.check.ins-2.0.8.js"></script>
+<script src="/site/2067/2068.app.learning.partner.connections.next-2.0.9.js"></script>
+<script src="/site/2007/2007.app.learning.partner.connections.feed-2.0.33.js"></script>
+<script src="/site/2007/2007.app.learning.partner.setup-2.0.41.js"></script>
+<script src="/site/2007/2007.app.learning.partner.wellbeing-1.1.9.js"></script>
+<script src="/site/2007/2007.app.learning.partner.tokens-2.0.24.js"></script>
+
+<script src="/site/2156/2007.app.projects.dashboard-2.0.35.js"></script>
+
+<script src="/site/2103/2068.app.next.steps.dashboard-2.0.9.js"></script>
+<script src="/site/2103/2068.app.next.steps.me-2.0.9.js"></script>
+<script src="/site/2103/2068.app.next.steps.me.on.chain-2.0.9.js"></script>
+<script src="/site/2103/2068.app.next.steps.connections-2.0.9.js"></script>
+<script src="/site/2103/2068.app.next.steps.achievements-2.0.9.js"></script>
+

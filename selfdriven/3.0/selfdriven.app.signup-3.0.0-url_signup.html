@@ -1,0 +1,412 @@
+<body style="background-color: #f6f6f6;
+	font-family: 'Poppins', sans-serif; display: block;">
+	<div class="navbar-wrapper">
+		<div class="container">
+
+			<!-- Fixed navbar -->
+			<div class="d-none navbar navbar-default navbar-fixed-top navbar-expand-md" role="navigation">
+				<div class="container mt-2">
+					<div class="navbar-header page-scroll">
+
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+							<i class="fa fa-bars"></i>
+						</button>
+					</div>
+
+					<div class="navbar-collapse collapse justify-content-end" id="navbar">
+						<ul class="nav navbar-nav navbar-right landing_link">
+							<a href="/" class="pt-3">LOG IN</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div>
+		<div>
+			<div class="container-fluid">
+
+				<div class="row" style="margin: 40px 40px 0px 40px;">
+					<div class="col-sm-12 text-center">
+						<img src="/site/2007/selfdriven-2-logo-small-orange.png" alt="selfdriven Logo" class="logo"
+							style="margin-left: 6px;">
+						<h1 class="mt-4 auth-header">selfdriven Sign Up</h1>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-0 col-lg-3 text-right">
+					</div>
+
+					<div class="col-12 col-lg-6">
+
+						<div style="border-radius: 1rem; padding:5px; margin-bottom: 40px;" id="auth-register-view"
+							class="carousel slide mx-auto myds-slid" data-interval="false" data-ride="carousel">
+							<div class="carousel-inner" role="listbox">
+
+								<div id="auth-register-1" class="auth-register carousel-item active myds-slide">
+
+									<h1 id="auth-register-1-welcome" class="d-none display-3 text-center ">
+										Sign Up
+									</h1>
+
+									<div class="d-none form-group text-center m-t">
+
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label style="display: flex; align-items: center;"
+												class="btn btn-primary btn-outline myds-click active"
+												data-controller="auth-register-1" data-context="type" data-id="learner"
+												data-role="learner">
+												<input type="radio" name="options" id="learner" autocomplete="off">
+												Learner
+											</label>
+
+											<label class="btn btn btn-primary btn-outline myds-click"
+												data-controller="auth-register-1" data-context="type" data-id="request">
+												<input type="radio" name="options" id="learning-partner"
+													data-role="learning-partner" autocomplete="off">
+												Learning Partner
+											</label>
+
+											<label class="btn btn btn-primary btn-outline myds-click"
+												data-controller="auth-register-1" data-context="type" data-id="request">
+												<input type="radio" name="options" id="community-facilitator"
+													data-role="community-facilitator" autocomplete="off">
+												Community Facilitator
+											</label>
+
+										</div>
+
+									</div>
+
+									<div id="auth-register-request-view" class="d-none myds-view-auth-register">
+										<form autocomplete="off">
+											<div>
+												<div class="d-none form-group text-center"
+													id="auth-register-organisation-name-view">
+													<label class="text-muted"
+														for="auth-register-request-organisation-name">Learning
+														Organisation/Community
+														Name (e.g. School Name)</label>
+													<input type="text"
+														class="form-control form-control-lg w-lg m-x-auto input-lg text-center myds-text"
+														id="auth-register-request-organisation-name"
+														data-controller="auth-register-1"
+														data-context="organisation-name">
+												</div>
+
+												<div class="form-group text-center mt-3">
+													<label for="auth-register-request-firstname">First Name</label>
+													<input
+														class="form-control form-control-lg text-center w-lg m-x-auto input-lg myds-text"
+														id="auth-register-request-firstname"
+														data-controller="auth-register-1" data-context="firstname">
+												</div>
+
+												<div class="form-group text-center">
+													<label for="auth-register-request-surname">Last Name</label>
+													<input type="text"
+														class="form-control form-control-lg text-center w-lg m-x-auto input-lg myds-text"
+														id="auth-register-request-surname"
+														data-controller="auth-register-1" data-context="surname">
+												</div>
+
+												<div class="form-group text-center">
+													<label for="auth-register-request-email">Email</label>
+													<input type="email"
+														class="form-control form-control-lg text-center w-lg m-x-auto input-lg myds-text"
+														id="auth-register-request-email"
+														data-controller="auth-register-1" data-context="email">
+												</div>
+
+												<div class="mb-3 text-center mt-4">
+													<button href="#auth-register-view" type="button"
+														class="btn btn-primary auth-register-next disabled myds-click"
+														data-controller="auth-register-router">Continue with request for
+														sign up</button>
+												</div>
+
+												<p class="p-a m-b-0 text-center ">For more information, please
+													contact selfdriven at <a href="mailto:team@selfdriven.foundation"
+														class="">team@selfdriven.foundation</a>.</p>
+											</div>
+										</form>
+									</div>
+
+									<div id="auth-register-learner-view" class="d-none myds-view-auth-register">
+
+										<form autocomplete="off">
+											<div id="auth-register-learner-invite-view"></div>
+
+											<div class="row">
+												<div class="col-md-6 col-12">
+													<div class="form-group text-center mt-4 mt-md-2">
+														<label class="lead" for="register-firstname">
+															First Name
+														</label>
+														<input
+															class="form-control text-center form-control-lg myds-text"
+															style="border-radius: 1rem;" id="register-firstname"
+															data-scope="auth-register-1"
+															data-controller="auth-register-1" data-context="firstname">
+													</div>
+												</div>
+												<div class="col-md-6 col-12">
+													<div class="form-group text-center mt-md-2">
+														<label class="lead" for="register-surname">
+															Last Name
+														</label>
+														<input type="text" style="border-radius: 1rem;"
+															class="form-control text-center form-control-lg myds-text"
+															id="register-surname" data-scope="auth-register-1"
+															data-controller="auth-register-1" data-context="surname">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="form-group text-center">
+														<label class="lead" for="register-email">
+															Email
+														</label>
+														<input type="email" style="border-radius: 1rem;"
+															class="form-control text-center form-control-lg myds-text"
+															id="register-email" data-scope="auth-register-1"
+															data-controller="auth-register-1" data-context="email">
+													</div>
+
+													<div class="form-group text-center mb-3">
+														<label class="lead" for="register-email">
+															<div>
+																Password
+															</div>
+														</label>
+														<input type="password"
+															class="form-control form-control-lg text-center mx-auto entityos-text"
+															style="border-radius: 1rem;" data-scope="auth-register-1"
+															data-context="userpassword"
+															data-controller="auth-register-1"
+															id="register-userpassword">
+														<div class="text-secondary w-75 mx-auto mb-0 mt-3 mb-1">
+															<i class="fa fa-exclamation-circle"></i> Password must be at
+															least 8 characters long, and a mix of numbers and letters.
+														</div>
+													</div>
+
+													<div class="form-group text-center">
+														<label class="lead" for="register-email">
+															Re-Enter Your Password
+														</label>
+
+														<input type="password"
+															class="form-control form-control-lg text-center mx-auto entityos-text"
+															style="border-radius: 1rem;" data-scope="auth-register-1"
+															data-context="userpasswordverify"
+															data-controller="auth-register-1"
+															id="register-userpasswordverify">
+													</div>
+												</div>
+											</div>
+										</form>
+										<div class="mb-3 text-center mt-2">
+											<button href="#auth-register-view" type="button"
+												class="btn btn-primary auth-register-next disabled entityos-click"
+												data-controller="auth-register-router">Next <i
+													class="fa fa-chevron-right"></i></button>
+										</div>
+										<div class="text-center mt-2">
+											<div id="auth-register-message-view"></div>
+										</div>
+									</div>
+
+									<div id="auth-register-learning-partner-view"
+										class="d-none myds-view-auth-register">
+										<div class="well well-sm text-center m-t-md">
+											<p class="p-a m-b-0">Please contact selfdriven at <a
+													href="mailto:team@selfdriven.foundation">team@selfdriven.foundation</a>.
+											</p>
+										</div>
+									</div>
+
+									<div id="auth-register-community-faciliator-view"
+										class="d-none myds-view-auth-register">
+										<div class="well well-sm text-center m-t-md">
+											<p class="p-a m-b-0">Please contact selfdriven at <a
+													href="mailto:team@selfdriven.foundation">team@selfdriven.foundation</a>.
+											</p>
+										</div>
+									</div>
+
+								</div>
+
+								<div id="auth-register-2" class="auth-register carousel-item myds-slid">
+									<div class="form-group text-center">
+										<h1 class="mb-3 display-4">Terms of use</h1>
+										<div class="text-center m-l m-r" id="auth-register-terms">
+											<div class="text-center m-a-lg m-t-md">
+												<img src="/site/1770/app-spinner-7.gif" style="height:25px;">
+											</div>
+										</div>
+									</div>
+
+									<div class="text-center m-t-md m-b">
+										<button href="#auth-register-view" type="button"
+											class="btn btn-primary auth-register-next" data-slide="next">Yes, I agree
+											with
+											these terms of use <i class="fa fa-chevron-right"></i></button>
+									</div>
+								</div>
+
+								<div id="auth-register-2b" class="auth-register carousel-item myds-slid">
+									<div class="form-group text-center">
+										<h1 class=" mb-3 display-4">Community Confirmation</h1>
+										<div class="text-center px-md-6" id="auth-register-terms">
+											You can only sign up if you are aleady a member of the <span
+												class="auth-register-organisation-name"></span> community.
+										</div>
+									</div>
+
+									<div class="text-center m-t-md m-b">
+										<button href="#auth-register-view" type="button"
+											class="btn btn-primary auth-register-next" data-slide="next">
+											Yes, I am a member of this community <i
+												class="fa fa-chevron-right"></i></button>
+									</div>
+								</div>
+
+								<div id="auth-register-3" class="auth-register carousel-item myds-slid">
+
+									<div id="auth-register-3-working">
+										<div class="text-center m-a-md">
+											<img src="/site/1770/app-spinner-7.gif" style="height:25px;">
+										</div>
+									</div>
+
+									<div id="auth-register-3-OK" class="d-none">
+										<div class="well well-sm text-center mt-0 ">
+											<h1 class="font-weight-bold mt-4 "><i
+													class="fa fa-check-circle text-success mr-2"></i>You have been
+												signed up!</h1>
+											<div class="">You can now log on to the app!</div>
+											<div id="auth-register-3-OK-view">
+												</p>
+											</div>
+										</div>
+
+										<div id="auth-register-3-ER" class="d-none">
+											<div class="well well-sm text-center m-t ">
+												<p>An error has occured when signing you up, please contact <a
+														href="mailto:team@selfdriven.foundation"
+														class="">team@selfdriven.foundation</a>.</p>
+											</div>
+										</div>
+									</div>
+
+									<div id="auth-register-3-ER-already-user" class="d-none">
+										<div class="text-center ">
+											<h2 class="font-weight-bold mt-0">It looks like you are already a user
+												of selfdriven!</h2>
+										</div>
+									</div>
+
+								</div>
+
+								<div id="auth-register-4" class="auth-register carousel-item myds-slid">
+
+									<div id="auth-register-4-working">
+										<div class="text-center m-a-md">
+											<img src="/site/1770/app-spinner-7.gif" style="height:25px;">
+										</div>
+									</div>
+
+									<div id="auth-register-4-OK" class="d-none">
+										<div class="text-center m-t ">
+											<h2 class="strong">Your request for sign up has been sent!</h2>
+										</div>
+
+										<div class=" text-center">
+											We will be in contact with you shortly.
+										</div>
+										<div class="text-center">
+											<a class=""
+												href="mailto:team@selfdriven.foundation">team@selfdriven.foundation</a>.
+										</div>
+
+									</div>
+
+									<div id="auth-register-4-ER" class="d-none">
+										<div class="text-center m-t ">
+											<p class="">An error has occured sending your request, please
+												contact <a
+													href="mailto:team@selfdriven.foundation">team@selfdriven.foundation</a>.
+											</p>
+										</div>
+										<div id="auth-register-4-ER-message-view">
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-0 col-lg-3 text-left d-none" style="padding-top:70px;">
+					</div>
+
+				</div>
+
+			</div>
+			<div class="x-overlay-bg"></div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="auth-register" tabindex="-1" role="dialog" aria-labelledby="auth-register-modal"
+		aria-hidden="true">
+
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header text-center">
+					<h4 class="modal-title">Sign up to selfdriven</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+
+				<div class="modal-footer">
+					<div class="text-center mx-auto">
+						<a href="mailto:team@selfdriven.foundation" class="text-secondary"><span
+								class="icon icon-help-with-circle"></span> Need help?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Bootstrap core JavaScript
+  ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+
+	<script src="/site/1901/jquery-3.1.1.min.js"></script>
+	<script src="/site/1987/popper.min.js"></script>
+	<script src="/site/1987/bootstrap.min.js"></script>
+
+	<script src="/site/1771/lodash.min.js"></script>
+	<script src="/site/1771/underscore.string.min.js"></script>
+	<script src="/site/1901/moment.min.js"></script>
+	<script src="/site/1901/he.js"></script>
+	<script src="/jscripts/md5-min.js"></script>
+	<script src="/site/1789/bootstrap-notify.min.js"></script>
+	<script src="/site/1901/numeral.min.js"></script>
+	<script src="/site/1901/tempusdominus-bootstrap-4.min.js"></script>
+
+	<script src="/site/2007/entityos-3.9.20.js"></script>
+	<script src="/site/2007/entityos.util-5.0.34.js"></script>
+
+	<script src="/site/2172/selfdriven.app.signup-3.0.0.js"></script>
+	<!--<script src="/site/2008/2008.util.settings-1.7.4.js"></script>-->
+
+</body>
+
+</html>

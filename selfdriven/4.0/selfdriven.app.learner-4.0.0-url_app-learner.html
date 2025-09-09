@@ -1,0 +1,141 @@
+<!--
+  {
+      title: "Form; App; Learner",
+      design: ""
+    }
+-->
+
+<!-- ROLE | LEARNER -->
+
+<div id="learner-dashboard" class="d-none entityos-view">
+	<div class="x-container-fluid">
+		<div class="row">
+			<!-- Sidebar -->
+			<div class="col-md-3 sidebar">
+				<h5>Dashboard</h5>
+				<div class="d-flex align-items-center my-3">
+					<div class="rounded-circle bg-danger text-white d-flex justify-content-center align-items-center"
+						style="width: 50px; height: 50px;">
+						MH
+					</div>
+					<div class="ml-3">
+						<div class="text-muted"><span class="entityos-logon-first-name">&nbsp;</span> <span
+							class="entityos-logon-surname"></span></div>
+						<div>
+						<a href="#learner-me" class="text-dark">Profile</a> | <a href="#" class="text-dark entityos-logoff">Log off</a>
+						</div>
+					</div>
+				</div>
+				<p><strong>1</strong> Project <br> <strong>0</strong> Challenges <br> <strong>0</strong> Connections</p>
+				<hr>
+				<p>What's up | <strong>Projects</strong></p>
+				<div class="d-flex align-items-center">
+					<div class="rounded bg-danger text-white p-2">📌</div>
+					<div class="ml-3">
+						<p class="mb-0">Onboarding project</p>
+						<small>0%</small>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main content -->
+			<div class="col-md-9 p-4">
+				<h4>Your selfdriven projects</h4>
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Active</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Completed</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Archived</a>
+					</li>
+				</ul>
+				<div class="project-card mt-3">
+					<h5>Onboarding project</h5>
+					<p>Understand the selfdriven platform better step by step.</p>
+					<span class="badge badge-light">selfdriven</span>
+					<span class="badge badge-light">Onboarding</span>
+				</div>
+				<div class="card mt-3 p-4 text-center">
+					<h5>Future projects will be listed here</h5>
+					<p>After completing the 'Onboarding' project you are able to create projects based on learning
+						templates.</p>
+					<button class="btn btn-gray">Start a project</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="learner-whats-up" class="d-none entityos-view">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<h5>What's Up?</h5>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="learner-projects" class="d-none entityos-view">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<h5>Projects</h5>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="learner-connections" class="d-none entityos-view">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<h5>Connections</h5>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="learner-achievements" class="d-none entityos-view">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<h5>Achievements</h5>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="settings" class="d-none entityos-view">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<h5>Settings</h5>
+				<div class="btn-group btn-group-sm mr-1 mb-2 mt-1">
+					<button class="btn btn-mode btn-xoutline active btn-sm myds-click myds-button-group"
+						type="button" id="util-view-theme-mode-light" value="light" data-id="light"
+						data-mode="light" data-controller="util-view-theme-mode-select"
+						data-scope="util-view-theme" data-context="mode"><img
+							src="/site/2007/light-white.svg" style="width:22px;" class="p-1">
+					</button>
+					<button class="btn btn-mode btn-xoutline btn-sm myds-click myds-button-group"
+						type="button" id="util-view-theme-mode-dark" value="dark" data-id="dark"
+						data-mode="dark" data-controller="util-view-theme-mode-select"
+						data-scope="util-view-theme" data-context="mode"><img
+							src="/site/2007/dark-white.svg" style="width:22px;" class="p-1">
+					</button>
+					<button class="btn btn-mode btn-xoutline btn-sm myds-click myds-button-group"
+						type="button" id="util-view-theme-mode-light-auto" value="auto" data-id="auto"
+						data-mode="auto" data-controller="util-view-theme-mode-select"
+						data-scope="util-view-theme" data-context="mode"><img
+							src="/site/2007/light-dark-white.svg" style="width:22px;" class="p-1">
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

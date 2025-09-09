@@ -1,0 +1,1179 @@
+<!--
+  {
+      title: "Form; Util; Set up; Users; Shares; Templates",
+      design: ""
+    }
+-->
+
+<!-- UTIL-SETUP; USERS -->
+
+<div id="util-setup-users" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Setup
+						</h6>
+						<h1 class="header-title">
+							Users
+						</h1>
+					</div>
+					<div class="col-auto text-right">
+						<button class="btn btn-sm btn-primary myds-navigate" href="#util-setup-user-signup"><i
+								class="fa fa-envelope"></i> Invites</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="card mt-3">
+			<div class="card-header pr-3">
+				<form autocomplete="off">
+					<div class="input-group input-group-flush input-group-merge input-group-reverse">
+						<input class="form-control myds-text" type="search" placeholder="Search for a user"
+							data-controller="util-setup-user-dashboard" data-context="search">
+						<div class="input-group-text">
+							<span class="fe fe-search"></span>
+						</div>
+					</div>
+				</form>
+
+				<div class="btn-group" role="group">
+					<button class="btn btn-sm btn-primary myds-navigate" href="#util-setup-user-edit"><i
+							class="fa fa-plus"></i></button>
+					<button class="btn btn-sm btn-primary btn-outline" data-toggle="collapse" role="button"
+						href="#util-setup-users-invite-generate-link-collapse" aria-expanded="true">
+						<i class="fa fa-link"></i>
+					</button>
+					<button class="myds-export btn btn-sm btn-primary" role="button" type="button"
+						data-scope="util-setup-user-dashboard" data-filename="users.csv">
+						<i class="fa fa-cloud-download-alt"></i></button>
+				</div>
+			</div>
+
+			<div class="myds-collapse collapse card-body" id="util-setup-users-invite-generate-link-collapse"
+				data-controller="util-setup-user-signup-invite-generate-link">
+				<div class="form-group mb-1">
+					<h4><label class="text-secondary mb-0 mt-1"
+							for="util-setup-users-invite-generate-link-contactbusiness">Organisation</label></h4>
+					<select class="form-control input-lg myds-select w-100"
+						id="util-setup-users-invite-generate-link-contactbusiness"
+						data-scope="util-setup-users-invite-generate-link" data-context="contactbusiness"
+						data-text="">
+					</select>
+				</div>
+				<div class="mb-3"><a class="entityos-click entityos-collapse entityos-collapse-toggle" data-toggle="collapse" href="#util-setup-users-invite-generate-link-contact">Generate for a Person <i class="far fa-chevron-down fe fe-chevron-down mt-2"></i></a></div>
+				<div class="collapse entityos-collapse" id="util-setup-users-invite-generate-link-contact">
+					<div class="form-group">
+						<h4><label class="text-secondary" for="util-setup-users-invite-generate-link-firstname">First Name</label></h4>
+						<input type="text" class="form-control input-lg myds-text" id="util-setup-users-invite-generate-link-firstname" value="" data-value="" data-id="" data-scope="util-setup-users-invite-generate-link" data-context="contactpersonfirstname">
+					</div>
+					<div class="form-group">
+						<h4><label class="text-secondary" for="util-setup-users-invite-generate-link-lastname">Last Name</label></h4>
+						<input type="text" class="form-control input-lg myds-text" id="util-setup-users-invite-generate-link-lastname" value="" data-value="" data-id="" data-scope="util-setup-users-invite-generate-link" data-context="contactpersonlastname">
+					</div>
+					<div class="form-group">
+						<h4><label class="text-secondary" for="util-setup-users-invite-generate-link-email">Email</label></h4>
+						<input type="text" class="form-control input-lg myds-text" id="util-setup-users-invite-generate-link-email" value="" data-value="" data-id="" data-scope="util-setup-users-invite-generate-link" data-context="contactpersonemail">
+					</div>
+				</div>
+				<button class="btn btn-sm btn-primary entityos-click"
+					data-controller="util-setup-user-signup-invite-generate-link-process">Generate Link</button>
+				<div id="util-setup-users-invite-generate-link-view"></div>
+			</div>
+
+			<div class="card-body d-none px-0 py-0" id="util-setup-user-dashboard-view">
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div id="util-setup-user-summary" class="d-none myds-view">
+</div>
+
+<div id="_util-setup-user-summary" class="d-none myds-view-template">
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row mt-4">
+			<div class="col-sm-6" id="util-setup-user-summary-card">
+				<div class="card">
+					<div class="card-body">
+						<h2 class="mb-0"><strong>{{username}}</strong></h2>
+						<div class="text-muted"><small>User</small></div>
+					</div>
+					<div class="card-body">
+						<div class="">
+							<div class="row">
+								<div class="col-sm-6">
+									<h3 class="mb-0">
+										{{user.contactperson.firstname}}
+									</h3>
+									<div class="text-muted"><small><i class="fa fa-user"></i> First Name</small></div>
+								</div>
+								<div class="col-sm-6">
+									<h3 class="mb-0">
+										{{user.contactperson.surname}}
+									</h3>
+									<div class="text-muted"><small><i class="fa fa-user"></i> Last Name</small></div>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-sm-12">
+									<h3 class="mb-0">
+										{{user.contactperson.contactbusiness.tradename}}
+									</h3>
+									<div class="text-muted"><small><i class="fa fa-industry"></i> Organistion</small>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-3 {{mobileshow}}">
+								<div class="col-sm-12">
+									<h3 class="mb-0">
+										{{user.contactperson.mobile}}
+									</h3>
+									<div class="text-muted"><small><i class="fa fa-phone"></i> Mobile</small></div>
+								</div>
+							</div>
+							<div class="row mt-3 {{emailshow}}">
+								<div class="col-sm-12">
+									<h3 class="mb-0">
+										{{user.contactperson.email}}
+									</h3>
+									<div class="text-muted"><small><i class="fa fa-envelope"></i> Email</small></div>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-sm-12">
+									<h3 class="mb-0">
+										{{statustext}}
+									</h3>
+									<div class="text-muted"><small><i class="far fa-question-circle"></i> Status</small>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-sm-6">
+									<h3 class="mb-0">
+										{{authorisation}}
+									</h3>
+									<div class="text-muted"><small><i class="fa fa-id-card"></i> Functional
+											Access</small></div>
+								</div>
+
+								<div class="col-sm-6">
+									<h3 class="mb-0">
+										{{relationaldataaccesstext}}
+									</h3>
+									<div class="text-muted"><small><i class="fa fa-database"></i> Data Access</small>
+									</div>
+								</div>
+
+							</div>
+							<div class="row mt-3">
+								<div class="col-sm-12">
+									<h3 class="mb-0">
+										{{authenticationleveltext}}
+									</h3>
+									<div class="text-muted"><small><i class="fa fa-user-lock"></i>
+											Authentication</small></div>
+								</div>
+							</div>
+
+							<div class="row mt-3">
+								<div class="col-sm-12">
+									<h3 class="mb-0">
+										{{authenticationdeliverytext}}
+									</h3>
+									<div class="text-muted"><small><i class="fa fa-key"></i> Authentication Token
+											Type</small></div>
+								</div>
+							</div>
+
+							<div class="row mt-3">
+								<div class="col-sm-12">
+									<h3 class="mb-0">
+										{{urlaccesstypetext}}
+									</h3>
+									<div class="text-muted"><small><i class="fad fa-browser"></i> Authentication
+											URL</small></div>
+								</div>
+							</div>
+
+							<div class="row mt-3">
+								<div class="col-sm-12">
+									<h3 class="mb-0">
+										{{lastlogon}}
+									</h3>
+									<div class="text-muted"><small><i class="far fa-clock"></i> Last Logon (
+											{{timezonetext}} )</small></div>
+								</div>
+							</div>
+
+							<div class="row mt-3">
+								<div class="col-sm-12">
+									<h3 class="mb-0">
+										{{guid}}
+									</h3>
+									<div class="text-muted"><small><i class="far fa-passport"></i> selfdriven ID</small>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-body">
+						<div class="row">
+							<div class="col-12">
+								<a class="btn btn-default btn-outline btn-sm myds-navigate float-left"
+									href="#util-setup-user-edit" data-context="{{id}}" data-id="{{id}}">Edit</a>
+								<div class="btn-group-x float-right">
+									<button class="btn btn-default btn-outline btn-sm myds-click float-right ml-1"
+										data-controller="util-setup-user-send-welcome-email"
+										id="util-setup-user-send-welcome-email-{{id}}" data-context="{{id}}"
+										data-id="{{id}}">
+										Send Welcome Email
+									</button>
+									<button class="btn btn-default btn-outline btn-sm myds-click float-right"
+										data-controller="util-setup-user-reset-password"
+										id="util-setup-user-summary-reset-password-{{id}}" data-context="{{id}}"
+										data-id="{{id}}">
+										Reset Password
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-12">
+								<div class="float-right" id="util-setup-user-reset-password-view">
+									<div class="text-secondary"><i class="far fa-info-circle"></i> Sending the welcome
+										email resets the password.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-body py-2 bg-light text-muted d-none"
+						id="util-setup-user-summary-shares-guid-view">
+						<div class="container-fluid px-1">
+							<div class="row">
+								<div class="col-sm-12">
+									<h4 class="mb-0">
+										{{guid}}
+									</h4>
+									<div class="text-muted"><small><i class="fa fa-key"></i> User GUID</small></div>
+								</div>
+							</div>
+							<div class="row mt-2">
+								<div class="col-sm-12">
+									<h4 class="mb-0">
+										{{user.contactperson.guid}}
+									</h4>
+									<div class="text-muted"><small><i class="fa fa-key"></i> Contact (Person)
+											GUID</small></div>
+								</div>
+							</div>
+							<div class="row mt-2">
+								<div class="col-sm-12">
+									<h4 class="mb-0">
+										{{user.contactbusiness.guid}}
+									</h4>
+									<div class="text-muted"><small><i class="fa fa-key"></i> Contact (Organisation)
+											GUID</small></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+
+				<div class="card">
+					<div class="card-header pt-1 pb-1 pr-2">
+						<h4 class="pull-left pt-1">Roles</h4>
+						<div class="pull-right" id="util-setup-user-summary-roles-assign-view">
+						</div>
+					</div>
+
+					<div class="card-body px-0 py-2" id="util-setup-user-summary-roles-view">
+					</div>
+				</div>
+
+				<div class="card mt-3 {{dataaccessclass}}" id="util-setup-user-summary-data-access">
+					<div class="card-header pt-1 pb-1 pr-2">
+						<h4 class="pull-left pt-1">Data Access</h4>
+						<div class="pull-right" id="util-setup-user-summary-shares-assign-view">
+						</div>
+					</div>
+
+					<div class="card-body py-2">
+						<div class="text-center alert alert-info m-2">
+							<div class="font-bold">This user has access to the data for the following contacts.</div>
+							<div><a href="/util-setup/#util-setup-user-shares" class="text-muted">Manage data
+									access...</a></div>
+						</div>
+
+						<div id="util-setup-user-summary-shares-view" class="mt-3"></div>
+					</div>
+				</div>
+
+				<div class="card mt-3 {{authenticationdeliveryclass}}" id="util-setup-user-summary-totp">
+
+					<div class="card-body pt-3 pb-2">
+						<div class="card-body py-3 text-center" id="learner-me-summary-security-2nd-factor-view">
+							Set up 2nd factor authentication using a TOTP client (ie Authy, Google Authenticator)
+							<div class="mt-2 d-none">
+								<a href="https://learn.selfdriven.cloud/auth2ndfactor" target="_blank">Find out more
+									...</a>
+							</div>
+							<button
+								class="btn btn-default btn-outline w-75 mx-auto btn-block btn-sm myds-click mt-3 mb-3"
+								data-controller="util-setup-user-totp" data-spinner="append" data-context="{{id}}"
+								data-id="{{id}}">
+								Set up or reset TOTP</button>
+							<div class="px-4" id="util-setup-user-totp-view"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header text-center pt-2 pb-2 border-bottom">
+						<h4 class="pt-1">Messaging</h4>
+						<div class="pull-right"></div>
+					</div>
+
+					<div class="card-body py-2 text-center" id="util-messaging-conversation-account-view">
+					</div>
+				</div>
+
+				<div class="card mt-3 d-none">
+					<div class="card-header pt-1 pb-1 pr-2">
+						<h4 class="pull-left pt-1">Attachments (Files)</h4>
+						<div class="pull-right">
+							<a class="btn btn-white btn-sm" role="button" data-toggle="collapse"
+								href="#util-setup-user-summary-attachments-upload">
+								<i class="fa fa-plus"></i>
+							</a>
+							<a class="ml-1 mr-1" data-toggle="collapse" role="button"
+								id="util-setup-user-summary-attachments-collapse"
+								href="#util-setup-user-summary-attachments-view">
+								<i class="fa fa-chevron-down text-muted ml-1"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="collapse myds-collapse" id="util-setup-user-summary-attachments-upload"
+						data-controller="util-files-upload-initialise" data-object="93"
+						data-scope="util-setup-user-summary">
+						<div class="card-body py-2">
+							<form class="dropzone myds-dropzone mb-3 mt-2"
+								id="util-setup-user-summary-attachments-upload-dropzone">
+								<div class="row" id="util-setup-user-summary-attachments-upload-container-preview">
+								</div>
+							</form>
+
+							<div class="text-center">
+								<button type="button" class="btn btn-default btn-outline btn-sm mr-2 mb-3 myds-click"
+									id="util-setup-user-summary-attachments-upload-process"
+									data-controller="util-attachment-upload-process"
+									data-target="#util-setup-user-summary-attachments-upload-dropzone">
+									Upload
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="collapse myds-collapse" id="util-setup-user-summary-attachments-view"
+						data-controller="util-files-show" data-object="93" data-objectcontext="{{id}}"
+						data-scope="util-setup-user-summary">
+						<div id="util-setup-user-summary-attachments-view" class="card-body py-2">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="util-setup-user-edit" class="hidden d-none myds-view">
+</div>
+
+<div id="_util-setup-user-edit" class="hidden d-none myds-view-template">
+	<div class="container-fluid mt-4">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h2 class="my-1">User</h2>
+					</div>
+					<div class="card-body">
+						<form autocomplete="off">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-sm-6">
+										<div id="util-setup-user-edit-create" class="hidden d-none">
+											<div class="form-group">
+												<h4><label class="text-muted"
+														for="util-setup-user-edit-firstname-{{id}}">First Name</label>
+												</h4>
+												<input type="text" class="form-control input-lg myds-text"
+													id="website-edit-details-firstname-{{id}}" value="" data-value=""
+													data-id="{{id}}" data-scope="util-setup-user-edit-{{id}}"
+													data-context="firstname">
+											</div>
+
+											<div class="form-group">
+												<h4><label class="text-muted"
+														for="util-setup-user-edit-surname-{{id}}">Last Name</label></h4>
+												<input type="text" class="form-control input-lg myds-text"
+													id="util-setup-user-edit-surname-{{id}}" value="" data-value=""
+													data-id="{{id}}" data-scope="util-setup-user-edit-{{id}}"
+													data-context="surname">
+											</div>
+
+											<div class="form-group">
+												<h4><label class="text-muted"
+														for="util-setup-user-edit-email-{{id}}">Email</label></h4>
+												<input type="text" class="form-control input-lg myds-text"
+													id="util-setup-user-edit-email-{{id}}" value="" data-value=""
+													data-id="{{id}}" data-scope="util-setup-user-edit-{{id}}"
+													data-context="email"
+													data-controller="util-setup-user-edit-set-username">
+											</div>
+
+											<div class="form-group">
+												<h4><label class="text-muted"
+														for="util-setup-user-edit-email-{{id}}">Mobile Number</label>
+												</h4>
+												<input type="text" class="form-control input-lg myds-text"
+													id="util-setup-user-edit-mobile-{{id}}" value="" data-value=""
+													data-id="{{id}}" data-scope="util-setup-user-edit-{{id}}"
+													data-context="mobile">
+											</div>
+
+										</div>
+
+										<div class="form-group">
+											<h4><label class="text-muted"
+													for="util-setup-user-edit-username-{{id}}">Username</label></h4>
+											<h5>Leave blank to use the linked contacts email address.</h5>
+											<input type="text" class="form-control input-lg myds-text"
+												id="util-setup-user-edit-username-{{id}}" value="{{username}}"
+												data-value="{{username}}" data-id="{{id}}"
+												data-scope="util-setup-user-edit-{{id}}" data-context="username">
+										</div>
+
+										<div class="form-group">
+											<h4><label class="text-muted"
+													for="website-edit-details-email-{{id}}">Password</label></h4>
+											<h5>Leave blank to have it auto-generated.</h5>
+											<input type="password" class="form-control input-lg myds-text"
+												id="util-setup-user-edit-userpassword-{{id}}" value="" data-value=""
+												data-id="{{id}}" data-scope="util-setup-user-edit-{{id}}"
+												data-context="userpassword" autocomplete="new-password">
+										</div>
+
+										<div class="form-group">
+											<h4><label class="text-muted"
+													for="util-setup-user-edit-disabled">Status</label></h4>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-disabled-N-{{id}}"
+													name="util-setup-user-edit-disabled-{{id}}" value="N" data-id="N"
+													data-page-id="{{id}}" data-scope="util-setup-user-edit-{{id}}"
+													data-context="disabled">
+												Enabled
+											</div>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-disabled-Y-{{id}}"
+													name="util-setup-user-edit-disabled-{{id}}" value="Y" data-id="Y"
+													data-page-id="{{id}}" data-scope="util-setup-user-edit-{{id}}"
+													data-context="disabled">
+												Disabled
+											</div>
+										</div>
+
+										<div class="form-group">
+											<h4><label class="text-muted mb-0 mt-1"
+													for="util-setup-user-edit-contactperson-{{id}}">Linked
+													Contact</label></h4>
+											<select class="form-control input-lg myds-select"
+												id="util-setup-user-edit-contactperson" style="width:100%;" data-id=""
+												data-scope="util-setup-user-edit-{{id}}" data-context="contactperson"
+												data-text="{{contactpersontext}}">
+											</select>
+										</div>
+
+									</div>
+
+									<div class="col-sm-5 ml-3">
+										<div class="form-group">
+											<h4><label class="text-muted"
+													for="util-setup-user-edit-disabled">Authentication</label></h4>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-authenticationlevel-1-{{id}}"
+													name="util-setup-user-edit-authenticationlevel-{{id}}" value="1"
+													data-id="1" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="authenticationlevel">
+												Basic
+											</div>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-authenticationlevel-2-{{id}}"
+													name="util-setup-user-edit-authenticationlevel-{{id}}" value="2"
+													data-id="2" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="authenticationlevel">
+												Standard
+											</div>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-authenticationlevel-3-{{id}}"
+													name="util-setup-user-edit-authenticationlevel-{{id}}" value="3"
+													data-id="3" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="authenticationlevel">
+												Standard with 2nd factor
+											</div>
+										</div>
+
+										<div class="form-group">
+											<h4><label class="text-muted" for="util-setup-user-edit-disabled">2nd
+													Factor</label></h4>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-authenticationdelivery-1-{{id}}"
+													name="util-setup-user-edit-authenticationdelivery-{{id}}" value="1"
+													data-id="1" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="authenticationdelivery">
+												Send as Email
+											</div>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-authenticationdelivery-2-{{id}}"
+													name="util-setup-user-edit-authenticationdelivery-{{id}}" value="2"
+													data-id="2" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="authenticationdelivery">
+												Send as SMS
+											</div>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-authenticationdelivery-3-{{id}}"
+													name="util-setup-user-edit-authenticationdelivery-{{id}}" value="3"
+													data-id="3" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="authenticationdelivery">
+												Use TOTP Client eg authy
+											</div>
+										</div>
+
+										<div class="form-group">
+											<h4><label class="text-muted" for="util-setup-user-edit-disabled">Use Access
+													Token to Logon</label></h4>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-authenticationusingaccesstoken-1-{{id}}"
+													name="util-setup-user-edit-authenticationusingaccesstoken-{{id}}"
+													value="1" data-id="1" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="authenticationusingaccesstoken">
+												Disabled
+											</div>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-authenticationusingaccesstoken-2-{{id}}"
+													name="util-setup-user-edit-authenticationusingaccesstoken-{{id}}"
+													value="2" data-id="2" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="authenticationusingaccesstoken">
+												Can be used as 2nd factor token
+											</div>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-authenticationusingaccesstoken-3-{{id}}"
+													name="util-setup-user-edit-authenticationusingaccesstoken-{{id}}"
+													value="3" data-id="3" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="authenticationusingaccesstoken">
+												Can be used to authenticate
+											</div>
+										</div>
+
+										<div class="form-group">
+											<h4><label class="text-muted"
+													for="util-setup-user-edit-urlaccesstype">Authentication URL</label>
+											</h4>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-select"
+													id="util-setup-user-edit-urlaccesstype-1-{{id}}"
+													name="util-setup-user-edit-urlaccesstype-{{id}}" value="1"
+													data-id="1" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="urlaccesstype">
+												Any URL
+											</div>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-select"
+													id="util-setup-user-edit-urlaccesstype-2-{{id}}"
+													name="util-setup-user-edit-urlaccesstype-{{id}}" value="2"
+													data-id="2" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="urlaccesstype">
+												Only URLs linked to this space
+											</div>
+										</div>
+
+										<div class="form-group">
+											<h4><label class="text-muted"
+													for="util-setup-user-edit-unrestrictedaccess">Functional
+													Access</label></h4>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-unrestrictedaccess-Y-{{id}}"
+													name="util-setup-user-edit-unrestrictedaccess-{{id}}" value="Y"
+													data-id="Y" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="unrestrictedaccess">
+												Unrestricted
+											</div>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-unrestrictedaccess-N-{{id}}"
+													name="util-setup-user-edit-unrestrictedaccess-{{id}}" value="N"
+													data-id="N" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="unrestrictedaccess">
+												Restricted by role
+											</div>
+										</div>
+
+										<div class="form-group"
+											id="util-setup-user-edit-relationshipmanagersecuritytype-view">
+											<h4><label class="text-muted"
+													for="util-setup-user-edit-relationshipmanagersecuritytype">Data
+													Access</label></h4>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-relationshipmanagersecuritytype-1-{{id}}"
+													name="util-setup-user-edit-relationshipmanagersecuritytype-{{id}}"
+													value="1" data-id="1" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="relationshipmanagersecuritytype">
+												All
+											</div>
+											<div class="radio-inline radio-lg">
+												<input type="radio" class="myds-check"
+													id="util-setup-user-edit-relationshipmanagersecuritytype-3-{{id}}"
+													name="util-setup-user-edit-relationshipmanagersecuritytype-{{id}}"
+													value="3" data-id="3" data-page-id="{{id}}"
+													data-scope="util-setup-user-edit-{{id}}"
+													data-context="relationshipmanagersecuritytype">
+												Restricted by sharing
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="card-footer text-right">
+						<button type="button" class="btn btn-link myds-navigate"
+							data-controller="util-setup-user-summary" id="util-setup-user-edit-cancel-{{id}}"
+							data-id="{{id}}">Cancel</button>
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							data-controller="util-setup-user-edit-save" id="util-setup-user-edit-save-{{id}}"
+							data-id="{{id}}">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- UTIL-SETUP; SHARES -->
+
+<div id="util-setup-user-shares" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Setup
+						</h6>
+						<h1 class="header-title">
+							Sharing
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-sm-12">
+				<form autocomplete="off">
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
+								id="util-setup-user-shares-filter" aria-expanded="false"><span
+									class="dropdown-text">User</span>
+							</button>
+							<ul class="dropdown-menu mt-1" data-controller="util-setup-user-shares" data-context="type">
+								<li>
+									<a href="#" class="myds-dropdown" data-id="1">
+										User
+									</a>
+								</li>
+								<li>
+									<a href="#" class="myds-dropdown" data-id="2">
+										Contact Organisation
+									</a>
+								</li>
+								<li>
+									<a href="#" class="myds-dropdown" data-id="3">
+										Contact Person
+									</a>
+								</li>
+							</ul>
+						</div>
+						<input type="text" class="form-control myds-text" placeholder="Search"
+							data-controller="util-setup-user-shares" data-context="search">
+						<div class="input-group-append">
+							<a class="btn btn-white myds-navigate" href="#util-setup-user-share-edit"><i
+									class="fa fa-plus mt-1"></i></a>
+							<button class="myds-export btn btn-white btn-sm" role="button" type="button"
+								data-scope="util-setup-user-shares" data-filename="util-setup-user-shares.csv">
+								<i class="fa fa-cloud-download-alt"></i>
+							</button>
+							<a class="btn btn-white myds-navigate d-none"
+								href="/app-admin/#admin-reports/user-shares"><i class="fa fa-search mt-1"></i></a>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="card mt-3">
+		<div class="card-body p-0 d-none" id="util-setup-user-shares-view">
+		</div>
+	</div>
+</div>
+
+<div id="util-setup-user-share-summary" class="d-none myds-view">
+</div>
+
+<div id="util-setup-user-share-edit" class="hidden d-none myds-view">
+</div>
+
+<div id="_util-setup-user-share-edit" class="hidden d-none myds-view-template">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-header">
+					<h2 class="my-1">User Share</h2>
+				</div>
+				<div class="card-body">
+					<form autocomplete="off">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-sm-12">
+
+									<div class="form-group mb-1">
+										<h4><label class="text-muted mb-0 mt-1"
+												for="util-setup-user-share-user-{{id}}">User</label></h4>
+										<select class="form-control input-lg myds-select"
+											id="util-setup-user-share-edit-user" style="width:100%;" data-id=""
+											data-scope="util-setup-user-share-edit-" data-context="userguid"
+											data-text="">
+										</select>
+									</div>
+
+									<div class="form-group ml-1 mb-2">
+										<input type="checkbox" class="myds-check"
+											data-scope="util-setup-user-share-edit-" data-context="samecontactbusiness"
+											id="util-setup-user-share-edit-user-same-contactbusiness" data-id="Y"
+											data-unselected-id="Y"><span class="text-muted">Include users within the
+											same organisation.</span>
+									</div>
+
+									<div class="text-muted mt-2 mb-2 ml-1 font-bold">Or</div>
+
+									<div class="form-group mb-4">
+										<h4><label class="text-muted mb-0 mt-1"
+												for="util-setup-user-share-usercontactbusiness-{{id}}">User Organisation
+												(Contact Business)</label></h4>
+										<select class="form-control input-lg myds-select"
+											id="util-setup-user-share-edit-usercontactbusiness" style="width:100%;"
+											data-id="" data-scope="util-setup-user-share-edit-"
+											data-context="usercontactbusiness" data-text="">
+										</select>
+									</div>
+
+									<div class="text-muted mt-2 pt-3 mb-2 font-bold border-top">Has access to data for
+									</div>
+
+									<div class="form-group">
+										<h4><label class="text-muted mb-0 mt-1"
+												for="util-setup-user-share-contactbusiness-{{id}}">Contact
+												Business</label></h4>
+										<select class="form-control input-lg myds-select"
+											id="util-setup-user-share-edit-contactbusiness" style="width:100%;"
+											data-id="" data-scope="util-setup-user-share-edit-"
+											data-context="contactbusiness" data-text="">
+										</select>
+									</div>
+
+									<div class="form-group">
+										<h4><label class="text-muted mb-0 mt-1"
+												for="util-setup-user-share-contactperson-{{id}}">Contact Person</label>
+										</h4>
+										<select class="form-control input-lg myds-select"
+											id="util-setup-user-share-edit-contactperson" style="width:100%;" data-id=""
+											data-scope="util-setup-user-share-edit-" data-context="contactperson"
+											data-text="">
+										</select>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer bg-light text-right">
+					<button type="button" class="btn btn-link myds-navigate" data-controller="util-setup-user-shares"
+						id="util-setup-user-edit-cancel-{{id}}" data-id="{{id}}">Cancel</button>
+					<button type="button" class="btn btn-default btn-outline myds-click"
+						data-controller="util-setup-user-share-edit-save" id="util-setup-user-edit-save-{{id}}"
+						data-id="{{id}}">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- UTIL; SETUP; TEMPLATES -->
+
+<div id="util-setup-templates" class="hidden d-none myds-view">
+
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Setup
+						</h6>
+						<h1 class="header-title">
+							Templates
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-sm-12">
+				<form autocomplete="off">
+					<div class="input-group">
+						<input type="text" class="form-control myds-text" placeholder="Search for a template"
+							data-controller="util-setup-templates" data-context="search">
+						<div class="input-group-append">
+							<a class="btn btn-white myds" href="/util-setup/#util-setup-template-edit"><i
+									class="fa fa-plus mt-1"></i></a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="card mt-3">
+			<div class="card-body p-0 d-none" id="util-setup-templates-view"></div>
+		</div>
+
+	</div>
+</div>
+
+<div id="util-setup-template-summary" class="d-none myds-view">
+</div>
+
+<div id="_util-setup-template-summary" class="d-none myds-view-template">
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-sm-5" id="util-setup-template-summary-card">
+				<div class="card">
+					<div class="card-body pt-1 pb-1">
+						<h2><strong>{{title}}</strong></h2>
+					</div>
+					<div class="card-body bg-light text-dark">
+						<div class="container-fluid px-1">
+							<div class="row">
+								<div class="col-sm-12">
+									<h3 class="mb-0">{{url}}</h3>
+									<div class="text-muted"><small><i class="fa fa-globe"></i> URL</small></div>
+								</div>
+							</div>
+							<div class="row mt-2">
+								<div class="col-sm-12">
+									<h3 class="mb-0">{{id}}</h3>
+									<div class="text-muted"><small><i class="fa fa-id-card"></i> ID</small></div>
+								</div>
+							</div>
+							<div class="row mt-2">
+								<div class="col-sm-12">
+									<h3 class="mb-0">{{guid}}</h3>
+									<div class="text-muted"><small><i class="fa fa-id-card"></i> GUID</small></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-body">
+						<button class="btn btn-default btn-outline btn-sm myds-navigate"
+							data-controller="util-setup-template-edit" id="util-setup-template-edit-{{id}}"
+							data-context="{{id}}" data-id="{{id}}">Edit template</button>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-sm-7">
+
+				<div class="card">
+					<div class="card-header pt-1 pb-1 pr-2">
+						<h4 class="pull-left pt-1">Attachments (Files)</h4>
+						<div class="pull-right">
+							<a class="btn btn-white btn-sm" role="button" data-toggle="collapse"
+								href="#util-setup-template-summary-attachments-upload">
+								<i class="fa fa-plus"></i>
+							</a>
+							<a class="ml-1 mr-1 myds-collapse-toggle" data-toggle="collapse" role="button"
+								id="util-setup-template-summary-attachments-collapse"
+								href="#util-setup-template-summary-attachments-view">
+								<i class="fa fa-chevron-down text-muted ml-1"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="collapse myds-collapse" id="util-setup-template-summary-attachments-upload"
+						data-controller="util-files-upload-initialise" data-object="14"
+						data-context="util-setup-template-summary">
+						<div class="card-body py-2">
+							<form class="dropzone myds-dropzone mb-3 mt-2"
+								id="util-setup-template-summary-attachments-upload-dropzone">
+								<div class="row" id="util-setup-template-summary-attachments-upload-container-preview">
+								</div>
+							</form>
+
+							<div class="text-center">
+								<button type="button" class="btn btn-default btn-outline btn-sm mr-2 mb-3 myds-click"
+									id="util-setup-template-summary-attachments-upload-process"
+									data-controller="util-attachment-upload-process"
+									data-target="#util-setup-template-summary-attachments-upload-dropzone">
+									Upload
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="collapse myds-collapse" id="util-setup-template-summary-attachments-view"
+						data-controller="util-files-show" data-object="14" data-objectcontext="{{id}}"
+						data-scope="util-setup-template-summary">
+						<div id="util-setup-template-summary-attachments-view" class="card-body py-2">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="util-setup-template-edit" class="hidden d-none myds-view">
+</div>
+
+<div id="_util-setup-template-edit" class="hidden d-none myds-view-template">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="card">
+				<div class="card-header">
+					<h2 class="my-1">Template</h2>
+				</div>
+				<div class="card-body">
+					<form autocomplete="off">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<h4><label class="text-muted"
+												for="util-setup-template-edit-title-{{id}}">Title</label></h4>
+										<input type="text" class="form-control input-lg myds-text"
+											id="util-setup-template-edit-title-{{id}}" value="" data-value=""
+											data-id="{{id}}" data-scope="util-setup-template-edit-{{id}}"
+											data-context="title">
+									</div>
+									<div class="form-group">
+										<h4><label class="text-muted"
+												for="util-setup-template-edit-url-{{id}}">URL</label></h4>
+										<input type="text" class="form-control input-lg myds-text"
+											id="util-setup-template-edit-url-{{id}}" value="" data-value=""
+											data-id="{{id}}" data-scope="util-setup-template-edit-{{id}}"
+											data-context="url">
+									</div>
+									<div class="form-group pt-2">
+										<textarea style="height:350px;" class="form-control myds-text myds-validate"
+											data-validate-mandatory id="util-setup-template-edit-content-{{id}}"
+											data-id="{{id}}" data-scope="util-setup-template-edit-{{id}}"
+											data-context="content"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer bg-light text-right">
+					<button type="button" class="btn btn-link myds-navigate"
+						data-controller="util-setup-template-summary" id="admin-billing-invoice-edit-cancel-{{id}}"
+						data-id="{{id}}">Cancel</button>
+					<button type="button" class="btn btn-default btn-outline myds-click"
+						data-controller="util-setup-template-edit-save" id="util-setup-template-edit-save-{{id}}"
+						data-id="{{id}}">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- UTIL; SETUP; USER SIGN UP | INVITES -->
+
+<!--
+	Show all the contact persons that don't have a user account
+	And select / send them invites
+-->
+
+<div id="util-setup-user-signups" class="hidden d-none myds-view">
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h6 class="header-pretitle">
+							Setup
+						</h6>
+						<h1 class="header-title">
+							User Signups
+						</h1>
+					</div>
+					<div class="col-auto text-right">
+						<div class="mt-2">
+							<a class="btn btn-sm btn-primary btn-outline myds-collapse-toggle" data-toggle="collapse"
+								role="button" href="#hospital-clinicians-invite-generate-link-collapse">
+								Generate a Generic Invite Link <i class="fa fa-chevron-down"></i>
+							</a>
+						</div>
+						<div class="collapse myds-collapse" id="hospital-clinicians-invite-generate-link-collapse"
+							data-controller="hospital-clinicians-invite-generate-link">
+							<div id="hospital-clinicians-invite-generate-link-view">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-l-0 p-r-0">
+		<div class="row">
+			<div class="col-sm-12">
+				<form autocomplete="off">
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
+								id="util-setup-user-shares-filter" aria-expanded="false"><span
+									class="dropdown-text">Pending</span>
+							</button>
+							<ul class="dropdown-menu mt-1" data-controller="util-setup-user-shares" data-context="type">
+								<li>
+									<a href="#" class="myds-dropdown" data-id="1">
+										Pending
+									</a>
+								</li>
+								<li>
+									<a href="#" class="myds-dropdown" data-id="2">
+										Accepted
+									</a>
+								</li>
+							</ul>
+						</div>
+						<input type="text" class="form-control myds-text" placeholder="Search"
+							data-controller="util-setup-user-signups" data-context="search">
+						<div class="input-group-append">
+							<a class="btn btn-white myds-navigate" href="#util-setup-user-signup-invite"><i
+									class="fa fa-plus mt-1"></i></a>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="card mt-3">
+		<div class="card-body p-0 d-none" id="util-setup-user-shares-view">
+		</div>
+	</div>
+</div>
+
+<div id="util-setup-user-signups-invite" class="d-none myds-view">
+	<div class="row mb-3">
+		<div class="col">
+			<h2 class="ml-1 mt-2">Invite Clinicians</h2>
+			<div class="ml-1 mb-1">Invite clinicians that are not already users to join beHub.</div>
+		</div>
+		<div class="col-auto text-right">
+			<div class="mt-2">
+				<a class="btn btn-sm btn-primary btn-outline myds-collapse-toggle" data-toggle="collapse" role="button"
+					href="#hospital-clinicians-invite-generate-link-collapse">
+					Generate a Generic Invite Link <i class="fa fa-chevron-down"></i>
+				</a>
+			</div>
+			<div class="collapse myds-collapse" id="hospital-clinicians-invite-generate-link-collapse"
+				data-controller="hospital-clinicians-invite-generate-link">
+				<div id="hospital-clinicians-invite-generate-link-view">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pl-0 tabs-container w-100">
+		<ul class="nav nav-tabs myds-tab">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#hospital-clinicians-invite-select"
+					data-controller="util-hospital-clinicians-invite-select-show">1. Select</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#hospital-clinicians-invite-send"
+					data-controller="util-hospital-clinicians-invite-send-show">2. Send</a>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="hospital-clinicians-invite-select">
+				<div class="panel-body">
+					<div class="my-0" id="hospital-clinicians-invite-select-view-message"></div>
+					<div class="my-0" id="hospital-clinicians-invite-select-view"></div>
+				</div>
+			</div>
+			<div class="tab-pane mb-4" id="hospital-clinicians-invite-send">
+				<div class="panel-body">
+					<div class="my-0" id="hospital-clinicians-invite-send-view-message"></div>
+					<div class="my-0" id="hospital-clinicians-invite-send-view"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

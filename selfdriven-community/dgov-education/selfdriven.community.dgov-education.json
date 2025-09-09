@@ -1,0 +1,28 @@
+{
+    "selfdriven": {
+        "community": {
+			"id": "dcd85ae6-2259-4574-b554-c8064178dc48",
+			"did": "did:dsociety:91c70d3068c8f6ad57c5d073225fb9b4d2e38ec0b7013d60c8d9ba833dffb7a9",
+			"site": "1a406553-455f-4827-ae45-026e2fc3a93c",
+			"templates":
+			{
+				"learning":
+				[
+					{
+						"name": "cardano-drep-pioneer-program-workshop-kit",
+						"url": "https://skillzeb.io/site/6b2beaea-f5ef-45f7-bec0-4c679d314d71/data/skillzeb.template.learning.cardano-drep-pioneer-program-workshop-kit.json"
+					}
+				]
+			},
+            "policies":
+            [
+                {
+                    "id": "906ba07f6419a89d7b05cca88f0ff3ee2114936c373cb2156f8426ec",
+					"token": "SDF",
+                    "image-url": ""
+                }
+            ]
+
+        }
+    }
+}

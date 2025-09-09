@@ -1,0 +1,52 @@
+@media only screen {
+	body {
+		background-color: #f6f6f6 !important;
+		font-family: 'Poppins'
+	}
+
+	.nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		background-color: #B4A1FB;
+		color: #fff
+	}
+
+	.nav-link {
+		color: #420633;
+	}
+
+	.nav-link:hover {
+		color: #420633;
+	}
+
+	a {
+		color: #1b2a4f;
+	}
+
+	a:hover {
+		color: #B4A1FB;
+	}
+
+	.fa-chevron-down.rotate {
+		transform: rotate(180deg);
+		transition: transform 0.3s ease;
+	}
+
+	.fa-chevron-down {
+		transition: transform 0.3s ease;
+	}
+
+	#selfdriven-ai-chat-text {
+	font-size: 16px;
+	background-color: #f8f8fc;
+	border: 1px solid #eee;
+	border-radius: 999px;
+	padding: 12px 20px;
+	transition: border 0.2s ease;
+	}
+	
+	#selfdriven-ai-chat-text:focus {
+	outline: none;
+	border-color: #c0aaff;
+	box-shadow: 0 0 0 2px rgba(192, 170, 255, 0.2);
+	}
+}

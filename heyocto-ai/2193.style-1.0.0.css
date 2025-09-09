@@ -1,0 +1,26 @@
+@media only screen {
+    body {
+        background-color: #f6f6f6 !important;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        background-color: #93c675;
+        color: #fff
+    }
+
+    .nav-link {
+        color: #869ab8;
+    }
+
+    .nav-link:hover {
+        color: #93c675;
+    }
+
+    a {
+        color: #1b2a4f;
+    }
+    a:hover {
+        color: #93c675;
+    }
+}

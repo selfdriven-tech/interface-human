@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Brookmann';
+	src: 	url('/site/ee1c4103-e47f-44a6-8642-1dc74953aa8f/fonts/brockmann-regular.eot') format('embedded-opentype');
+    src: 	url('/site/ee1c4103-e47f-44a6-8642-1dc74953aa8f/fonts/brockmann-regular.woff2') format('woff2'),
+         	url('/site/ee1c4103-e47f-44a6-8642-1dc74953aa8f/fonts/brockmann-regular.woff') format('woff'),
+			url('/site/ee1c4103-e47f-44a6-8642-1dc74953aa8f/fonts/brockmann-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Poppins';
+	src: url('/site/ee1c4103-e47f-44a6-8642-1dc74953aa8f/fonts/poppins-regular.woff2') format('woff2')
+		url('/site/ee1c4103-e47f-44a6-8642-1dc74953aa8f/fonts/poppins-regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+    background-color: #f8f9fa;
+	 font-family: 'Poppins', sans-serif;
+}
+
+a.text-app {
+    color: #DE5A31 !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a.text-app :hover {
+    color: #c44f2b; /* Slightly darker shade on hover */
+    text-decoration: underline;
+}
+
+a.text-app :active {
+    color: #a84324; /* Even darker shade for active (click) state */
+}
+
+a.text-app :visited {
+    color: #DE5A31; /* Keeping visited links the same color */
+}
+
+.login-box {
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 50px;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+.text-muted {
+    font-size: 14px;
+}
+
+.btn-dark {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.input-group .btn {
+    border-left: none;
+    background: transparent;
+}
+
+.form-control {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.signup-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+.btn-block {
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+.text-muted {
+    font-size: 14px;
+}
+
+.promo-section {
+    background-color: #f5f2ea;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.promo-content img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+h3 {
+    font-weight: bold;
+    color: #5b3d5d;
+}
+
+.navbar-dark {
+	background-color: black !important;
+}

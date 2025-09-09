@@ -1,0 +1,724 @@
+<!--
+  {
+    To find out about this webpapp, in the browser console run; app.invoke('util-whoami')
+  }
+-->
+
+<div id="myds-toast" class="position-fixed fixed-top w-100 d-flex flex-column p-4" aria-live="assertive"
+	aria-atomic="true" style="z-index: 0"></div>
+
+<nav class="navbar navbar-vertical fixed-start navbar-expand-md navbar-dark pl-3 pr-0" id="sidebar">
+	<div class="container-fluid pl-1">
+		<div class="w-100 mt-0">
+			<div class="pt-0">
+				<!-- Toggler -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse"
+					aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Brand -->
+				<a class="navbar-brand pt-sm-3 entityos-app-logo" href="/">
+					<img src="/site/2204/selfdriven.logo.white.transparent-3.0.0.png"
+						class="d-xs-block d-sm-none navbar-brand-img mx-auto" alt="..."
+						style="max-height:1.4rem !important;">
+					<img src="/site/2204/selfdriven.logo.white.transparent-3.0.0.png"
+						class="d-none d-sm-block navbar-brand-img mx-auto" alt="..."
+						style="text-align: left; margin-left:0px !important; max-height:1.4rem !important;">
+				</a>
+
+				<!-- User (xs) -->
+				<div class="navbar-user d-md-none">
+
+					<!-- Dropdown -->
+					<div class="dropdown">
+
+						<!-- Toggle -->
+						<a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							<div class="avatar avatar-sm avatar-online">
+								<img src="/site/2007/2007.image.octo-logging-on.png"
+									class="avatar-img rounded-circle myds-logon-image" alt="...">
+							</div>
+						</a>
+
+						<!-- Menu -->
+						<div class="dropdown-menu dropdown-menu-end" aria-labelledby="sidebarIcon">
+							<a href="#learner-me" class="dropdown-item">Profile</a>
+							<hr class="dropdown-divider">
+							<a href="#" class="dropdown-item myds-logoff">Log off</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- Collapse -->
+				<div class="collapse navbar-collapse myds-menu" id="sidebarCollapse">
+
+					<div id="side-menu-view-learner" class="d-none">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="/app-learner/#learner-dashboard">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M15.2175 5.25036L11.0475 2.16786C9.82773 1.27738 8.17227 1.27738 6.9525 2.16786L2.79 5.25036C1.98408 5.83096 1.50458 6.76209 1.5 7.75536V13.3279C1.54502 15.1228 3.03499 16.5423 4.83 16.5004H13.17C14.965 16.5423 16.455 15.1228 16.5 13.3279V7.74786C16.4936 6.75888 16.0175 5.83182 15.2175 5.25036ZM15.375 13.3279C15.3303 14.5016 14.3438 15.4176 13.17 15.3754H4.83C3.65773 15.4134 2.67377 14.4997 2.625 13.3279V7.75536C2.629 7.1178 2.93863 6.52086 3.4575 6.15036L7.62 3.07536C8.44207 2.47504 9.55793 2.47504 10.38 3.07536L14.5425 6.15786C15.0609 6.52193 15.3711 7.11438 15.375 7.74786V13.3279ZM5.625 11.8129H12.375C12.6857 11.8129 12.9375 12.0647 12.9375 12.3754C12.9375 12.686 12.6857 12.9379 12.375 12.9379H5.625C5.31434 12.9379 5.0625 12.686 5.0625 12.3754C5.0625 12.0647 5.31434 11.8129 5.625 11.8129Z"
+											fill="white" />
+									</svg>
+									<span class="pl-2">Dashboard</span>
+								</a>
+							</li>
+							
+							<li class="nav-item">
+								<a href="/app-learner/#learner-whats-up" class="nav-link">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M15.8299 11.61C15.4967 11.325 15.3049 10.9085 15.3049 10.47V6.855C15.3049 3.8925 12.6199 1.5 9.30493 1.5C5.98993 1.5 3.30493 3.8925 3.30493 6.855V10.47C3.30496 10.9085 3.11313 11.325 2.77993 11.61C1.64743 12.6225 2.44993 14.3475 4.05493 14.3475H6.90493C7.26856 15.3603 8.22883 16.0358 9.30493 16.0358C10.381 16.0358 11.3413 15.3603 11.7049 14.3475H14.5549C16.1599 14.3475 16.9624 12.6225 15.8299 11.61ZM9.30504 14.9099C8.85863 14.9082 8.43797 14.7007 8.16504 14.3474H10.415C10.1508 14.6951 9.74168 14.9024 9.30504 14.9099ZM14.5629 13.2225C14.8356 13.2472 15.0952 13.101 15.2154 12.855C15.2738 12.7068 15.2206 12.538 15.0879 12.45C14.5228 11.9459 14.1961 11.2272 14.1879 10.47V6.855C14.1879 4.5225 11.9979 2.625 9.31288 2.625C6.62789 2.625 4.43789 4.5225 4.43789 6.855V10.47C4.42966 11.2272 4.10297 11.9459 3.53789 12.45C3.40237 12.5358 3.34594 12.7051 3.40289 12.855C3.52311 13.101 3.78271 13.2472 4.05539 13.2225H14.5629Z"
+											fill="white" />
+									</svg>
+									<span class="pl-2">What's Up?</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-learner/#learner-projects" class="nav-link">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M15.195 11.1225V5.0625C15.195 3.5092 13.9358 2.25 12.3825 2.25H5.8125C4.2592 2.25 3 3.5092 3 5.0625V12.9675C3 14.2971 4.07787 15.375 5.4075 15.375H14.6325C14.9432 15.375 15.195 15.1232 15.195 14.8125C15.195 14.5018 14.9432 14.25 14.6325 14.25H5.4075C4.69919 14.25 4.125 13.6758 4.125 12.9675C4.125 12.2592 4.69919 11.685 5.4075 11.685H14.6325C14.9432 11.685 15.195 11.4332 15.195 11.1225ZM4.125 10.935V5.0625C4.125 4.13052 4.88052 3.375 5.8125 3.375H12.3825C13.3145 3.375 14.07 4.13052 14.07 5.0625V10.56H5.4075C4.95312 10.5611 4.50838 10.6911 4.125 10.935Z"
+											fill="white" />
+										<path
+											d="M4.845 12.9675C4.845 12.6568 5.09684 12.405 5.4075 12.405H13.71C14.0207 12.405 14.2725 12.6568 14.2725 12.9675C14.2725 13.2782 14.0207 13.53 13.71 13.53H5.4075C5.09684 13.53 4.845 13.2782 4.845 12.9675Z"
+											fill="white" />
+									</svg>
+									<span class="pl-2">Projects</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-learner/#learner-connections" class="nav-link">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M12 6.57018C11.9755 7.79521 10.9753 8.77542 9.75004 8.77518C8.53937 8.75524 7.56159 7.78077 7.53754 6.57018V5.72268C7.53739 5.22347 7.73873 4.74533 8.09594 4.39659C8.45314 4.04786 8.93598 3.85805 9.43504 3.87018H10.14C10.6327 3.86818 11.1058 4.06247 11.4548 4.4101C11.8038 4.75773 12 5.23006 12 5.72268V6.57018ZM9.41254 4.97268C8.99833 4.97268 8.66254 5.30846 8.66254 5.72268L8.69254 6.57018C8.69254 7.17079 9.17943 7.65768 9.78004 7.65768C10.3806 7.65768 10.8675 7.17079 10.8675 6.57018V5.72268C10.8675 5.30846 10.5318 4.97268 10.1175 4.97268H9.41254Z"
+											fill="white" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M17.61 11.4752L17.6925 12.6452C17.7792 13.0113 17.6946 13.3971 17.4626 13.6933C17.2305 13.9895 16.8763 14.1641 16.5 14.1677H13.1325C12.8388 14.4808 12.4294 14.6597 12 14.6627H7.50004C7.04898 14.6687 6.61718 14.4802 6.31504 14.1452C6.24526 14.1529 6.17483 14.1529 6.10504 14.1452H2.66254C2.29652 14.1314 1.95542 13.9561 1.73105 13.6666C1.50668 13.3771 1.42209 13.0031 1.50004 12.6452L1.61254 11.4752C1.72198 10.9169 2.20625 10.5108 2.77504 10.5002H6.00004C6.13466 10.4927 6.26948 10.5105 6.39754 10.5527C6.68528 10.1933 7.12215 9.98588 7.58254 9.99018H11.9175C12.351 9.98856 12.764 10.1745 13.05 10.5002C13.1023 10.4928 13.1553 10.4928 13.2075 10.5002H16.4475C17.0163 10.5108 17.5006 10.9169 17.61 11.4752ZM13.1625 13.0202H16.56C16.583 12.976 16.5857 12.924 16.5675 12.8777V12.7277L16.4925 11.6627L16.4475 11.6027H13.05C12.733 11.6038 12.4303 11.4702 12.2175 11.2352C12.1431 11.1462 12.0335 11.0941 11.9175 11.0927H7.58255C7.4569 11.0943 7.33857 11.1521 7.26005 11.2502C7.04595 11.5043 6.72985 11.65 6.39754 11.6477C6.26147 11.6483 6.12654 11.6228 6.00004 11.5727H2.81254C2.76754 11.5727 2.76754 11.5877 2.76754 11.6327L2.69254 12.6977V12.8477C2.67201 12.893 2.67201 12.9449 2.69254 12.9902H6.13505C6.21488 12.9828 6.29521 12.9828 6.37504 12.9902C6.67984 12.9958 6.96827 13.1292 7.17004 13.3577C7.2528 13.4545 7.37271 13.5117 7.50004 13.5152H12.03C12.1576 13.5127 12.2779 13.4553 12.36 13.3577C12.5709 13.1413 12.8604 13.0196 13.1625 13.0202Z"
+											fill="white" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M16.4775 7.69518C16.4775 8.60645 15.7388 9.34518 14.8275 9.34518C14.3886 9.34717 13.967 9.17421 13.656 8.86456C13.3449 8.55491 13.17 8.13409 13.17 7.69518V7.06518C13.17 6.69719 13.3162 6.34427 13.5764 6.08407C13.8366 5.82386 14.1896 5.67768 14.5575 5.67768H15.09C15.8563 5.67768 16.4775 6.29888 16.4775 7.06518V7.69518ZM14.3719 6.90956C14.3227 6.95879 14.295 7.02556 14.295 7.09518V7.72518C14.327 7.99297 14.5541 8.19459 14.8238 8.19459C15.0935 8.19459 15.3206 7.99297 15.3525 7.72518V7.09518C15.3525 6.9502 15.235 6.83268 15.09 6.83268H14.5575C14.4879 6.83268 14.4212 6.86033 14.3719 6.90956Z"
+											fill="white" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M5.56662 8.86456C5.25556 9.17421 4.83395 9.34717 4.39504 9.34518C3.95744 9.34518 3.53775 9.17134 3.22832 8.8619C2.91888 8.55247 2.74504 8.13278 2.74504 7.69518V7.06518C2.74504 6.29888 3.36625 5.67768 4.13254 5.67768H4.66504C5.43134 5.67768 6.05254 6.29888 6.05254 7.06518V7.69518C6.05255 8.13409 5.87768 8.55491 5.56662 8.86456ZM4.13254 6.83268C3.98757 6.83268 3.87004 6.9502 3.87004 7.09518V7.72518C3.90199 7.99297 4.1291 8.19459 4.39879 8.19459C4.66848 8.19459 4.89559 7.99297 4.92754 7.72518V7.09518C4.92754 6.9502 4.81002 6.83268 4.66504 6.83268H4.13254Z"
+											fill="white" />
+									</svg>
+									<span class="pl-2">Connections</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-learner/#learner-achievements" class="nav-link">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M11.0521 4.77776L6.31212 9.52526C6.20491 9.62973 6.14445 9.77307 6.14445 9.92276C6.14445 10.0725 6.20491 10.2158 6.31212 10.3203C6.41751 10.4258 6.56049 10.4851 6.70962 10.4853C6.85812 10.482 6.99999 10.4231 7.10712 10.3203L11.8471 5.57276C11.9543 5.4683 12.0148 5.32495 12.0148 5.17526C12.0148 5.02557 11.9543 4.88223 11.8471 4.77776C11.6275 4.55842 11.2717 4.55842 11.0521 4.77776Z"
+											fill="white" />
+										<path
+											d="M7.09963 7.71776C7.24844 7.71603 7.39084 7.65693 7.49713 7.55276L9.07963 5.97026C9.28615 5.74863 9.28005 5.40326 9.06584 5.18905C8.85163 4.97484 8.50626 4.96874 8.28463 5.17526L6.70213 6.75776C6.48279 6.97738 6.48279 7.33315 6.70213 7.55276C6.80926 7.65564 6.95113 7.71453 7.09963 7.71776Z"
+											fill="white" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M16.5796 9.62276L15.3121 3.49526C15.0737 2.33439 14.0522 1.50094 12.8671 1.50026H5.32963C4.13046 1.48297 3.0883 2.32047 2.84713 3.49526L1.57963 9.62276C1.36193 10.2967 1.60074 11.0343 2.17213 11.4528L8.11963 15.8028C8.69374 16.2135 9.46552 16.2135 10.0396 15.8028L15.9871 11.4828C16.5716 11.0601 16.8119 10.3056 16.5796 9.62276ZM15.2446 10.4253L9.29713 14.7528C9.16624 14.8432 8.99301 14.8432 8.86213 14.7528L2.91463 10.4253C2.78248 10.3334 2.72736 10.165 2.77963 10.0128C2.78298 9.96782 2.78298 9.9227 2.77963 9.87776L4.08463 3.75026C4.20765 3.16492 4.73172 2.75135 5.32963 2.76776H12.9046C13.4885 2.76939 13.9918 3.17891 14.1121 3.75026L15.3796 9.87776C15.3763 9.9227 15.3763 9.96782 15.3796 10.0128C15.4319 10.165 15.3768 10.3334 15.2446 10.4253Z"
+											fill="white" />
+									</svg>
+									<span class="pl-2">Achievements</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-learner/#learner-tokens" class="nav-link">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor"
+										stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-disc">
+										<circle cx="9" cy="9" r="8"></circle>
+										<circle cx="9" cy="9" r="3"></circle>
+									</svg>								<span class="pl-2">Tokens</span>
+								</a>
+							</li>
+							<li class="d-none nav-item">
+								<a href="/app-learner/#learner-tokens" class="nav-link">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M15.2175 5.25036L11.0475 2.16786C9.82773 1.27738 8.17227 1.27738 6.9525 2.16786L2.79 5.25036C1.98408 5.83096 1.50458 6.76209 1.5 7.75536V13.3279C1.54502 15.1228 3.03499 16.5423 4.83 16.5004H13.17C14.965 16.5423 16.455 15.1228 16.5 13.3279V7.74786C16.4936 6.75888 16.0175 5.83182 15.2175 5.25036ZM15.375 13.3279C15.3303 14.5016 14.3438 15.4176 13.17 15.3754H4.83C3.65773 15.4134 2.67377 14.4997 2.625 13.3279V7.75536C2.629 7.1178 2.93863 6.52086 3.4575 6.15036L7.62 3.07536C8.44207 2.47504 9.55793 2.47504 10.38 3.07536L14.5425 6.15786C15.0609 6.52193 15.3711 7.11438 15.375 7.74786V13.3279ZM5.625 11.8129H12.375C12.6857 11.8129 12.9375 12.0647 12.9375 12.3754C12.9375 12.686 12.6857 12.9379 12.375 12.9379H5.625C5.31434 12.9379 5.0625 12.686 5.0625 12.3754C5.0625 12.0647 5.31434 11.8129 5.625 11.8129Z"
+											fill="white" />
+									</svg>
+									<span class="pl-2">Tokens</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-learner/#settings" class="nav-link">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M14.4198 6.54808C14.5627 6.89618 14.9012 7.12391 15.2775 7.125C15.7882 7.12912 16.2 7.54429 16.2 8.055V9.66C16.2 10.1736 15.7836 10.59 15.27 10.59C14.8937 10.5911 14.5552 10.8188 14.4123 11.1669C14.2695 11.515 14.3505 11.9149 14.6175 12.18C14.9757 12.5471 14.9757 13.1329 14.6175 13.5L13.4925 14.625C13.1254 14.9832 12.5396 14.9832 12.1725 14.625C12.0032 14.4456 11.7667 14.345 11.52 14.3475C11.2721 14.3455 11.0336 14.4426 10.8575 14.6172C10.6815 14.7919 10.5825 15.0295 10.5825 15.2775C10.5825 15.7911 10.1661 16.2075 9.6525 16.2075H8.0475C7.53387 16.2075 7.1175 15.7911 7.1175 15.2775C7.11751 15.0295 7.0185 14.7919 6.84246 14.6172C6.66643 14.4426 6.42795 14.3455 6.18 14.3475C5.93333 14.345 5.69682 14.4456 5.5275 14.625C5.16041 14.9832 4.57459 14.9832 4.2075 14.625L3.0825 13.5C2.72428 13.1329 2.72428 12.5471 3.0825 12.18C3.34954 11.9149 3.43052 11.515 3.28766 11.1669C3.14481 10.8188 2.80627 10.5911 2.43 10.59C2.18335 10.59 1.9468 10.492 1.77239 10.3176C1.59798 10.1432 1.5 9.90665 1.5 9.66V8.055C1.5 7.54137 1.91638 7.125 2.43 7.125C2.80627 7.12391 3.14481 6.89618 3.28766 6.54808C3.43052 6.19998 3.34954 5.80009 3.0825 5.535C2.72428 5.16791 2.72428 4.58209 3.0825 4.215L4.2075 3.09C4.57459 2.73178 5.16041 2.73178 5.5275 3.09C5.69682 3.2694 5.93333 3.36998 6.18 3.3675C6.42925 3.36952 6.66888 3.27139 6.84514 3.09514C7.02139 2.91888 7.11952 2.67925 7.1175 2.43C7.1175 1.91638 7.53387 1.5 8.0475 1.5H9.66C10.1736 1.5 10.59 1.91638 10.59 2.43C10.588 2.67925 10.6861 2.91888 10.8624 3.09514C11.0386 3.27139 11.2782 3.36952 11.5275 3.3675C11.7742 3.36998 12.0107 3.2694 12.18 3.09C12.5471 2.73178 13.1329 2.73178 13.5 3.09L14.625 4.215C14.9832 4.58209 14.9832 5.16791 14.625 5.535C14.358 5.80009 14.277 6.19998 14.4198 6.54808ZM13.35 10.7325C13.6428 10.0187 14.3132 9.53109 15.0825 9.4725L15.06 8.2425C14.2991 8.17577 13.6391 7.68952 13.35 6.9825C13.0668 6.27381 13.1965 5.46676 13.6875 4.8825L12.825 4.02C12.4592 4.32631 11.9971 4.49364 11.52 4.4925C10.4571 4.4899 9.56897 3.68276 9.465 2.625H8.235C8.13438 3.68445 7.24421 4.4934 6.18 4.4925C5.70292 4.49364 5.24076 4.32631 4.875 4.02L4.035 4.8825C4.5184 5.47122 4.63939 6.27786 4.35 6.9825C4.06085 7.68952 3.40095 8.17577 2.64 8.2425V9.4725C3.40095 9.53923 4.06085 10.0255 4.35 10.7325C4.63323 11.4412 4.50352 12.2482 4.0125 12.8325L4.875 13.695C5.24076 13.3887 5.70292 13.2214 6.18 13.2225C7.24286 13.2251 8.13103 14.0322 8.235 15.09H9.465C9.55877 14.0271 10.453 13.2145 11.52 13.2225C11.9971 13.2214 12.4592 13.3887 12.825 13.695L13.665 12.8325C13.1816 12.2438 13.0606 11.4371 13.35 10.7325Z"
+											fill="white" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M6.255 8.8575C6.255 7.42432 7.41682 6.2625 8.85 6.2625C9.53824 6.2625 10.1983 6.5359 10.6849 7.02256C11.1716 7.50922 11.445 8.16926 11.445 8.8575C11.445 10.2907 10.2832 11.4525 8.85 11.4525C7.41682 11.4525 6.255 10.2907 6.255 8.8575ZM7.35 8.8575C7.35 9.68593 8.02157 10.3575 8.85 10.3575C9.67843 10.3575 10.35 9.68593 10.35 8.8575C10.35 8.02907 9.67843 7.3575 8.85 7.3575C8.02157 7.3575 7.35 8.02907 7.35 8.8575Z"
+											fill="white" />
+									</svg>
+
+									<span class="pl-2">Settings</span>
+								</a>
+							</li>
+
+						</ul>
+					</div>
+
+					<div id="side-menu-view-learning-partner" class="d-none">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="/app-learner/#learner-dashboard-dashboard">
+									<i class="fe fe-home"></i> Dashboard
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-level-up/#learner-feed" class="nav-link">
+									<i class="fe fe-zap"></i> What's Up?
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-level-up/#learner-projects" class="nav-link">
+									<i class="fe fe-folder"></i> Projects
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-level-up/#learning-partner-connections" class="nav-link">
+									<i class="fe fe-users"></i> Connections
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-level-up/#learner-achievements" class="nav-link">
+									<i class="fe fe-star"></i> Achievements
+								</a>
+							</li>
+							<li class="d-none nav-item">
+								<a href="/app-learner/#learner-dashboard-my-skills" class="nav-link">
+									<i class="fe fe-sun"></i> Skills
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-level-up/#learner-tokens" class="nav-link">
+									<i class="fe fe-disc"></i> Tokens
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="/app-level-up/#learner-me" class="nav-link">
+									<i class="fe fe-user"></i> My Profile
+								</a>
+							</li>
+							<li class="nav-item d-none">
+								<a href="/app-learner/#learner-dashboard" class="nav-link">
+									<i class="fe fe-plus"></i>More
+								</a>
+							</li>
+							<li class="nav-item d-none">
+								<a href="https://slfdrvn.io/connect" target="_blank" class="nav-link">
+									<i class="fe fe-help-circle"></i> Help
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-learning-partner-setup"
+									data-bs-toggle="collapse" role="button"
+									aria-controls="side-menu-view-learning-partner-setup">
+									<i class="fe fe-settings"></i> Setup
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-learning-partner-setup">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-level-up/#learning-partner-setup-project-templates"
+												class="nav-link">
+												Templates
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div id="side-menu-view-learning-partner-x" class="d-none">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link " href="/app-learning-partner/#learning-partner-dashboard">
+									<i class="fe fe-home"></i> Dashboard
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-learning-partner-my" data-bs-toggle="collapse"
+									role="button" aria-controls="side-menu-view-learning-partner-my">
+									<i class="fe fe-user"></i> My
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-learning-partner-my">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-me" class="nav-link">
+												Profile
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-projects" class="nav-link">
+												Projects
+											</a>
+										</li>
+										<li class="nav-item d-none">
+											<a href="/app-learning-partner/#learning-partner-teams" class="nav-link">
+												Teams
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-tasks" class="nav-link">
+												To Do Tasks
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-tokens" class="nav-link">
+												Tokens
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-learning-partner-community"
+									data-bs-toggle="collapse" role="button"
+									aria-controls="side-menu-view-learning-partner-community">
+									<i class="fe fe-users"></i> Community
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-learning-partner-community">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-facilitators"
+												class="nav-link">
+												Facilitators
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-projects"
+												class="nav-link">
+												Projects
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-teams"
+												class="nav-link">
+												Teams
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-tasks"
+												class="nav-link">
+												To Do Tasks
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-skills"
+												class="nav-link">
+												Skills
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-community-documents"
+												class="nav-link">
+												Docs
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link"
+												href="#side-menu-view-learning-partner-community-reflections"
+												data-bs-toggle="collapse" role="button"
+												aria-controls="side-menu-view-learning-partner-community-reflections">
+												Reflections
+											</a>
+
+											<div class="collapse"
+												id="side-menu-view-learning-partner-community-reflections">
+												<ul class="nav nav-sm flex-column">
+													<li class="nav-item">
+														<a class="nav-link"
+															href="/app-learning-partner/#util-community-reflection-attributes">
+															Attributes
+														</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link"
+															href="/app-learning-partner/#util-community-reflection-skills">
+															Skills
+														</a>
+													</li>
+
+												</ul>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-learning-partner-connections"
+									data-bs-toggle="collapse" role="button"
+									aria-controls="side-menu-view-learning-partner-connections">
+									<i class="fe fe-share-2"></i> Connections
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-learning-partner-connections">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-feed"
+												class="nav-link">
+												What's Up?
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-projects"
+												class="nav-link">
+												Projects
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections"
+												class="nav-link">
+												Learners
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-endorsements"
+												class="nav-link">
+												Endorsements
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-reflections"
+												class="nav-link">
+												Reflections
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-achievements"
+												class="nav-link">
+												Achievements
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-check-ins"
+												class="nav-link">
+												Check-Ins
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-tokens"
+												class="nav-link">
+												Tokens
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-connections-next"
+												class="nav-link">
+												Next Steps
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#side-menu-view-learning-partner-setup"
+									data-bs-toggle="collapse" role="button"
+									aria-controls="side-menu-view-learning-partner-setup">
+									<i class="fe fe-settings"></i> Setup
+								</a>
+								<div class="collapse myds-menu-group" id="side-menu-view-learning-partner-setup">
+									<ul class="nav nav-sm flex-column">
+										<li class="nav-item">
+											<a href="/app-learning-partner/#learning-partner-setup-project-templates"
+												class="nav-link">
+												Project Templates
+											</a>
+										</li>
+
+
+									</ul>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+
+					<div id="stylesheetLight"></div>
+					<div id="stylesheetDark"></div>
+				</div> <!-- / .navbar-collapse -->
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- MAIN-->
+
+<div class="main-content">
+
+	<!--
+	<nav class="navbar navbar-expand-md navbar-light d-none d-md-flex" id="topbar" style="display: none !important">
+		<div class="container-fluid">
+			<div class="row">
+				
+			</div>
+	  	</div>
+	</nav>
+-->
+
+	<div class="mt-0">
+		<-mydigitalstructure:content->
+	</div>
+
+</div>
+
+<div class="modal fade" id="auth-password" tabindex="-1" role="dialog" aria-labelledby="auth-password-modal"
+	aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<h4 class="modal-title">Change your password</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+
+			<div class="modal-body">
+				<div id="auth-password-1" class="auth-password">
+					<div class="alert alert-info w-lg alert-sm text-center mx-auto">
+						Your password needs to be at least six characters long and contain at least one number.
+					</div>
+					<div class="form-group text-center">
+						<label class="text-muted" for="auth-password-existing">Existing password</label>
+						<input type="password" class="form-control text-center w-lg m-x-auto input-lg myds-text"
+							id="auth-password-existing">
+					</div>
+					<div class="form-group text-center">
+						<label class="text-muted" for="auth-password-new">New password</label>
+						<input type="password" class="form-control text-center w-lg mx-auto input-lg"
+							id="auth-password-new">
+					</div>
+					<div class="form-group text-center">
+						<label class="text-muted" for="auth-password-new-confirm">Confirm new password</label>
+						<input type="password" class="form-control text-center w-lg mx-auto input-lg"
+							id="auth-password-new-confirm">
+					</div>
+					<div class="mb-2 text-center mt-3">
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							id="auth-password-change">Continue with changing your password</button>
+					</div>
+				</div>
+
+				<div id="auth-password-2" class="hidden auth-password">
+					<div class="alert alert-info alert-sm text-center">
+						Your password has been changed.
+					</div>
+
+					<div class="text-muted text-center">
+						If you have any issues please contact <a href="mailto:journal@ths.community"
+							class="text-muted">journal@ths.community</a>.
+					</div>
+
+					<div class="m-b-md text-center m-t-md">
+						<button type="button" data-dismiss="modal" class="btn btn-default btn-outline">Close</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="auth-trust" tabindex="-1" role="dialog" aria-labelledby="auth-trust-modal"
+	aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<h4 class="modal-title">Trust this browser</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+
+			<div class="modal-body ml-2 mr-2">
+				<div id="auth-trust-OK" class="d-none auth-trust">
+					<div class="alert alert-info alert-sm text-center p-2 mx-auto" id="auth-trust-1-message-OK">
+						Instead of entering a 2nd factor code when logging on, you can trust this browser.
+					</div>
+
+					<div class="mb-2 text-center mt-2 d-none" id="auth-trust-1-set">
+						<div class="text-muted text-center mb-3">
+							<strong>You currently don't trust this browser.</strong>
+						</div>
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							data-controller="auth-trust-set">Trust this browser</button>
+					</div>
+
+					<div class="mb-2 text-center mt-2 d-none" id="auth-trust-1-remove">
+						<div class="text-muted text-center mb-3">
+							<strong>You currently trust this browser.</strong>
+						</div>
+						<button type="button" class="btn btn-default btn-outline myds-click"
+							data-controller="auth-trust-remove">I no longer trust this browser</button>
+					</div>
+
+					<div class="mb-2 text-center mt-4">
+						<button type="button" data-dismiss="modal" class="btn btn-default btn-outline">Close</button>
+					</div>
+
+				</div>
+
+				<div id="auth-trust-ER" class="d-none auth-trust">
+					<div class="alert alert-info alert-sm text-center p-2 mx-auto" id="auth-trust-1-message-ER">
+						<div><strong>Your user account has not been enabled to trust a browser.</strong></div>
+						<div>Please contact your system administrator for more information.</div>
+					</div>
+
+					<div class="mb-2 text-center mt-2">
+						<button type="button" data-dismiss="modal" class="btn btn-default btn-outline">Close</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<script src="/site/1901/jquery-3.1.1.min.js"></script>
+<script src="/site/1987/popper.min.js"></script>
+<script src="/site/2204/bootstrap.bundle.min-5.3.0.js"></script>
+<!--<script src="/site/1987/bootstrap.min.js"></script>-->
+<script src="/site/1987/jquery.metisMenu.js"></script>
+<script src="/site/1987/jquery.slimscroll.min.js"></script>
+<script src="/site/1901/lodash.min.js"></script>
+<script src="/site/1901/underscore.string.min.js"></script>
+<script src="/site/1901/moment.min.js"></script>
+<script src="/site/1901/numeral.min.js"></script>
+<script src="/site/1901/he.js"></script>
+<script src="/site/1901/d3.min.js"></script>
+<script src="/site/1901/c3.min.js"></script>
+
+<script src="/site/1901/1901.popconfirm-1.0.0.js"></script>
+<script src="/site/1987/inspinia.js"></script>
+<script src="/site/1987/pace.min.js"></script>
+<script src="/site/1901/jquery.sparkline.min.js"></script>
+<script src="/site/1901/jquery.gritter.min.js"></script>
+<script src="/site/2007/base64.js"></script>
+<script src="/site/1929/select2.full.js"></script>
+<script src="/site/1991/xlsx.full.min.js"></script>
+<script src="/site/1903/xss.js"></script>
+<script src="/site/1991/faker.js"></script>
+<script src="/site/1991/html2pdf.bundle.min.js"></script>
+<script src="/site/1789/malsup.jquery.form.js"></script>
+
+<script src="/site/1929/dropzone.js"></script>
+<script src="/site/2007/core.js"></script>
+<script src="/site/2007/hmac.js"></script>
+<script src="/site/2007/sha256.js"></script>
+<script src="/site/2007/enc-base64.js"></script>
+<script src="/site/2007/jsrsasign-all-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.0.0/tinymce.min.js"></script>
+<script src="/site/2007/fullcalendar-5.3.2.min.js"></script>
+
+<script src="/site/2007/hybrid-crypto.js"></script>
+
+<script src="/site/2008/chartist.min.js"></script>
+<script src="/site/2007/pdfmake.min.js"></script>
+<script src="/site/2007/vfs_fonts.js"></script>
+<script src="/site/2067/dashkit.vendor.bundle.js"></script>
+<script src="/site/2067/dashkit.theme.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/site/1901/tempusdominus-bootstrap-4.min.js"></script>
+
+<script src="/site/1901/crypto-js.js"></script>
+<script src="/site/2007/elliptic.min.js"></script>
+
+<script src="/site/2007/entityos-3.9.20.js"></script>
+<script src="/site/2007/entityos.util-5.0.33.js"></script>
+<script src="/site/2007/entityos.util.security-1.1.5.js"></script>
+<script src="/site/2007/entityos.util.identity-1.0.1.js"></script>
+<script src="/site/2007/entityos.util.protect-1.0.5.js"></script>
+<script src="/site/2007/entityos.util.import-1.1.9.js"></script>
+<script src="/site/2007/entityos.util.export-1.1.15.js"></script>
+<script src="/site/2007/entityos.util.dashboard-1.0.11.js"></script>
+<script src="/site/2007/entityos.util.search-1.1.15.js"></script>
+<script src="/site/2007/entityos.util.editor-1.0.2.js"></script>
+<script src="/site/2007/entityos.util.calendar-1.0.0.js"></script>
+<script src="/site/2007/entityos.util.chart-1.0.4.js"></script>
+
+<script src="/site/2204/selfdriven.app-3.0.0.js"></script>
+<script src="/site/2007/2007.auth-2.0.13.js"></script>
+<script src="/site/2067/2068.app.notifications-2.0.5.js"></script>
+
+<script src="/site/2007/2007.app.util-2.0.70.js"></script>
+<script src="/site/2007/2007.app.util.actions-2.0.32.js"></script>
+<script src="/site/2007/2007.app.util.attachment-2.0.38.js"></script>
+<script src="/site/2007/2007.app.util.projects-2.0.91.js"></script>
+<script src="/site/2007/2007.app.util.projects.story-2.0.45.js"></script>
+<script src="/site/2007/2007.app.util.projects.do-2.0.92.js"></script>
+<script src="/site/2007/2007.app.util.community.members-2.0.13.js"></script>
+<script src="/site/2007/2007.app.util.community.facilitators-1.1.5.js"></script>
+<script src="/site/2067/2068.app.util.community.calendar-2.0.8.js"></script>
+<script src="/site/2067/2068.app.util.community.reflection-2.0.2.js"></script>
+<script src="/site/2067/2068.app.util.community.improve-2.0.5.js"></script>
+<script src="/site/2007/2007.app.util.dashboard-1.1.2.js"></script>
+<script src="/site/2007/2007.app.util.pdf-2.0.48.js"></script>
+<script src="/site/2007/2007.app.util.export-1.1.4.js"></script>
+<script src="/site/2007/2007.app.util.import.community.members-2.0.10.js"></script>
+<script src="/site/2007/2007.app.util.import.community.tokens-2.0.10.js"></script>
+<script src="/site/2007/2007.app.util.import.setup.skills-2.0.11.js"></script>
+<script src="/site/2067/2068.app.util.visuals-2.0.8.js"></script>
+<script src="/site/2007/2007.app.util.templates-2.0.90.js"></script>
+
+<script src="/site/2204/selfdriven.app.util.level.up-3.0.0.js"></script>
+<script src="/site/2204/selfdriven.app.learner.dashboard-3.0.0.js"></script>
+<script src="/site/2204/selfdriven.app.learner.whats.up-3.0.0.js"></script>
+<script src="/site/2204/selfdriven.app.learner.projects-3.0.0.js"></script>
+<script src="/site/2204/selfdriven.app.learner.connections-3.0.0.js"></script>
+<script src="/site/2204/selfdriven.app.learner.achievements-3.0.0.js"></script>
+<script src="/site/2204/selfdriven.app.learner.tokens-3.0.0.js"></script>
+
+<!--
+<script src="/site/2007/2007.app.learner.profile-1.1.6.js"></script>
+<script src="/site/2007/2007.app.learner.profile.visuals-1.1.7.js"></script>
+<script src="/site/2007/2007.app.learner.me-2.0.67.js"></script>
+<script src="/site/2007/2007.app.learner.me.on.chain-2.0.58.js"></script>
+<script src="/site/2007/2007.app.learner.projects-2.0.92.js"></script>
+<script src="/site/2007/2007.app.learner.tasks-2.0.51.js"></script>
+<script src="/site/2007/2007.app.learner.teams-2.0.44.js"></script>
+<script src="/site/2067/2068.app.learner.connections-2.0.8.js"></script>
+<script src="/site/2067/2068.app.learner.endorsements-2.0.5.js"></script>
+<script src="/site/2007/2007.app.learner.achievements-2.0.91.js"></script>
+<script src="/site/2067/2068.app.learner.reflections-2.0.5.js"></script>
+<script src="/site/2067/2068.app.learner.check.ins-2.0.8.js"></script>
+<script src="/site/2007/2007.app.learner.next-2.0.10.js"></script>
+<script src="/site/2067/2068.app.learner.wellbeing-2.0.8.js"></script>
+<script src="/site/2007/2007.app.learner.tokens-2.0.57.js"></script>
+<script src="/site/2007/2007.app.learner.next.on.chain-2.0.89.js"></script>
+<script src="/site/2007/2007.app.learner.showcase-2.0.15.js"></script>
+<script src="/site/2007/2007.app.learner.feed-2.0.82.js"></script>
+<script src="/site/2007/2007.app.learner.feed.activity-2.0.85.js"></script>
+
+<script src="/site/2007/2007.app.learning.partner.connections-2.0.90.js"></script>
+<script src="/site/2007/2007.app.learning.partner.connections.feed-2.0.48.js"></script>
+<script src="/site/2007/2007.app.learning.partner.connections.projects-2.0.65.js"></script>
+<script src="/site/2007/2007.app.learning.partner.connections.learners.projects-2.0.22.js"></script>
+
+<script src="/site/2007/2007.app.learning.partner.setup-2.0.49.js"></script>
+
+<script src="/site/2154/2007.app.level.up.dashboard-2.0.56.js"></script>
+<script src="/site/2154/2007.app.level.up.skills-2.0.46.js"></script>
+<script src="/site/2154/2007.app.level.up.challenges-2.0.43.js"></script>
+<script src="/site/2154/2007.app.level.up.challenges.start-2.0.54.js"></script>
+<script src="/site/2154/2007.app.level.up.profile-2.0.53.js"></script>
+<script src="/site/2154/2007.app.level.up.tasks-2.0.42.js"></script>
+<script src="/site/2154/2007.app.level.up.explorer.skills-2.0.36.js"></script>
+-->
+
+<script src="/site/2007/2007.util.octo-2.0.0.js"></script>

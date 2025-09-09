@@ -1,0 +1,101 @@
+.btn-primary
+{
+    border-radius: 50px !important;
+}
+
+.btn-default
+{
+    background-color: #2c7be5;
+    border-color: #2c7be5;
+    color: #fff;
+	border-radius: 50px !important;
+}
+
+.btn-default.active
+{
+	background-color: #2362b7;
+}
+
+.btn-light.active
+{
+	background-color: #2c7be5 !important;
+	border-color: #2c7be5 !important;
+    color: #fff !important;
+}
+
+.form-control-lg
+{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu
+{
+    width: 22rem;
+}
+
+form.myds-dropzone
+{
+	border: 1px dashed #d2ddec;
+    border-radius: 0.375rem;
+}
+
+.dropzone .dz-message, .dz-message, .dz-message:hover
+{
+	border-color: white;
+	margin: 0px;
+}
+
+.dz-message:hover
+{
+	color: #2c7be5;;
+}
+
+.alert-info {
+    background-color: #efeae0;
+    border-color: #efeae0;
+    color: #343a40;
+}
+
+.navbar-light .navbar-nav .active>.nav-link
+{
+	color: #63ac09;
+}
+
+.nav-tabs .nav-link:not(.active)
+{
+	color: #6c757d !important;
+}
+
+@media (min-width: 768px) {
+    .navbar-vertical.navbar-expand-md {
+		max-width: 200px;
+	}
+}
+
+@media (min-width: 768px) {
+    .navbar-vertical.navbar-expand-md.fixed-start:not([style*="display: none"])~.main-content {
+        margin-left:200px
+    }
+
+    .navbar-vertical.navbar-expand-md.fixed-end:not([style*="display: none"])~.main-content {
+        margin-right: 200px
+    }
+}
+
+.navbar-light
+{
+	background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.dropdown-menu > li > a {
+    border-radius: 3px;
+    color: inherit;
+    line-height: 25px;
+    margin: 4px;
+    text-align: left;
+    font-weight: normal;
+    display: block;
+    padding: 3px 20px;
+}

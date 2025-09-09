@@ -1,0 +1,14 @@
+{
+    "selfdriven": {
+        "community": {
+            "policies":
+            [
+                {
+                    "id": "09b1ae51b984fc1aa405d753a98a239ec4fcd2c199f0ea532e9139df",
+                    "image-url": ""
+                }
+            ]
+
+        }
+    }
+}

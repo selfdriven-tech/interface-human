@@ -1,4 +1,9 @@
-# Human Interfaces
+# The Human Interface
+
+- Your data - protected 
+- Collective engagement - community / organisation.
+- Human verification
+- Discoverability - supporting human/practition in the loop
 
 ### Design Principles
 - Keep data protected as close to the human as possible
@@ -20,4 +25,6 @@ selfdriven uses the entityOS SDK to support human, device and cloud storage inte
 - [entityos-sdk-npm](https://github.com/ibcom-lab/entityos-sdk-npm) - NodeJS
 - [entityos-learn](https://github.com/ibcom-lab/entityos-learn)
 - [entityos-learn-protect](https://github.com/ibcom-lab/entityos-learn-protect)
+
+*The "selfdriven Human Interface Tech Kit" is being worked on in the lab, it will abstract entityOS.*
 

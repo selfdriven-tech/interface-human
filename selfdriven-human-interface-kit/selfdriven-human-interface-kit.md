@@ -1,10 +1,4 @@
-# selfdriven Human Interface Tech Kit
-
-- DID using selfdriven-interface-human-kit/selfdriven.interface.human.kit.identity.js
-- Hashed and stored locally using selfdriven-interface-human-kit/selfdriven.interface.human.kit.protect.js / local.js
-- Hash shared and persisted if required selfdriven-interface-human-kit/selfdriven.interface.human.kit.onchain.js
-
-*Merge all into on kit.js abstract entityos.js*
+# selfdriven Human Interface Kit
 
 ## Scope
 
@@ -21,6 +15,4 @@
 ### 3. Collective Engagement - Sharing data with community members / organisation
 - Community members, human (organic) & AI (inorganic)
 - MCP
-
-### ?. Discoverability - supporting human/practition in the loop
-??? May be Collective engagement
+- Human/practitioner in the loop

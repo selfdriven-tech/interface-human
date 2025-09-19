@@ -1,0 +1,197 @@
+<!--
+    A learn-by-example of SSI DID
+
+    # Create DID
+        - Download Private Key
+        - Document did-document.json with DID & Public Key
+    
+    Thank you,
+    Turlia.
+
+    We have an opportunity
+    to descentralise
+    & rehumanise our society
+
+    --
+
+    Great reference: DID authorisation (proofing ownership)
+    https://www.w3.org/Security/201812-Auth-ID/04_-_Day_1_-_Understanding_DID_Auth.pdf
+
+    Use https://github.com/digitalbazaar/ed25519-verification-key-2020/tree/main/lib to generate keys
+
+    W3C DID Specs: Methods:
+    https://github.com/w3c/did-spec-registries/tree/main/methods
+
+	Key Management Services:
+	https://docs.aws.amazon.com/kms/latest/developerguide/programming-top.html
+	https://entityos.cloud
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" href="/site/2152/2152.icon-2.0.0.png" type="image/png" />
+    <link rel="stylesheet" href="/site/2033/landkit.libs.bundle.css" />
+    <link rel="stylesheet" href="/site/2033/landkit.theme.bundle.css" />
+    <link rel="stylesheet" href="/site/2152/dsociety.style-2.0.0.css" />
+    <link rel="stylesheet" href="/site/2098/entityos.util-4.4.17.css" />
+
+    <title>dSociety Learn SSI</title>
+</head>
+
+<body style="padding-left:30px; padding-right: 20px;">
+    <div class="pt-6">
+        <a class="lift"
+            style="padding-left: 4px; font-family:system-ui !important; color:#ff943d !important; font-size:1.6rem; text-align:left;"
+            href="/">
+            dSociety</a> <span class="text-muted-80" style="font-size:1.6rem; font-family:system-ui !important;font-weight: 100;">|</span> <a class="lift"
+            style="font-family:system-ui !important; color:#ff943d !important; font-size:1.6rem; text-align:left;"
+            href="/learn">
+            Learn
+        </a>
+    </div>
+
+    <div class="pt-0" style="color:#ff943d; font-size:4rem; line-height:1;">
+        Self-Sovereign Identity (SSI)
+    </div>
+
+    <div class="pt-6">
+        <button id="learn-ssi-create-did" type="button" class="btn btn-outline-primary entityos-click"
+            data-controller="learn-ssi-create-did" style="width:200px;">
+            Create DID
+        </button>
+    </div>
+
+	<div class="form-group mt-3 mb-0" style="margin-left: 20px;">
+		<div class="radio-inline radio-lg text-secondary">
+			<input type="radio" class="entityos-check" checked="checked" id="learn-ssi-create-did-curve-secp256k1" name="learn-ssi-create-did-curve" value="secp256k1" data-id="secp256k1" data-scope="learn-ssi-create-did" data-context="curve">
+			secp256k1
+		</div>
+		<div class="radio-inline radio-lg text-secondary">
+			<input type="radio" class="entityos-check" id="learn-ssi-create-did-curve-ed25519" name="learn-ssi-create-did-curve" value="ed25519" data-id="ed25519" data-scope="learn-ssi-create-did" data-context="curve">
+			Ed25519
+		</div>
+		
+	</div>
+
+    <div id="learn-ssi-view">
+    </div>
+
+    <div id="learn-view" class="pt-4" style="width:100%;">
+    </div>
+
+    <div class="pt-6" style="width:100%;">
+        <a data-toggle="collapse" href="#learn-ssi-info-tech-view" class="btn btn-outline-primary text-dark"
+            style="width:200px;">
+            The Curves <i class="fe fe-chevron-down"></i>
+        </a>
+        <div class="collapse mt-4" id="learn-ssi-info-tech-view">
+            <ul class="d-none nav nav-pills justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="learn-ssi-info-tech-curves" data-toggle="tab" href="#stack"
+                        role="tab" aria-controls="stack" aria-selected="false">Curves</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="learn-ssi-info-tech-curves" role="tabpanel"
+                    aria-labelledby="learn-ssi-info-tech-curves">
+                    <div style="background-color:rgba(0,0,0,0.7); border-radius: 6px; padding:20px; color:#e8d5cf;"
+                        class="w-md-75 mt-6 px-8 pt-6">
+                        <h3 class="d-none fw-bold" style="color:#ff943d;">The Curves</h3>
+                        <div>
+                            Decentralized Identifiers (DIDs) are a new type of identifier that enable verifiable,
+                            decentralized digital identity. They are an important part of decentralized networks,
+                            including blockchain, and help to ensure that each participant has a unique, verifiable
+                            identity.
+                        </div>
+                        <div class="mt-2">
+                            The cryptographic algorithms used for DIDs often rely on elliptic curve cryptography, which
+                            offers good security with relatively small keys, making it well suited to the constrained
+                            environments where DIDs are often used.
+                        </div>
+                        <div class="mt-2">
+                            Common curve algorithms for DIDs include...
+                        </div>
+                        <div class="mt-2">
+                            <h4 class="fw-bold  mb-0 mt-3" style="color:#ff943d;">secp256k1</h4>
+                            This elliptic curve is used by Bitcoin, Ethereum, and many other blockchain
+                            systems. It's considered secure and efficient, and there's a large amount of existing
+                            tooling and infrastructure for systems that use secp256k1.
+                        </div>
+                        <div class="mt-2">
+                            <h4 class="fw-bold  mb-0 mt-3" style="color:#ff943d;">secp256r1 (also known as
+                                P-256)</h4>
+                            This is another common elliptic curve, often used in
+                            traditional web systems. It's part of the NIST suite of curves, and while it's somewhat
+                            controversial due to its association with the NSA, it's nonetheless widely used and
+                            well-supported.
+                        </div>
+                        <div class="mt-2">
+                            <h4 class="fw-bold  mb-0 mt-3" style="color:#ff943d;">Ed25519</h4>
+                            This is a specific elliptic curve signature scheme using a variant of Schnorr's
+                            signature and Twisted Edwards curves. It offers high security and performance, and it's
+                            widely used in blockchain systems like Bitcoin, Ethereum, and others.
+                        </div>
+                        <div class="mt-2">
+                            <h4 class="fw-bold  mb-0 mt-3" style="color:#ff943d;">Curve25519</h4>
+                            This is a state-of-the-art Diffie-Hellman function suitable for a wide variety
+                            of applications. It's designed for high performance and high security. Ed25519 is actually
+                            derived from Curve25519.
+                        </div>
+                        <div class="mt-2">
+                            <h4 class="fw-bold  mb-0 mt-3" style="color:#ff943d;">BLS12-381</h4>
+                            This is a pairing-friendly elliptic curve designed for use in cryptographic
+                            systems that require pairings. It's used in some advanced systems like Zcash's zk-SNARKs.
+                        </div>
+                    </div>
+                    <div class="mt-6 mb-8 px-8">
+                        <a href="https://cardano.build/#ssi" target="_blank" style="font-size: 1rem;"
+                            class="pl-4">
+                            More SSI Dev Resources @ cardano.build <i class="fe fe-external-link"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-6 text-secondary w-md-75">
+        <div class="text-danger fw-bold"><i class="fe fe-alert-triangle text-danger"></i> The functionality on this page is for learning only.</div>
+        <div>In a real application you would not generate and display the private keys in the browser without careful security considerations.</div>
+    </div>
+
+	<div class="text-muted-80 mt-4 mb-6 text-leftr">
+		<a class="btn btn-dark btn-pill shadow lift p-1" href="https://skillzeb.io/template-explorer/resources-dsociety-learn-ssi" target="_blank">
+			<img src="/site/2151/skillzeb-kit-horizontal.png" class="text-secondary me-1" style="max-height: 1.4rem !important;"><i class="fe fe-external-link me-1"></i>
+		</a>
+	</div>
+
+</body>
+
+<!-- Vendor JS -->
+<script src="/site/2033/landkit.vendor.bundle.js"></script>
+
+<!-- Theme JS -->
+<script src="/site/2033/landkit.theme.bundle.js"></script>
+
+<script src="/site/2030/jquery-3.2.1.min.js"></script>
+<script src="/site/1901/lodash.min.js"></script>
+<script src="/site/1901/moment.min.js"></script>
+<script src="/site/1901/numeral.min.js"></script>
+<script src="/site/1987/popper.min.js"></script>
+<script src="/site/2152/cbor.js"></script>
+<script src="/site/1901/crypto-js.js"></script>
+<script src="/site/2152/blake2b.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+
+<script src="/site/2152/entityos-3.9.6.js"></script>
+<script src="/site/2152/entityos.util-5.0.32.js"></script>
+<script src="/site/2152/entityos.util.protect-1.0.6.js"></script>
+<script src="/site/1987/bootstrap.min.js"></script>
+
+<script type="module" src="/site/2152/dsociety.entityos.learn.ssi-2.0.7.js"></script>
+
+</html>

@@ -1,0 +1,100 @@
+<!--
+    A learn-by-example of SSI DID
+
+    # Util
+        - Random Text
+        - Random Reference Number
+    
+    Thank you,
+    Turlia.
+
+    We have an opportunity
+    to descentralise
+    & rehumanise our society
+
+    --
+
+    Great reference: DID authorisation (proofing ownership)
+    https://www.w3.org/Security/201812-Auth-ID/04_-_Day_1_-_Understanding_DID_Auth.pdf
+
+	Key Management Services:
+	https://entityos.cloud
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" href="/site/2152/2152.icon-2.0.0.png" type="image/png" />
+    <link rel="stylesheet" href="/site/2033/landkit.libs.bundle.css" />
+    <link rel="stylesheet" href="/site/2033/landkit.theme.bundle.css" />
+    <link rel="stylesheet" href="/site/2152/dsociety.style-2.0.0.css" />
+    <link rel="stylesheet" href="/site/2098/entityos.util-4.4.17.css" />
+
+    <title>dSociety Util</title>
+</head>
+
+<body style="padding-left:30px; padding-right: 20px;">
+    <div class="pt-6">
+        <a class="lift"
+            style="padding-left: 4px; font-family:system-ui !important; color:#ff943d !important; font-size:1.6rem; text-align:left;"
+            href="/">
+            dSociety</a> <span class="text-muted-80" style="font-size:1.6rem; font-family:system-ui !important;font-weight: 100;">
+        </a>
+    </div>
+
+    <div class="pt-0" style="color:#ff943d; font-size:4rem; line-height:1;">
+       Util
+    </div>
+
+	<div style="background-color:rgba(0,0,0,0.7); border-radius: 6px; padding:16px;" class="w-100 w-md-50 mt-6 mb-4">
+		<h4 class="fw-bold mb-3 mt-1">Length</h4>
+		<div class="mb-1">
+			<input class="form-control entityos-text border border-info" data-scope="dsociety-util-generate-random-text"
+				data-context="length">
+		</div>
+		
+		<div class="form-check form-switch mt-3">
+			<h4 class="fw-bold mb-0"><input type="checkbox" class="entityos-check form-check-input" data-scope="dsociety-util-generate-random-text"
+				data-context="reference" data-id="1" id="utilGenerateTextReferenceNumber">
+			<label class="form-check-label" for="utilGenerateTextReferenceNumber">Reference Number</label>
+		</div>
+
+	</div>
+
+	<div class="mt-2"> 
+		<button type="button" class="btn btn-sm btn-outline-primary text-light entityos-click mb-2"
+			data-controller="dsociety-util-generate-random-text" style="width: 300px;">
+			Generate Random Text
+		</button>
+	</div>
+
+    <div id="util-view">
+    </div>
+
+</body>
+
+<!-- Vendor JS -->
+<script src="/site/2033/landkit.vendor.bundle.js"></script>
+
+<!-- Theme JS -->
+<script src="/site/2033/landkit.theme.bundle.js"></script>
+
+<script src="/site/2030/jquery-3.2.1.min.js"></script>
+<script src="/site/1901/lodash.min.js"></script>
+<script src="/site/1901/moment.min.js"></script>
+<script src="/site/1901/numeral.min.js"></script>
+<script src="/site/1987/popper.min.js"></script>
+<script src="/site/2152/cbor.js"></script>
+<script src="/site/1901/crypto-js.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+
+<script src="/site/2152/entityos-3.9.6.js"></script>
+<script src="/site/2152/entityos.util-5.0.29.js"></script>
+<script src="/site/1987/bootstrap.min.js"></script>
+
+<script type="module" src="/site/2152/dsociety.entityos.util-2.0.0.js"></script>
+
+</html>

@@ -1,0 +1,107 @@
+<!--
+    A learn-by-example "connect to Cardano wallet" site.
+    
+    Code is free to use (CC0), but it is only provided as to aid learning about connecting to the Cardano blockchain/wallet.
+    To that purpose it uses Javascript in its simplest form, so as to keep focus on the blockchain/wallet conceptual learning.
+    Recommend using resources @ https://buildingoncardano.dev if plan to build a production-grade app.
+
+    I'm working in collaboration with @selfdrivenOcto (https://slfdrvn.io/octo) on this.
+    If you have any issues please contact twitter.com/selfdrivenOcto.
+    Or join the BuildingOnCardano.dev Discord server and ask for help!
+    https://buildingoncardano.dev
+
+    Thank you,
+    Turlia.
+
+    We have an opportunity
+    to descentralise
+    & rehumanise our society
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" href="/site/2152/2152.icon-2.0.0.png" type="image/png" />
+    <link rel="stylesheet" href="/site/2033/landkit.libs.bundle.css" />
+    <link rel="stylesheet" href="/site/2033/landkit.theme.bundle.css" />
+    <link rel="stylesheet" href="/site/2152/dsociety.style-2.0.0.css" />
+    <link rel="stylesheet" href="/site/2098/entityos.util-4.4.17.css" />
+
+    <title>dSociety Learn Blockchain</title>
+</head>
+
+<body style="padding-left:30px; padding-right: 20px;">
+    <div class="pt-6">
+        <a class="lift"
+            style="padding-left: 4px; font-family:system-ui !important; color:#ff943d !important; font-size:1.6rem; text-align:left;"
+            href="/">
+            dSociety</a> <span class="text-muted-80"
+            style="font-size:1.6rem; font-family:system-ui !important;font-weight: 100;">|</span> <a class="lift"
+            style="font-family:system-ui !important; color:#ff943d !important; font-size:1.6rem; text-align:left;"
+            href="/learn">
+            Learn
+        </a>
+    </div>
+
+    <div class="pt-0" style="color:#ff943d; font-size:4rem; line-height:1;">
+        Blockchain (Cardano)
+    </div>
+
+    <div class="pt-8">
+
+        <button id="learn-connect" type="button" class="btn btn-outline-primary disabled" data-container="body"
+            data-toggle="popover" data-placement="bottom">
+            Connect
+        </button>
+    </div>
+
+    <div id="learn-view">
+        <div class="mt-6 fw-bold text-secondary" style="font-size: 1.2rem;">
+            Initialising...</div>
+    </div>
+
+    <div id="learn-info-view" class="py-8" style="width:100%;">
+        <div style="background-color:rgba(0,0,0,0.5); border-radius: 6px; padding:16px;" class="w-md-75">
+            <div style="font-size: 1rem; color:#fff;">
+                To see the code & dev console logs, right click, click <em>Inspect</em> & click the
+                <em>Sources</em> or <em>Console</em> tab.
+            </div>
+            <div class="mt-3 text-white">
+                Cardano development tools &
+                    resources indexed @ <a href="https://cardano.build" target="_blank"
+                    style="font-size: 1rem; color:#fff;">Cardano.build <i class="fe fe-external-link"></i></a>
+            </div>
+            <div class="mt-3 text-white">
+               Wallet index @ <a href="https://cardanowallets.io" target="_blank"
+                    style="font-size: 1rem; color:#fff;">CardanoWallets.io <i class="fe fe-external-link"></i></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="/site/2033/landkit.vendor.bundle.js"></script>
+<script src="/site/2033/landkit.theme.bundle.js"></script>
+
+<script src="/site/2030/jquery-3.2.1.min.js"></script>
+<script src="/site/1901/lodash.min.js"></script>
+<script src="/site/1901/moment.min.js"></script>
+<script src="/site/1901/numeral.min.js"></script>
+<script src="/site/1987/popper.min.js"></script>
+<script src="/site/2152/cbor.js"></script>
+
+<script src="/site/2152/entityos-3.9.6.js"></script>
+<script src="/site/2152/entityos.util-5.0.16.js"></script>
+<script src="/site/2152/entityos.util.protect-1.0.5.js"></script>
+<script src="/site/1987/bootstrap.min.js"></script>
+
+<script src="/site/2152/bignumber.min.js"></script>
+
+<!-- <script src="/site/2170/typhonjs.min.js"></script> -->
+<script src="/site/2152/typhonjs.min-2.0.0.js"></script>
+
+<script type="module" src="/site/2152/dsociety.entityos.learn.blockchain.cardano-2.0.4.js"></script>
+
+</html>

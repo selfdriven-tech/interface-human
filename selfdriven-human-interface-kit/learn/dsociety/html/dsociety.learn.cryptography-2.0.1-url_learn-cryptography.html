@@ -1,0 +1,191 @@
+<!--
+    A learn-by-example of SSI DID
+
+    # Create DID
+        - Download Private Key
+        - Document did-document.json with DID & Public Key
+    
+    Thank you,
+    Turlia.
+
+    We have an opportunity
+    to descentralise
+    & rehumanise our society
+
+    --
+
+    Great reference: DID authorisation (proofing ownership)
+    https://www.w3.org/Security/201812-Auth-ID/04_-_Day_1_-_Understanding_DID_Auth.pdf
+
+    Use https://github.com/digitalbazaar/ed25519-verification-key-2020/tree/main/lib to generate keys
+
+    W3C DID Specs: Methods:
+    https://github.com/w3c/did-spec-registries/tree/main/methods
+
+	Key Management Services:
+	https://docs.aws.amazon.com/kms/latest/developerguide/programming-top.html
+	https://entityos.cloud
+
+	TODO:
+		- Notes on:
+			SHA-256: Standard and widely used (Bitcoin, Ethereum).
+			SHA3-256: More modern and secure.
+			BLAKE3: Faster and ideal for performance-sensitive applications.	
+-->
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="shortcut icon" href="/site/2152/2152.icon-2.0.0.png" type="image/png" />
+	<link rel="stylesheet" href="/site/2033/landkit.libs.bundle.css" />
+	<link rel="stylesheet" href="/site/2033/landkit.theme.bundle.css" />
+	<link rel="stylesheet" href="/site/2152/dsociety.style-2.0.1.css" />
+	<link rel="stylesheet" href="/site/2098/entityos.util-4.4.17.css" />
+
+	<title>dSociety Learn Cryptography</title>
+</head>
+
+<body style="padding-left:30px; padding-right: 20px;">
+	<div class="pt-6">
+		<a class="lift"
+			style="padding-left: 4px; font-family:system-ui !important; color:#ff943d !important; font-size:1.6rem; text-align:left;"
+			href="/">
+			dSociety</a> <span class="text-muted-80"
+			style="font-size:1.6rem; font-family:system-ui !important;font-weight: 100;">|</span> <a class="lift"
+			style="font-family:system-ui !important; color:#ff943d !important; font-size:1.6rem; text-align:left;"
+			href="/learn">
+			Learn
+		</a>
+	</div>
+
+	<div class="pt-0" style="color:#ff943d; font-size:4rem; line-height:1;">
+		Crytography
+	</div>
+
+	<!-- Tabs below the image -->
+	<ul class="nav nav-pills mt-5" id="myTab" role="tablist">
+		<li class="nav-item" role="presentation">
+			<button class="nav-link active" id="pgp-tab" data-bs-toggle="tab" data-bs-target="#pgp" type="button"
+				role="tab" aria-controls="pgp" aria-selected="true">PGP</button>
+		</li>
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="merkletree-tab" data-bs-toggle="tab" data-bs-target="#merkletree" type="button"
+				role="tab" aria-controls="merkletree" aria-selected="false">Merkle Tree</button>
+		</li>
+	</ul>
+	<div class="tab-content mt-0" id="tabContent">
+		<div class="tab-pane fade show active" id="pgp" role="tabpanel" aria-labelledby="pgp-tab">
+			<div class="form-group mt-4 mb-0" style="margin-left: 20px;">
+				<div class="radio-inline radio-lg text-secondary">
+					<input type="radio" class="entityos-check" checked="checked"
+						id="learn-cryptography-create-pgp-curve-secp256r1" name="learn-cryptography-create-pgp-curve"
+						value="secp256r1" data-id="secp256k1" data-scope="learn-cryptography-create-pgp"
+						data-context="curve">
+					Secp256r1
+				</div>
+				<div class="radio-inline radio-lg text-secondary">
+					<input type="radio" class="entityos-check" id="learn-cryptography-create-pgp-curve-rsa"
+						name="learn-cryptography-create-pgp-curve" value="rsa" data-id="rsa"
+						data-scope="learn-cryptography-create-pgp" data-context="curve">
+					RSA
+				</div>
+			</div>
+			<div class="pt-3">
+				<button id="learn-cryptography-create-pgp" type="button" class="btn btn-outline-primary entityos-click"
+					data-controller="learn-cryptography-create-pgp" style="width:200px;">
+					Create PGP Keys
+				</button>
+			</div>
+
+			<div id="learn-cryptography-pgp-view">
+			</div>
+		</div>
+		<div class="tab-pane fade show" id="merkletree" role="tabpanel" aria-labelledby="merkletree-tab">
+			<div class="form-group mt-4 mb-0" style="margin-left: 20px;">
+				<div class="radio-inline radio-lg text-secondary">
+					<input type="radio" class="entityos-check" checked="checked"
+						id="learn-cryptography-merkletree-create-sha256"
+						name="learn-cryptography-merkletree-create-curve" value="sha256" data-id="sha256"
+						data-scope="learn-cryptography-merkletree" data-context="curve">
+					SHA-256
+				</div>
+				<div class="radio-inline radio-lg text-secondary">
+					<input type="radio" class="entityos-check" id="learn-cryptography-merkletree-create-curve-sha3256"
+						name="learn-cryptography-merkletree-create-curve" value="sha3256" data-id="sha3256"
+						data-scope="learn-cryptography-merkletree" data-context="curve">
+					SHA3-256
+				</div>
+				<div class="radio-inline radio-lg text-secondary">
+					<input type="radio" class="entityos-check" id="learn-cryptography-merkletree-create-blake2b"
+						name="learn-cryptography-merkletree-create-curve" value="blake2b" data-id="blake2b"
+						data-scope="learn-cryptography-merkletree" data-context="curve">
+					Blake2b
+				</div>
+			</div>
+			<div class="pt-3">
+				<button type="button" class="btn btn-outline-primary entityos-click"
+					data-controller="learn-cryptography-merkletree-create" style="width:260px;">
+					Create Merkle Tree
+				</button>
+			</div>
+
+			<div id="learn-cryptography-merkletree-view">
+			</div>
+		</div>
+	</div>
+
+	<div id="learn-cryptography-view">
+	</div>
+
+	<div id="learn-view" class="pt-4" style="width:100%;">
+	</div>
+
+	<div class="pt-6 text-secondary w-md-75">
+		<div class="text-danger fw-bold"><i class="fe fe-alert-triangle text-danger"></i> The functionality on this page
+			is for learning only.</div>
+		<div>In a real application you would not generate and display the private keys in the browser without careful
+			security considerations.</div>
+	</div>
+
+	<div class="text-muted-80 mt-4 mb-6 text-leftr">
+		<a class="btn btn-dark btn-pill shadow lift p-1"
+			href="https://skillzeb.io/template-explorer/resources-dsociety-learn-cryptography-pgp" target="_blank">
+			<img src="/site/2151/skillzeb-kit-horizontal.png" class="text-secondary me-1"
+				style="max-height: 1.4rem !important;"><i class="fe fe-external-link me-1"></i>
+		</a>
+	</div>
+
+</body>
+
+<!-- Vendor JS -->
+<script src="/site/2033/landkit.vendor.bundle.js"></script>
+
+<!-- Theme JS -->
+<script src="/site/2033/landkit.theme.bundle.js"></script>
+
+<script src="/site/2030/jquery-3.2.1.min.js"></script>
+<script src="/site/1901/lodash.min.js"></script>
+<script src="/site/1901/moment.min.js"></script>
+<script src="/site/1901/numeral.min.js"></script>
+<script src="/site/1987/popper.min.js"></script>
+<script src="/site/2152/cbor.js"></script>
+<script src="/site/1901/crypto-js.js"></script>
+<script src="/site/2152/blake2b.js"></script>
+<script src="/site/2152/sha3.min.js"></script>
+<script src="/site/2152/qrcode.min.js"></script>
+
+<script src="https://unpkg.com/openpgp@5.6.0/dist/openpgp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+
+<script src="/site/2152/entityos-3.9.6.js"></script>
+<script src="/site/2152/entityos.util-5.0.32.js"></script>
+<script src="/site/2152/entityos.util.protect-1.0.6.js"></script>
+<script src="/site/1987/bootstrap.min.js"></script>
+
+
+<script type="module" src="/site/2152/dsociety.entityos.learn.cryptography.pgp-2.0.0.js"></script>
+<script type="module" src="/site/2152/dsociety.entityos.learn.cryptography.merkletree-2.0.0.js"></script>
+
+</html>

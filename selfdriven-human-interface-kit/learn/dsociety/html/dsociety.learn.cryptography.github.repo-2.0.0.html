@@ -1,0 +1,97 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Repo BLAKE2 Hash</title>
+
+<button id="go">Hash cardano-in-oceania.github.io@main</button>
+<pre id="out">Ready…</pre>
+
+<script type="module">
+  import { blake2b } from "https://esm.sh/@noble/hashes@1.4.0/blake2b";
+  import { utf8ToBytes, bytesToHex } from "https://esm.sh/@noble/hashes@1.4.0/utils";
+
+  async function githubJSON(url, token) {
+    const headers = {
+      Accept: "application/vnd.github+json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {})
+    };
+    const r = await fetch(url, { headers });
+    if (!r.ok) throw new Error(`HTTP ${r.status} ${url}`);
+    return r.json();
+  }
+
+  async function githubRawBlob(owner, repo, sha, token) {
+    const url = `https://api.github.com/repos/${owner}/${repo}/git/blobs/${sha}`;
+    const headers = {
+      Accept: "application/vnd.github.raw",
+      ...(token ? { Authorization: `Bearer ${token}` } : {})
+    };
+    const r = await fetch(url, { headers });
+    if (!r.ok) throw new Error(`HTTP ${r.status} ${url}`);
+    return new Uint8Array(await r.arrayBuffer());
+  }
+
+  // Deterministic repo hash at a ref
+  async function blake2RepoHash({ owner, repo, ref = "main", token, dkLen = 32, concurrency = 8, onProgress }) {
+    // 1) Resolve ref -> commit -> tree
+    const commit = await githubJSON(
+      `https://api.github.com/repos/${owner}/${repo}/commits/${encodeURIComponent(ref)}`,
+      token
+    );
+    const treeSha = commit.commit.tree.sha;
+
+    // 2) List whole tree
+    const tree = await githubJSON(
+      `https://api.github.com/repos/${owner}/${repo}/git/trees/${treeSha}?recursive=1`,
+      token
+    );
+
+    // 3) Pick blobs and canonicalise order
+    const blobs = tree.tree
+      .filter(e => e.type === "blob")
+      .map(e => ({ path: e.path, mode: e.mode, sha: e.sha }))
+      .sort((a, b) => a.path.localeCompare(b.path));
+
+    // 4) Fetch & hash with limited concurrency
+    const h = blake2b.create({ dkLen });
+    const enc = utf8ToBytes;
+    let i = 0, done = 0, count = blobs.length;
+
+    async function worker() {
+      while (i < count) {
+        const idx = i++;
+        const { path, mode, sha } = blobs[idx];
+        const bytes = await githubRawBlob(owner, repo, sha, token);
+
+        // Canonical framing: "<mode> <path>\0<blob-bytes>"
+        h.update(enc(mode));
+        h.update(enc(" "));
+        h.update(enc(path));
+        h.update(Uint8Array.of(0));
+        h.update(bytes);
+
+        done++;
+        if (onProgress && (done % 25 === 0 || done === count)) onProgress({ done, count, path });
+      }
+    }
+    await Promise.all(Array.from({ length: Math.min(concurrency, Math.max(1, count)) }, worker));
+
+    return { digestHex: bytesToHex(h.digest()), filesHashed: count, commitSha: commit.sha, treeSha };
+  }
+
+  const out = document.getElementById("out");
+  document.getElementById("go").onclick = async () => {
+    out.textContent = "Hashing… (may take a bit on large repos)";
+    try {
+      const { digestHex, filesHashed, commitSha } = await blake2RepoHash({
+        owner: "cardano-in-oceania",
+        repo: "cardano-in-oceania.github.io",
+        ref: "main",
+        // token: "ghp_…", // optional; avoids 60/hr unauth’d rate limit
+        onProgress: ({ done, count, path }) => { out.textContent = `Hashed ${done}/${count}: ${path}`; }
+      });
+      out.textContent = `BLAKE2b-256: ${digestHex}\nfiles: ${filesHashed}\ncommit: ${commitSha}`;
+    } catch (e) {
+      out.textContent = "Error: " + e.message;
+    }
+  };
+</script>

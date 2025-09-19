@@ -1,0 +1,112 @@
+<!--
+	namespace: "selfdriven.human.interface.kit", 	
+    context: "settings"
+    url: "https://github.com/selfdriven-tech/interface-human"
+-->
+
+<div id="human-interface-settings" class="d-none entityos-view">
+
+	<div class="header mb-4">
+		<div class="container-fluid">
+			<div class="header-body py-3">
+				<div class="row align-items-end">
+					<div class="col">
+						<h1 class="header-title">
+							Settings
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+
+			<div class="row mt-3">
+				<div class="col-12">
+					<div class="btn-group btn-group-sm mr-1 mb-2 mt-1">
+						<button class="btn btn-mode btn-xoutline active btn-sm myds-click myds-button-group"
+							type="button" id="util-view-theme-mode-light" value="light" data-id="light"
+							data-mode="light" data-controller="util-view-theme-mode-select" data-scope="util-view-theme"
+							data-context="mode"><img src="/site/2007/light-white.svg" style="width:22px;" class="p-1">
+						</button>
+						<button class="btn btn-mode btn-xoutline btn-sm myds-click myds-button-group" type="button"
+							id="util-view-theme-mode-dark" value="dark" data-id="dark" data-mode="dark"
+							data-controller="util-view-theme-mode-select" data-scope="util-view-theme"
+							data-context="mode"><img src="/site/2007/dark-white.svg" style="width:22px;" class="p-1">
+						</button>
+						<button class="btn btn-mode btn-xoutline btn-sm myds-click myds-button-group" type="button"
+							id="util-view-theme-mode-light-auto" value="auto" data-id="auto" data-mode="auto"
+							data-controller="util-view-theme-mode-select" data-scope="util-view-theme"
+							data-context="mode"><img src="/site/2007/light-dark-white.svg" style="width:22px;"
+								class="p-1">
+						</button>
+					</div>
+				</div>
+			</div>
+
+            <div class="card mt-4 shadow-lg">
+					<div class="card-header text-center pt-2 pb-2 border-bottom">
+						<h4 class="pt-1">Security</h4>
+						<div class="pull-right"></div>
+					</div>
+
+					<div class="card-body py-2 text-center" id="studio-me-summary-security-view">
+
+						<div class="row mt-3">
+							<div class="col-sm-12">
+								<h3 class="mb-0" id="">
+									{{lastlogon}}
+								</h3>
+								<div class="text-muted"><small>Last Logon</small></div>
+							</div>
+						</div>
+
+						<div class="row mt-1">
+							<div class="col-sm-12">
+								<a class="btn btn-default btn-outline w-75 mx-auto btn-sm mt-3 mb-3"
+									href="#auth-password" data-toggle="modal">Change Password</a>
+								<div id="studio-me-summary-security-password-view"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-body py-3 text-center border-top" id="studio-me-summary-security-2nd-factor-view">
+						<h4>2nd Factor</h4>
+						<div>
+							To protect your account you need to enable 2nd factor authentication.
+						</div>
+						<div class="mt-2 d-none">
+							<a href="https://learn.selfdriven.cloud/auth2ndfactor" target="_blank">Find out more ...</a>
+						</div>
+						<button class="btn btn-default btn-outline w-75 mx-auto btn-sm myds-click mt-3 mb-3"
+							data-controller="studio-me-security-setup-2ndfactor"
+							id="studio-me-summary-security-setup-2ndfactor-{{id}}" data-context="{{id}}"
+							data-id="{{id}}">
+							Set up or reset 2FA</button>
+						<div class="px-4" id="studio-me-summary-security-2ndfactor-view"></div>
+					</div>
+
+					<div class="card-body py-3 text-center border-top"
+						id="studio-me-summary-security-2nd-factor-trust-this-browser-view">
+						<a href="#auth-trust" data-toggle="modal"
+							class="btn btn-default btn-outline w-75 mx-auto btn-sm mt-3 mb-3">Trust This
+							Browser</a>
+					</div>
+					
+					<div class="card-body py-3 text-center border-top" id="learner-me-summary-security-passkey-container">
+						<h4>Passkey</h4>
+						<div>
+							Use a passkey to sign in - it's faster and more secure than a password.
+						</div>
+						<div class="mt-2 d-none">
+							<a href="https://selfdriven.id/tech#passkey" target="_blank">Find out more ...</a>
+						</div>
+						<div id="util-identity-webauthn-passkey-view"></div>
+						<div class="px-4" id="learner-me-summary-security-passkey-message-view"></div>
+					</div>
+
+				</div>
+
+		</div>
+	</div>
+</div>
